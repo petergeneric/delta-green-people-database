@@ -44,3 +44,26 @@ The `gameStage` property can be used to control whether records are visible at a
  - `notAfter`: an integer that defines the `gameStage` after which this record will not appear
 
 Then simply edit the `gameStage` property as appropriate as the game progresses.
+
+
+Optional Feature: Putting Your Players In The Database
+-------------------------------------------------------
+
+You can add another file, `players.json` (that won't be committed) and put the real details of your players in.
+Here's an example of what that file would look like for a single player:
+
+```
+[
+  {
+    "surname": "PlayerSurname",
+    "forename": "PlayerForename",
+    "classifier": "P",
+    "dateOfBirth": "2000-01-01",
+    "nationality": "...",
+    "warning": "{yellow-bg}{blue-fg}STOP PLAYING NOW YOU AREN'T SAFE{/}{/}",
+    "status": "Playing",
+    "lastKnownAddress": "Behind Your Eyes, Can't You Smell It?",
+    "notes": "{yellow-fg}<<Take 1D10 of Sanity Damage>>{/}"
+  }
+]
+```
