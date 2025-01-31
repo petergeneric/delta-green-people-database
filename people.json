@@ -902,6 +902,107 @@
       "lastKnownAddress": "Unknown",
       "dateOfDeath": "1950-01-01",
       "notes": "Homicide Victim"
+    },
+    
+    
+    
+    {
+      "surname": "Curson",
+      "forename": "Steven",
+      "classifier": "I",
+      "dateOfBirth": "1962-11-03",
+      "status": "Alive",
+      "lastKnownAddress": "Unknown",
+      "dateOfDeath": "1950-01-01",
+      "notes": "Veteran. 3 arrests for Vagrancy."
+    },
+
+    {
+      "surname": "Dallan",
+      "forename": "Richard",
+      "classifier": "I",
+      "dateOfBirth": "1953-02-03",
+      "status": "Alive",
+      "lastKnownAddress": "Apt 224, 145 Adams Street, Boston, MA",
+      "notes": "None\n\nLinked Record: <Medical License 34232/3590>"
+    },
+    {
+      "surname": "Samigina",
+      "forename": "Esther",
+      "classifier": "I",
+      "dateOfBirth": "1966-06-03",
+      "status": "Alive",
+      "lastKnownAddress": "52 Crockett Ave. Boston, MA",
+      "notes": ""
+    },
+    {
+      "surname": "Samigina",
+      "forename": "Philip",
+      "classifier": "I",
+      "dateOfBirth": "1965-11-21",
+      "status": "Alive",
+      "lastKnownAddress": "52 Crockett Ave. Boston, MA",
+      "notes": ""
+    },
+    
+    {
+      "surname": "Samigina",
+      "forename": "Henry",
+      "classifier": "I",
+      "dateOfBirth": "1999-01-01",
+      "status": "Alive",
+      "lastKnownAddress": "52 Crockett Ave. Boston, MA",
+      "notes": "",
+      "notBefore": 2
+    },
+
+
+
+    
+    {
+      "surname": "Dallan",
+      "forename": "Michael",
+      "classifier": "I",
+      "dateOfBirth": "1982-07-15",
+      "status": "Alive",
+      "lastKnownAddress": "58 Greenway Dr, Austin, TX",
+      "notes": ""
+    },
+    {
+      "surname": "Samigina",
+      "forename": "Sarah",
+      "classifier": "I",
+      "dateOfBirth": "1975-11-03",
+      "status": "Alive",
+      "lastKnownAddress": "112 Ocean Ave, Miami, FL",
+      "notes": ""
+    },
+    {
+      "surname": "Dallan",
+      "forename": "Robert",
+      "classifier": "I",
+      "dateOfBirth": "1990-01-22",
+      "status": "Alive",
+      "lastKnownAddress": "77 Maple St, Boston, MA",
+      "notes": ""
+    },
+    {
+      "surname": "Curson",
+      "forename": "Emily",
+      "classifier": "I",
+      "dateOfBirth": "1988-05-30",
+      "status": "Alive",
+      "lastKnownAddress": "350 Elmwood Rd, Seattle, WA",
+      "notes": ""
+    },
+    {
+      "surname": "Curson",
+      "forename": "William",
+      "classifier": "I",
+      "dateOfBirth": "1969-09-14",
+      "status": "Alive",
+      "lastKnownAddress": "99 Sunset Blvd, Los Angeles, CA",
+      "notes": ""
     }
   ]
 }
