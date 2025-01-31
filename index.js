@@ -327,7 +327,7 @@ function showDetails(person) {
 }
 
 function formatPersonDetails(person) {
-	var content = '';
+	let content = '';
 
 	if ('warning' in person) {
 		content = '{red-bg}{white-fg}{bold}NOTE{/bold} ' + person.warning + '{/white-fg}{/red-bg}';
@@ -335,12 +335,12 @@ function formatPersonDetails(person) {
 	}
 
 	// Optional warning for 'legacy records' for deep history if you want players to have to go hunting in a physical archive
-	if (cutoffDateWarning !== null) {
+	if (cutoffDateWarning != null) {
 		let dod = person.dateOfDeath || null;
-		const cutoff = '1960-01-01';
+		const cutoff = cutoffDateWarning;
 	
 		if (person.dateOfBirth < cutoff) {
-			if (dod !== null && dod < cutoff) {
+			if (dod == null || dod < cutoff) {
 				content = '{blue-bg}{white-fg}{bold}Legacy Record{/bold} Consult physical original{/white-fg}{/blue-bg}';
 				content += "\n\n";
 			}
