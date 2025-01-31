@@ -1,5 +1,11 @@
 {
-  "gameStage": 1,
+  "gameStage": 10,
+  
+  "stages": {
+  	"10": "Beginning of IL Chapter 1",
+  	"20": "Beginning of IL Chapter 2"
+  },
+  
   "records": [
     {
       "surname": "Hastur",
@@ -955,7 +961,7 @@
       "status": "Alive",
       "lastKnownAddress": "52 Crockett Ave. Boston, MA",
       "notes": "",
-      "notBefore": 2
+      "notBefore": 20
     },
 
 
