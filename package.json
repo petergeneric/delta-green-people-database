@@ -1,0 +1,15 @@
+{
+  "name": "delta-green-person-database",
+  "version": "1.0.0",
+  "description": "delta green person database",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js; clear"
+  },
+  "dependencies": {
+    "blessed": "^0.1.81",
+    "blessed-contrib": "^4.11.0"
+  },
+  "author": "N/A",
+  "license": "Public Domain"
+}
