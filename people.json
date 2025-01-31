@@ -5,10 +5,12 @@
       "surname": "Hastur",
       "forename": "King",
       "classifier": "I",
+      "type": "Metagaming Punishment Record",
       "dateOfBirth": "Unknown",
       "nationality": "N/A",
       "status": "Alive",
       "lastKnownAddress": "1 Carcosa Way",
+      "warning": "{yellow-bg}{blue-fg}Take 1D50 Sanity Damage{/}{/}",
       "notes": "                                                                                                    \n                                         / &                                                        \n                                          (/*(                                                      \n                                         ** (*(                                                     \n                                         &    (#                                                    \n                                         /      /                                                   \n                                        %       /*                                                  \n                                       /         &/                                                 \n                                      #&           /                                                \n                                     /              (&                                              \n                                    //               //                   #                         \n                                  /**                 /*               / *                          \n                                 % #         &*/*      /*           /  %                            \n                               (  *          % (#&*     //         ((                               \n                               & //          /%/ /*      &       %                                  \n                                / / #        (#/  //       // (                                     \n                                      */      *    //      / %                                      \n                                      /(/(  ( /*    %*  &   (                                       \n                                         &(/ **     /*#      /  %                                   \n                                           *%/   / /  /*      /& /                                  \n                                           *(% (       //      &# /                                 \n                                          /*/           //       / *                                \n                 ( (/                     *&             //      ** (                               \n                        %                &%/              **      /  /                              \n                          &             /#(                *(     #/                                \n                                       #(/                  *% /                                    \n                                   #  / /               /#( (# %                                    \n                                     (#*             ( % //    /                                    \n                                    / # /           (  (         /                                  \n                                   *  ( ( %(  /     (            * /                                \n                                  *  /   ( &     /#                /(                               \n                                 /*(    &     #//                    #/                             \n                                *&#       &(                           (                            \n                              *(                                        /#                          \n                              /#                                        / (*                        \n                             %                                              //                      \n                                                                               /                    \n                                                                                                    \n                                                                                                    \n                                                                                                    \n"
     },
     {
@@ -1003,6 +1005,26 @@
       "status": "Alive",
       "lastKnownAddress": "99 Sunset Blvd, Los Angeles, CA",
       "notes": ""
+    },
+    
+    
+    {
+      "surname": "Larkin",
+      "forename": "Augustus",
+      "classifier": "I",
+      "dateOfBirth": "1899",
+      "status": "Unknown",
+      "lastKnownAddress": "Lima, Peru",
+      "notes": "Archaeologist"
+    },
+    {
+      "surname": "Elias",
+      "forename": "Jackson",
+      "classifier": "I",
+      "dateOfBirth": "1880",
+      "status": "Unknown",
+      "lastKnownAddress": "Hotel Chelsea, NY, NY",
+      "notes": "None\n\nLinked Record: <ISBN 2348957235: Skulls Along the River, 1910>"
     }
   ]
 }
