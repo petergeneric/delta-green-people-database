@@ -235,7 +235,8 @@
       "dateOfDeath": "1960-09-02",
       "status": "Deceased*",
       "lastKnownAddress": "Unknown",
-      "notes": "Naturalized Citizen 1887-06-06. Homicide suspect. Declared dead 1960-09-02."
+      "notes": "Naturalized Citizen 1887-06-06.\nHomicide suspect.\nMissing presumed dead\nDeclared dead 1960-09-02.",
+      "related": ["Case 452452-251-521"]
     },
     {
       "surname": "DeCraig",
@@ -1131,7 +1132,16 @@
       "lastKnownAddress": "Unknown"
     },
 
-
+    {
+      "surname": "Topchick",
+      "forename": "Gary",
+      "classifier": "I",
+      "dateOfBirth": "1906-02-29",
+      "dateOfDeath": "1972-06-10",
+      "lastKnownAddress": "Bellevue Hospital, NY, NY",
+      "notes": "{blue-fg}<Please see physical case files>{/}",
+      "related": [ "Case 34-523623-5235-52", "Declaration of Criminal Insanity, 1953", "Internet Movie Database: The Philco Television Playhouse" ]
+    },
 
     {
       "surname": "Example",
