@@ -655,7 +655,7 @@
       "lastKnownAddress": "669 Cox Unions Apt. 880, Jamesmouth, HI 95364"
     },
     {
-      "surname": "Severs",
+      "surname": "Whitwer",
       "forename": "Mary",
       "classifier": "I",
       "dateOfBirth": "1939-10-22",
@@ -1141,6 +1141,16 @@
       "lastKnownAddress": "Bellevue Hospital, NY, NY",
       "notes": "{blue-fg}<Please see physical case files>{/}",
       "related": [ "Case 34-523623-5235-52", "Declaration of Criminal Insanity, 1953", "Internet Movie Database: The Philco Television Playhouse" ]
+    },
+
+    {
+      "surname": "Whitwer",
+      "forename": "Michael",
+      "classifier": "I",
+      "dateOfBirth": "1980-05-23",
+      "notAfter": 19,
+      "lastKnownAddress": "823 Rosewood Ave, Lansing, MI",
+      "notes": "Warned for truancy, Jan 1995, Officer Jason Parks Lansing PD"
     },
 
     {
