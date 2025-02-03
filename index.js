@@ -349,13 +349,13 @@ function formatPersonDetails(person) {
 	}
 
 	// Optional warning for 'legacy records' for deep history if you want players to have to go hunting in a physical archive
-	if (cutoffDateWarning != null) {
+	if (cutoffDateWarning != null && person.suppressLegacyWarning !== true) {
 		let dod = person.dateOfDeath || null;
 		const cutoff = cutoffDateWarning;
 	
 		if (person.dateOfBirth < cutoff) {
 			if (dod == null || dod < cutoff) {
-				content = '{blue-bg}{white-fg}{bold}Legacy Record{/bold} Consult physical original{/white-fg}{/blue-bg}';
+				content += '{blue-bg}{white-fg}{bold}Legacy Record{/bold} Consult physical original{/white-fg}{/blue-bg}';
 				content += "\n\n";
 			}
 		}
