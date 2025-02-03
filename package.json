@@ -7,8 +7,8 @@
     "start": "node index.js; clear"
   },
   "dependencies": {
-    "blessed": "^0.1.81",
-    "blessed-contrib": "^4.11.0"
+    "neo-blessed": "^0.2.0",
+    "neo-blessed-contrib": "^4.9.0"
   },
   "author": "Peter Wright",
   "license": "MIT"

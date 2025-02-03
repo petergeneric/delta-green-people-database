@@ -1,6 +1,6 @@
 const fs = require('fs');
-const blessed = require('blessed');
-const contrib = require('blessed-contrib');
+const blessed = require('neo-blessed');
+const contrib = require('neo-blessed-contrib');
 
 function loadDatabase() {
 	if (!fs.existsSync('people.json')) {

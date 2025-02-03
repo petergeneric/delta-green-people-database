@@ -1,6 +1,12 @@
 Delta Green People Database
 ===========================
 
+First, run the following to get the dependencies:
+
+```
+npm install
+```
+
 Populate a `people.json` file with the following format:
 
 ```
