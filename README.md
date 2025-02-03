@@ -15,7 +15,8 @@ Populate a `people.json` file with the following format:
 			"nationality": "USA",
 			"status": "Alive",
 			"lastKnownAddress": "1 Main Street",
-			"notes": "Optional notes section"
+			"notes": "Optional notes section",
+			"related": [ "Optional related record text" ]
 		},
 	...
 	]
@@ -33,6 +34,8 @@ Optional Record Fields
 
 - Nationality will default to "USA"
 - dateOfDeath can be specified (N.B. cannot be before dateOfBirth)
+- status will default to "Alive" or "Deceased" based on presence of dateOfDeath
+- If "suppressLegacyWarning" is set to true, a record with dates prior to a given cutoff (1960-01-01 by default) will not have a physical record warning presented
 
 
 Optional Feature: Conditional Records

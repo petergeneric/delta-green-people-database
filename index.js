@@ -363,6 +363,12 @@ function formatPersonDetails(person) {
 
 	content += `Surname: ${person.surname}\nForename: ${person.forename}\nAliases: N/A\nRecord Type: ${person.type || 'Individual'}\nRecord Classifiers: ${person.classifier || 'N/A'}\nBorn: ${person.dateOfBirth}\nDied: ${person.dateOfDeath || 'N/A'}\nStatus: ${person.status || 'N/A'}\nNationality: ${person.nationality || 'USA'}\nLast Known Address: ${person.lastKnownAddress || 'N/A'}\n\nNotes:\n${person.notes || 'None'}`;
 
+	if (person.related !== undefined) {
+		content += '\n\nLinked Record(s):\n - '
+		content += person.related.join('\n - ');
+		content += '\n';
+	}
+
 	return content;
 }
 
