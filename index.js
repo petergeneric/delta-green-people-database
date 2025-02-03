@@ -49,6 +49,10 @@ const people = loadDatabase();
 // Set to null if not desired. This feature lets you force players into a dusty dark archives room for old records.
 const cutoffDateWarning = '1960-01-01';
 const maxResults = 20;
+// Set to true to allow showing entire db
+const allowAllQuery = false;
+// Set to true to allow partial matches based on address field
+const allowAddressSearch = true;
 
 const screen = blessed.screen({ smartCSR: true, title: 'FBI KNOWN PERSONS DATABASE' });
 
@@ -193,7 +197,7 @@ function showSearchScreen() {
         height: 3,
         inputOnFocus: true,
         border: { type: 'line' },
-        label: ' Enter Surname Selector ',
+        label: ' Enter Selector ',
         keys: true,
         vi: true
     });
@@ -203,7 +207,17 @@ function showSearchScreen() {
     screen.render();
 
     searchInput.on('submit', query => {
-        if ((query.length < 4 && query.toLowerCase() !== '') || runSearch(query).length > maxResults) {
+		if (query.toLowerCase() === 'all') {
+			if (allowAllQuery) {
+				screen.remove(searchInput);
+				showSearchResultsScreen('all');
+			}
+			else {
+				showErrorBox('DENIED', 'Your account does not have sufficient privileges to use the supplied search operator');
+				searchInput.focus();
+			}
+		}
+        else if ((query.length < 4 && query.toLowerCase() !== '') || runSearch(query).length > maxResults) {
             showErrorBox('TOO MANY RESULTS', 'Your search selector was insufficiently precise and matched too many results to display. Please refine your search and try again.');
             searchInput.focus();
         }
@@ -226,14 +240,17 @@ function showSearchScreen() {
 function runSearch(query) {
 	const q = query.toLowerCase().replaceAll(', ', ' ');
 
+	if (q === 'all' && allowAllQuery)
+		return people;
+
 	const matches = (surname, forename, address) => {
 		if (q.includes(' ')) {
 			let parts = q.replaceAll('[^a-z]+', ' ') .split(' ', 2);
 
-			return surname.toLowerCase().startsWith(parts[0]) && forename.toLowerCase().startsWith(parts[1]) || address.toLowerCase().includes(query);
+			return surname.toLowerCase().startsWith(parts[0]) && forename.toLowerCase().startsWith(parts[1]) || (allowAddressSearch && address.toLowerCase().includes(q));
 		}
 		else {
-			return surname.toLowerCase().startsWith(q)  || address.toLowerCase().includes(query);
+			return surname.toLowerCase().startsWith(q);
 		}
 	}
 
