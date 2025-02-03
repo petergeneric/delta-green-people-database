@@ -200,7 +200,7 @@
       "classifier": "I, V, MM",
       "dateOfBirth": "1969-01-22",
       "status": "Missing",
-      "lastKnownAddress": "210 E 32 St, NY, NY, 10016",
+      "lastKnownAddress": "Apt 1A, 210 E 32 St, NY, NY, 10016",
       "notes": "Active Missing Persons Case, FBI Jurisdiction. Last Seen 1995-06-01.\nMugging Victim (1994-04-23; case closed no arrests).\nCard theft victim (see missing persons case).\nReported missing 1995-06-04 by father (WRIGHT, THOMAS). NYPD FBI handover Aug 95.\n\n-- NYPD DATABASE LINK :: REPORT --\n\nMISSING PERSON:\nAbigail Wright [Caucasian woman, 26] reported missing on 4\nJUNE 1995 by her father, Thomas Wright of the Nassau County\nPolice Department. NYPD suspects she may have been missing even\nearlier, best guess 1 JUNE 1995.\n\nBACKGROUND:\nAbigail Wright moved to Manhattan in 1988 and has been\nworking as an artist and painter. She has a distinguished\nacademic record. Her first art show in New York was held last\nyear (1994) at the Mercury, a trendy art gallery on Franklin\nStreet. There she sold fifteen (15) pieces, and has been living\noff of the proceeds from those since.\n\nNYPD INVESTIGATION:\nPolice entered Wright’s apartment at the Macallister\nBuilding on East 32nd Street in Kips Bay on 4 JUNE 1995, where\nthey encountered a baffling tableau: every available surface of\nthe residence was covered in junk, affixed to the walls [and in\nsome places even the ceiling] with either a fast-setting,\nfull-bond epoxy, a common pasting glue, and/or adhesive tape. In\nsome cases all three methods were used. Only the floor remained\nclear.\nItems cataloged inside the residence include: sets of\ndentures and partial dentures, a 1940s wheelchair in excellent\ncondition, artificial limbs both modern and antique, dozens of\nshirts, shoes, pants, and various other clothing articles\nbelonging to men as well as women, and representing a large\nvariety of different sizes, a collection of briefcases, various\nradio equipment including several vintage radios, all manner of\njewelry, much of it quite valuable, and a small library’s worth\nof loose papers in a variety of languages, most notably English,\nSpanish, and Mandarin, but spanning such variety as to also\ncontain a college economics report in Farsi.\nThere were no signs of a struggle or any kind of violence.\nNeighbors did not report witnessing anything unusual. NYPD\ndetectives have exhausted all of their leads in this case.\n\nOn 4 AUGUST 1995 Abigail Wright’s credit card was used in Patience, MD to purchase a pack of Old Gold cigarettes, at which point the case was referred to the FBI as a possible interstate kidnapping.\n\nFBI agents arrived at building 6 Aug 1995, taking over case from Det. Graham Giuradanda\n",
       "related": ["Case: 349-812-34", "WRIGHT, THOMAS" ]
     },
@@ -263,6 +263,7 @@
       "classifier": "BUILDING",
       "dateOfBirth": "N/A",
       "status": "Structure",
+      "type": "Structure",
       "lastKnownAddress": "210 E 32 St, NY, NY, 10016",
       "related": [
         "BUILDING PERMIT: LUNDINE HOUSE, 1925",
@@ -276,6 +277,7 @@
       "classifier": "BUILDING",
       "dateOfBirth": "N/A",
       "status": "Structure",
+      "type": "Structure",
       "lastKnownAddress": "210 E 32 St, NY, NY, 10016",
       "related": ["BUILDING PERMIT: VARIATION OF EXISTING STRUCTURE, 1953","PROPERTY SALE: ARTLIFE CORPORATION, 1967","COMPANY REGISTER: ARTLIFE CORPORATION"]
     },
@@ -325,7 +327,7 @@
       "classifier": "I",
       "dateOfBirth": "1967-02-13",
       
-      "lastKnownAddress": "210 E 32 St, NY, NY, 10016",
+      "lastKnownAddress": "Apt 6B, 210 E 32 St, NY, NY, 10016",
       "notes": ""
     },
     {
@@ -334,7 +336,7 @@
       "classifier": "I",
       "dateOfBirth": "1968-01-08",
       
-      "lastKnownAddress": "210 E 32 St, NY, NY, 10016",
+      "lastKnownAddress": "Apt 4A, 210 E 32 St, NY, NY, 10016",
       "notes": ""
     },
     {
@@ -353,16 +355,17 @@
       "classifier": "I",
       "dateOfBirth": "1952-06-23",
       
-      "lastKnownAddress": "210 E 32 St, NY, NY, 10016",
-      "notes": ""
+      "lastKnownAddress": "Apt 3A, 210 E 32 St, NY, NY, 10016",
+      "notes": "",
+      "related": ["ISBN 249834151: The Night Sea"]
     },
     {
       "surname": "Carun",
-      "forename": "Roger",
+      "forename": "Derek",
       "classifier": "I",
-      "dateOfBirth": "1952-06-23",
+      "dateOfBirth": "1960-12-01",
       
-      "lastKnownAddress": "210 E 32 St, NY, NY, 10016",
+      "lastKnownAddress": "472 West Dorello St, NY, NY",
       "notes": ""
     },
     {
@@ -380,7 +383,7 @@
       "classifier": "I",
       "dateOfBirth": "1969-04-03",
       
-      "lastKnownAddress": "210 E 32 St, NY, NY, 10016",
+      "lastKnownAddress": "Apt 2B, 210 E 32 St, NY, NY, 10016",
       "notes": ""
     },
     {
