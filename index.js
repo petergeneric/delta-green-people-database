@@ -26,6 +26,13 @@ function loadDatabase() {
 		}
 	});
 
+	// Apply default status value
+	people.forEach(person => {
+		if (!('status' in person)){
+			person.status = ('dateOfDeath' in person) ? 'Deceased' : 'Alive';
+		}
+	});
+
 	// Remove any records that should not be visible in the current game stage
 	const stage = config.gameStage || 1;
 	return people.filter(person => {
