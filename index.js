@@ -96,6 +96,12 @@ function createMainMenu() {
 	menuList.focus();
 	screen.render();
 
+
+	menuList.key('/', (item, index) => {
+		screen.remove(mainMenu);
+		showSearchScreen();
+	});
+
 	menuList.on('select', (item, index) => {
 		if (index === 0) {
 			screen.remove(mainMenu);
