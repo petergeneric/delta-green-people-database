@@ -1,11 +1,11 @@
 {
   "gameStage": 10,
-  
+
   "stages": {
   	"10": "Beginning of IL Chapter 1",
   	"20": "Beginning of IL Chapter 2"
   },
-  
+
   "records": [
     {
       "surname": "Hastur",
@@ -14,7 +14,7 @@
       "type": "Metagaming Punishment Record",
       "dateOfBirth": "Unknown",
       "nationality": "N/A",
-      "status": "Alive",
+      
       "lastKnownAddress": "1 Carcosa Way",
       "warning": "{yellow-bg}{blue-fg}Take 1D50 Sanity Damage{/}{/}",
       "notes": "                                                                                                    \n                                         / &                                                        \n                                          (/*(                                                      \n                                         ** (*(                                                     \n                                         &    (#                                                    \n                                         /      /                                                   \n                                        %       /*                                                  \n                                       /         &/                                                 \n                                      #&           /                                                \n                                     /              (&                                              \n                                    //               //                   #                         \n                                  /**                 /*               / *                          \n                                 % #         &*/*      /*           /  %                            \n                               (  *          % (#&*     //         ((                               \n                               & //          /%/ /*      &       %                                  \n                                / / #        (#/  //       // (                                     \n                                      */      *    //      / %                                      \n                                      /(/(  ( /*    %*  &   (                                       \n                                         &(/ **     /*#      /  %                                   \n                                           *%/   / /  /*      /& /                                  \n                                           *(% (       //      &# /                                 \n                                          /*/           //       / *                                \n                 ( (/                     *&             //      ** (                               \n                        %                &%/              **      /  /                              \n                          &             /#(                *(     #/                                \n                                       #(/                  *% /                                    \n                                   #  / /               /#( (# %                                    \n                                     (#*             ( % //    /                                    \n                                    / # /           (  (         /                                  \n                                   *  ( ( %(  /     (            * /                                \n                                  *  /   ( &     /#                /(                               \n                                 /*(    &     #//                    #/                             \n                                *&#       &(                           (                            \n                              *(                                        /#                          \n                              /#                                        / (*                        \n                             %                                              //                      \n                                                                               /                    \n                                                                                                    \n                                                                                                    \n                                                                                                    \n"
@@ -25,7 +25,7 @@
       "classifier": "I",
       "dateOfBirth": "Unknown",
       "nationality": "N/A",
-      "status": "Alive",
+      
       "lastKnownAddress": "1 Carcosa Way",
       "notes": ""
     },
@@ -34,7 +34,7 @@
       "forename": "Dennis",
       "classifier": "I",
       "dateOfBirth": "1972-07-12",
-      "status": "Alive",
+      
       "lastKnownAddress": "1923 Bridge St, NY, NY",
       "notes": ""
     },
@@ -44,7 +44,7 @@
       "classifier": "NYPD",
       "dateOfBirth": "1951-10-23",
       "warning": "Active Concealed Carry Permit",
-      "status": "Alive",
+      
       "lastKnownAddress": "40319 W 34, Oakfield, NY, NY",
       "notes": "Law Enforcement Officer. NYPD Detective, 13th Precinct"
     },
@@ -54,7 +54,7 @@
       "classifier": "RR",
       "dateOfBirth": "1920-02-11",
       "dateOfDeath": "1994-07-05",
-      "status": "Deceased",
+      
       "lastKnownAddress": "789 Pine Rd, Gotham",
       "notes": "Former agent. Retired in 1984. Cause of death: unknown."
     },
@@ -63,7 +63,7 @@
       "forename": "Alive",
       "classifier": "CIA-CC",
       "dateOfBirth": "1990-12-01",
-      "status": "Alive",
+      
       "lastKnownAddress": "321 Birch St, Star City",
       "notes": "Undercover operative. Last seen in Eastern Europe.\n\n<Access to this record has been logged>"
     },
@@ -73,7 +73,7 @@
       "classifier": "FBI",
       "dateOfBirth": "1948-03-12",
       "dateOfDeath": "1993-08-22",
-      "status": "Deceased",
+      
       "lastKnownAddress": "201 Hoover St, Washington DC",
       "notes": "Former FBI agent involved in counterintelligence operations. Cause of death: classified."
     },
@@ -82,9 +82,9 @@
       "forename": "Helen",
       "classifier": "FBI",
       "dateOfBirth": "1955-07-04",
-      "status": "Alive",
+      
       "lastKnownAddress": "102 Federal Plaza, New York City",
-      "notes": "Senior analyst for the Federal Bureau of Investigation. Specialized in organized crime."
+      "notes": "Senior analyst for the Federal Bureau of Investigation, Organized Crime division"
     },
     {
       "surname": "Moseby",
@@ -92,16 +92,17 @@
       "classifier": "I, D, V",
       "dateOfBirth": "1960-09-19",
       "dateOfDeath": "1991-06-15",
-      "status": "Deceased",
+      
       "lastKnownAddress": "305 Elm St, Chicago",
-      "notes": "Victim of a gang-related homicide. Case remains unsolved."
+      "notes": "Victim of a gang-related homicide",
+      "related": ["Case 452-4325-7257"]
     },
     {
       "surname": "Moseby",
       "forename": "Sarah",
       "classifier": "DG",
       "dateOfBirth": "1972-11-29",
-      "status": "Alive",
+      
       "lastKnownAddress": "220 Capitol Hill, Washington DC",
       "notes": "Works for an undisclosed federal agency. Role unknown.\n\n<Access to this record has been logged>"
     },
@@ -111,7 +112,7 @@
       "classifier": "I, V, D",
       "dateOfBirth": "1950-05-17",
       "dateOfDeath": "1989-12-03",
-      "status": "Deceased",
+      
       "lastKnownAddress": "147 Oak St, Los Angeles",
       "notes": "Victim of a high-profile criminal case. Incident details classified."
     },
@@ -121,7 +122,7 @@
       "classifier": "I, V",
       "dateOfBirth": "1950-05-17",
       "dateOfDeath": "1989-12-03",
-      "status": "Deceased",
+      
       "lastKnownAddress": "147 Oak St, Los Angeles",
       "notes": "Victim of a high-profile criminal case. Incident details classified."
     },
@@ -132,7 +133,7 @@
       "dateOfBirth": "1905-04-12",
       "status": "Unknown",
       "lastKnownAddress": "Unknown",
-      "notes": "<Classified record field. Contact supervisor for further information>\n\n<Access to this record has been logged>"
+      "notes": "{red-bg}<Classified record field. Contact supervisor for further information>{/}\n\n<Access to this record has been logged>"
     },
     {
       "surname": "Wright",
@@ -141,14 +142,15 @@
       "dateOfBirth": "1950-05-17",
       "status": "Missing PD",
       "lastKnownAddress": "147 Oak St, Los Angeles",
-      "notes": "Active missing persons. Reported missing 1995-03-17 by mother <WRIGHT, JANE>.\n\nLinked Record: <Case: 126-812-34>"
+      "notes": "Active missing persons. Reported missing 1995-03-17 by mother <WRIGHT, JANE>",
+      "related": ["Case: 126-812-34"]
     },
     {
       "surname": "Wright",
       "forename": "Steven",
       "classifier": "I",
       "dateOfBirth": "1932-05-01",
-      "status": "Alive",
+      
       "lastKnownAddress": "123 Main Street, NY, NY",
       "notes": "Pending appearance at NY County Court on IRS complaint 1994-12-01/349283-B"
     },
@@ -157,9 +159,10 @@
       "forename": "Ian",
       "classifier": "I, V",
       "dateOfBirth": "1982-01-02",
-      "status": "Alive",
+      
       "lastKnownAddress": "72 Arneau Av, Rochester, NY",
-      "notes": "Minor. Parental kidnap victim.\n\nLinked Record: <WRIGHT, IAN>, <VICKERS, SAMANTHA>, <Case 1923-542-5125>"
+      "notes": "Minor. Parental kidnap victim.",
+      "related": ["WRIGHT, IAN", "VICKERS, SAMANTHA","Case 1923-542-5125"]
     },
     {
       "surname": "Wright",
@@ -168,7 +171,8 @@
       "dateOfBirth": "1950-05-17",
       "status": "Custody",
       "lastKnownAddress": "3498 W 43 St, NY, NY",
-      "notes": "Arrested 1993-01-30 for Parental Kidnapping son.\n\nLinked Record: <Case 1923-542-5125>"
+      "notes": "Arrested 1993-01-30 for Parental Kidnapping son.",
+      "related": ["Case 1923-542-5125"]
     },
     {
       "surname": "Wright",
@@ -176,7 +180,7 @@
       "classifier": "I",
       "dateOfBirth": "1892-09-30",
       "dateOfDeath": "1990-06-23",
-      "status": "Deceased",
+      
       "lastKnownAddress": "329 E 120 St, NY, NY",
       "notes": "Natural Causes"
     },
@@ -185,7 +189,7 @@
       "forename": "Jennifer",
       "classifier": "LEO, FBI",
       "dateOfBirth": "1979-12-22",
-      "status": "Alive",
+      
       "lastKnownAddress": "1500 Hoover St, Washington DC",
       "notes": "Law Enforcement Officer"
     },
@@ -197,17 +201,20 @@
       "dateOfBirth": "1969-01-22",
       "status": "Missing",
       "lastKnownAddress": "210 E 32 St, NY, NY, 10016",
-      "notes": "Active Missing Persons Case, FBI Jurisdiction. Last Seen 1995-06-01.\nMugging Victim (1994-04-23; case closed no arrests).\nCard theft victim (see missing persons case).\nReported missing 1995-06-04 by father (WRIGHT, THOMAS). NYPD FBI handover Aug 95.\n\nLinked Record: <Case: 349-812-34>, <WRIGHT, THOMAS>\n\n-- NYPD DATABASE LINK :: REPORT --\n\nMISSING PERSON:\nAbigail Wright [Caucasian woman, 26] reported missing on 4\nJUNE 1995 by her father, Thomas Wright of the Nassau County\nPolice Department. NYPD suspects she may have been missing even\nearlier, best guess 1 JUNE 1995.\n\nBACKGROUND:\nAbigail Wright moved to Manhattan in 1988 and has been\nworking as an artist and painter. She has a distinguished\nacademic record. Her first art show in New York was held last\nyear (1994) at the Mercury, a trendy art gallery on Franklin\nStreet. There she sold fifteen (15) pieces, and has been living\noff of the proceeds from those since.\n\nNYPD INVESTIGATION:\nPolice entered Wright’s apartment at the Macallister\nBuilding on East 32nd Street in Kips Bay on 4 JUNE 1995, where\nthey encountered a baffling tableau: every available surface of\nthe residence was covered in junk, affixed to the walls [and in\nsome places even the ceiling] with either a fast-setting,\nfull-bond epoxy, a common pasting glue, and/or adhesive tape. In\nsome cases all three methods were used. Only the floor remained\nclear.\nItems cataloged inside the residence include: sets of\ndentures and partial dentures, a 1940s wheelchair in excellent\ncondition, artificial limbs both modern and antique, dozens of\nshirts, shoes, pants, and various other clothing articles\nbelonging to men as well as women, and representing a large\nvariety of different sizes, a collection of briefcases, various\nradio equipment including several vintage radios, all manner of\njewelry, much of it quite valuable, and a small library’s worth\nof loose papers in a variety of languages, most notably English,\nSpanish, and Mandarin, but spanning such variety as to also\ncontain a college economics report in Farsi.\nThere were no signs of a struggle or any kind of violence.\nNeighbors did not report witnessing anything unusual. NYPD\ndetectives have exhausted all of their leads in this case.\n\nOn 4 AUGUST 1995 Abigail Wright’s credit card was used in Patience, MD to purchase a pack of Old Gold cigarettes, at which point the case was referred to the FBI as a possible interstate kidnapping.\n\nFBI agents arrived at building 6 Aug 1995, taking over case from Det. Graham Giuradanda\n"
+      "notes": "Active Missing Persons Case, FBI Jurisdiction. Last Seen 1995-06-01.\nMugging Victim (1994-04-23; case closed no arrests).\nCard theft victim (see missing persons case).\nReported missing 1995-06-04 by father (WRIGHT, THOMAS). NYPD FBI handover Aug 95.\n\n-- NYPD DATABASE LINK :: REPORT --\n\nMISSING PERSON:\nAbigail Wright [Caucasian woman, 26] reported missing on 4\nJUNE 1995 by her father, Thomas Wright of the Nassau County\nPolice Department. NYPD suspects she may have been missing even\nearlier, best guess 1 JUNE 1995.\n\nBACKGROUND:\nAbigail Wright moved to Manhattan in 1988 and has been\nworking as an artist and painter. She has a distinguished\nacademic record. Her first art show in New York was held last\nyear (1994) at the Mercury, a trendy art gallery on Franklin\nStreet. There she sold fifteen (15) pieces, and has been living\noff of the proceeds from those since.\n\nNYPD INVESTIGATION:\nPolice entered Wright’s apartment at the Macallister\nBuilding on East 32nd Street in Kips Bay on 4 JUNE 1995, where\nthey encountered a baffling tableau: every available surface of\nthe residence was covered in junk, affixed to the walls [and in\nsome places even the ceiling] with either a fast-setting,\nfull-bond epoxy, a common pasting glue, and/or adhesive tape. In\nsome cases all three methods were used. Only the floor remained\nclear.\nItems cataloged inside the residence include: sets of\ndentures and partial dentures, a 1940s wheelchair in excellent\ncondition, artificial limbs both modern and antique, dozens of\nshirts, shoes, pants, and various other clothing articles\nbelonging to men as well as women, and representing a large\nvariety of different sizes, a collection of briefcases, various\nradio equipment including several vintage radios, all manner of\njewelry, much of it quite valuable, and a small library’s worth\nof loose papers in a variety of languages, most notably English,\nSpanish, and Mandarin, but spanning such variety as to also\ncontain a college economics report in Farsi.\nThere were no signs of a struggle or any kind of violence.\nNeighbors did not report witnessing anything unusual. NYPD\ndetectives have exhausted all of their leads in this case.\n\nOn 4 AUGUST 1995 Abigail Wright’s credit card was used in Patience, MD to purchase a pack of Old Gold cigarettes, at which point the case was referred to the FBI as a possible interstate kidnapping.\n\nFBI agents arrived at building 6 Aug 1995, taking over case from Det. Graham Giuradanda\n",
+      "related": ["Case: 349-812-34", "WRIGHT, THOMAS" ]
     },
     {
       "surname": "Wright",
       "forename": "Thomas",
       "classifier": "LEO",
       "dateOfBirth": "1945-07-20",
-      "status": "Alive",
+      "suppressLegacyWarning": true,
+      
       "lastKnownAddress": "1079 Knickerbocker Ave, NY, NY",
       "warning": "Active Concealed Carry Permit",
-      "notes": "Law Enforcement Officer\n\nLinked Record: <WRIGHT, ELLEN>, <WRIGHT, ABIGAIL>"
+      "notes": "Law Enforcement Officer",
+      "related": ["WRIGHT, ELLEN", "WRIGHT, ABIGAIL", "Concealed Carry Permit 30249234"]
     },
     {
       "surname": "Wright",
@@ -215,9 +222,10 @@
       "classifier": "I",
       "dateOfBirth": "1943-02-20",
       "dateOfDeath": "1988-05-06",
-      "status": "Deceased",
+      
       "lastKnownAddress": "147 Oak St, New York, NY",
-      "notes": "Linked Record: <WRIGHT, ABIGAIL>, <WRIGHT, THOMAS>"
+      "notes": "",
+      "related": ["WRIGHT, THOMAS", "WRIGHT, ABIGAIL"]
     },
     {
       "surname": "Daribondi",
@@ -244,9 +252,31 @@
       "classifier": "I",
       "dateOfBirth": "1886-05-28",
       "dateOfDeath": "1952-04-30",
-      "status": "Deceased",
+      
       "lastKnownAddress": "210 E 32 St, NY, NY, 10016",
       "notes": "Natural Causes"
+    },
+    {
+      "surname": "Lundine",
+      "forename": "House",
+      "classifier": "BUILDING",
+      "dateOfBirth": "N/A",
+      "status": "Structure",
+      "lastKnownAddress": "210 E 32 St, NY, NY, 10016",
+      "related": [
+        "BUILDING PERMIT: LUNDINE HOUSE, 1925",
+        "PROPERTY SALE: STAR CORPORATION, 1952",
+        "STRUCTURE: MACALLISTER BUILDING. 210 E 32 St, NY, NY, 10016"
+      ]
+    },
+    {
+      "surname": "MacAllister",
+      "forename": "Building",
+      "classifier": "BUILDING",
+      "dateOfBirth": "N/A",
+      "status": "Structure",
+      "lastKnownAddress": "210 E 32 St, NY, NY, 10016",
+      "related": ["BUILDING PERMIT: VARIATION OF EXISTING STRUCTURE, 1953","PROPERTY SALE: ARTLIFE CORPORATION, 1967","COMPANY REGISTER: ARTLIFE CORPORATION"]
     },
     {
       "surname": "Lundine",
@@ -254,9 +284,29 @@
       "classifier": "I",
       "dateOfBirth": "1925-05-01",
       "dateOfDeath": "1950-08-30",
-      "status": "Deceased",
+      
       "lastKnownAddress": "210 E 32 St, NY, NY, 10016",
       "notes": "Suicide"
+    },
+    {
+      "surname": "Lundine",
+      "forename": "Vincent",
+      "classifier": "I",
+      "dateOfBirth": "1973-12-07",
+      
+      "lastKnownAddress": "470 W 4 St, NY, NY",
+      "notes": "Wanted in connection with a series of break-ins in the Harlem area",
+      "related": ["Case 423034-52345-234"]
+    },
+    {
+      "surname": "Lundine",
+      "forename": "Charles",
+      "classifier": "I",
+      "dateOfBirth": "1962-01-22",
+      "status": "Alice",
+      "lastKnownAddress": "7423 Locksley Ave, NY, NY",
+      "notes": "Disqualified from driving, DUI 1995-05-01",
+      "related": ["Case 45423-523-745-2"]
     },
     {
       "surname": "Fitzroy",
@@ -264,7 +314,7 @@
       "classifier": "I",
       "dateOfBirth": "1924-05-21",
       "dateOfDeath": "1950-08-30",
-      "status": "Deceased",
+      
       "lastKnownAddress": "Bellefleur House, Oak Park, Chicago, IL",
       "notes": "Missing presumed dead"
     },
@@ -273,7 +323,7 @@
       "forename": "Michelle",
       "classifier": "I",
       "dateOfBirth": "1967-02-13",
-      "status": "Alive",
+      
       "lastKnownAddress": "210 E 32 St, NY, NY, 10016",
       "notes": ""
     },
@@ -282,7 +332,7 @@
       "forename": "Louis",
       "classifier": "I",
       "dateOfBirth": "1968-01-08",
-      "status": "Alive",
+      
       "lastKnownAddress": "210 E 32 St, NY, NY, 10016",
       "notes": ""
     },
@@ -291,16 +341,17 @@
       "forename": "Mike",
       "classifier": "I",
       "dateOfBirth": "1934-11-16",
-      "status": "Alive",
+      
       "lastKnownAddress": "1245 E 97 St, NY, NY",
-      "notes": "Arrested for DUI 1992-07-34\n\nLinked Record: <case 34-523-5262-3287>"
+      "notes": "Arrested for DUI 1992-07-34",
+      "related": ["Case 34-523-5262-3287"]
     },
     {
       "surname": "Carun",
       "forename": "Roger",
       "classifier": "I",
       "dateOfBirth": "1952-06-23",
-      "status": "Alive",
+      
       "lastKnownAddress": "210 E 32 St, NY, NY, 10016",
       "notes": ""
     },
@@ -309,7 +360,7 @@
       "forename": "Roger",
       "classifier": "I",
       "dateOfBirth": "1952-06-23",
-      "status": "Alive",
+      
       "lastKnownAddress": "210 E 32 St, NY, NY, 10016",
       "notes": ""
     },
@@ -318,7 +369,7 @@
       "forename": "Carmen",
       "classifier": "I",
       "dateOfBirth": "1955-03-17",
-      "status": "Alive",
+      
       "lastKnownAddress": "Unknown",
       "notes": ""
     },
@@ -327,7 +378,7 @@
       "forename": "Thomas",
       "classifier": "I",
       "dateOfBirth": "1969-04-03",
-      "status": "Alive",
+      
       "lastKnownAddress": "210 E 32 St, NY, NY, 10016",
       "notes": ""
     },
@@ -336,7 +387,7 @@
       "forename": "Elaine",
       "classifier": "I",
       "dateOfBirth": "1941",
-      "status": "Alive",
+      
       "lastKnownAddress": "17 Bridge Street, NY, NY",
       "notes": ""
     },
@@ -345,7 +396,7 @@
       "forename": "Arthur",
       "classifier": "I",
       "dateOfBirth": "1939",
-      "status": "Alive",
+      
       "lastKnownAddress": "17 Bridge Street, NY, NY",
       "notes": ""
     },
@@ -354,7 +405,7 @@
       "forename": "Cynthia",
       "classifier": "I",
       "dateOfBirth": "1948-04-12",
-      "status": "Alive",
+      
       "lastKnownAddress": "23rd St and 3rd Ave, NY, NY",
       "notes": ""
     },
@@ -364,7 +415,7 @@
       "nationality": "United Kingdom",
       "classifier": "FBI /DG",
       "dateOfBirth": "1960-04-26",
-      "status": "Alive",
+      
       "lastKnownAddress": "4070 81 St W Oakhurst NY, NY",
       "notes": "Forensic Anthropologist with FBI\n\n<Access to this record has been logged>"
     },
@@ -374,7 +425,7 @@
       "warning": "Record corruption detected; please consult IT",
       "classifier": "FBI /DG",
       "dateOfBirth": "1975-10-08",
-      "status": "Alive",
+      
       "lastKnownAddress": "7 Wood Rd, Hiwatha Township, MI",
       "notes": "\n\n<Access to this record has been logged>"
     },
@@ -384,7 +435,7 @@
       "warning": "Record corruption detected; please consult IT",
       "classifier": "FBI /DG",
       "dateOfBirth": "1975-11-26",
-      "status": "Alive",
+      
       "lastKnownAddress": "1419 DORADO BEACH DR, LITTLE ROCK, AR",
       "notes": "\n\n<Access to this record has been logged>"
     },
@@ -394,7 +445,7 @@
       "warning": "Record corruption detected; please consult IT",
       "classifier": "FBI /DG",
       "dateOfBirth": "1971-06-30",
-      "status": "Alive",
+      
       "lastKnownAddress": "3600 Princeton Ave, Dallas, TX",
       "notes": "\n\n<Access to this record has been logged>"
     },
@@ -403,7 +454,7 @@
       "forename": "Enrico",
       "classifier": "I, S",
       "dateOfBirth": "1975-04-20",
-      "status": "Alive",
+      
       "warning": "investigative journalist, control information release",
       "lastKnownAddress": "242 W 12 St, NY, NY",
       "notes": ""
@@ -413,7 +464,7 @@
       "forename": "Jordan",
       "classifier": "DoS /DG",
       "dateOfBirth": "1975-10-08",
-      "status": "Alive",
+      
       "lastKnownAddress": "723 West State Dr, Hiwatha Township, MI",
       "notes": "Department of State employee. Foreign Service Officer. On leave pending performance management plan.\n\n<Access to this record has been logged>"
     },
@@ -422,7 +473,7 @@
       "forename": "Amelevia",
       "classifier": "LEO /DG",
       "dateOfBirth": "1975-11-26",
-      "status": "Alive",
+      
       "lastKnownAddress": "990 Camino Bvd, Little Rock, AR",
       "notes": "\n\n<Access to this record has been logged>"
     },
@@ -431,7 +482,7 @@
       "forename": "Justin",
       "classifier": "DoJ /DG",
       "dateOfBirth": "1971-06-30",
-      "status": "Alive",
+      
       "lastKnownAddress": "126 Graceland Ave, Dallas, TX",
       "notes": "United States Marshall. Performance management plan.\n\n<Access to this record has been logged>"
     },
@@ -440,7 +491,7 @@
       "forename": "Darlene",
       "classifier": "I",
       "dateOfBirth": "1934-01-15",
-      "status": "Alive",
+      
       "lastKnownAddress": "688 David Overpass Suite 298, Bushberg, AL 59705"
     },
     {
@@ -448,7 +499,7 @@
       "forename": "Jessica",
       "classifier": "I",
       "dateOfBirth": "1962-02-01",
-      "status": "Deceased",
+      
       "lastKnownAddress": "9323 Williams Greens, New Terrimouth, WA 02952",
       "dateOfDeath": "1953-03-14"
     },
@@ -457,7 +508,7 @@
       "forename": "David",
       "classifier": "I",
       "dateOfBirth": "1929-07-11",
-      "status": "Alive",
+      
       "lastKnownAddress": "854 Tammy Underpass Apt. 512, South Nicole, NC 78477"
     },
     {
@@ -465,7 +516,7 @@
       "forename": "Joseph",
       "classifier": "I",
       "dateOfBirth": "1986-07-29",
-      "status": "Deceased",
+      
       "lastKnownAddress": "4885 Sabrina Track, West Dustinburgh, AK 02539",
       "dateOfDeath": "1990-08-13"
     },
@@ -474,7 +525,7 @@
       "forename": "Johnathan",
       "classifier": "I",
       "dateOfBirth": "1965-10-07",
-      "status": "Alive",
+      
       "lastKnownAddress": "3744 Kelly Gardens, East Kaitlyn, SC 61250"
     },
     {
@@ -482,7 +533,7 @@
       "forename": "John",
       "classifier": "I",
       "dateOfBirth": "1978-05-11",
-      "status": "Alive",
+      
       "lastKnownAddress": "92518 Torres Wells, New Peterchester, RI 18870"
     },
     {
@@ -490,7 +541,7 @@
       "forename": "Veronica",
       "classifier": "I",
       "dateOfBirth": "1988-08-18",
-      "status": "Deceased",
+      
       "lastKnownAddress": "USNV Miller, FPO AE 66400",
       "dateOfDeath": "1956-05-30"
     },
@@ -499,7 +550,7 @@
       "forename": "Robin",
       "classifier": "I",
       "dateOfBirth": "1960-06-26",
-      "status": "Deceased",
+      
       "lastKnownAddress": "PSC 3702, Box 5502, APO AP 25133",
       "dateOfDeath": "1978-08-19"
     },
@@ -508,7 +559,7 @@
       "forename": "Tanya",
       "classifier": "I",
       "dateOfBirth": "1938-05-27",
-      "status": "Deceased",
+      
       "lastKnownAddress": "624 Miller Shoal Apt. 184, Kristyport, NV 48215",
       "dateOfDeath": "1981-08-08"
     },
@@ -517,7 +568,7 @@
       "forename": "Rhonda",
       "classifier": "I",
       "dateOfBirth": "1981-07-12",
-      "status": "Alive",
+      
       "lastKnownAddress": "576 Elizabeth Turnpike, West Bruceton, NJ 31500"
     },
     {
@@ -525,7 +576,7 @@
       "forename": "Michael",
       "classifier": "I",
       "dateOfBirth": "1940-06-02",
-      "status": "Deceased",
+      
       "lastKnownAddress": "1257 Hart Views, North Shawn, PA 49907",
       "dateOfDeath": "1987-04-10"
     },
@@ -534,7 +585,7 @@
       "forename": "Jessica",
       "classifier": "I",
       "dateOfBirth": "1966-01-07",
-      "status": "Deceased",
+      
       "lastKnownAddress": "PSC 4135, Box 3784, APO AP 18310",
       "dateOfDeath": "1927-05-09"
     },
@@ -543,7 +594,7 @@
       "forename": "Ryan",
       "classifier": "I",
       "dateOfBirth": "1975-02-15",
-      "status": "Alive",
+      
       "lastKnownAddress": "8693 Martin Lakes, Jamesside, OH 47683"
     },
     {
@@ -551,7 +602,7 @@
       "forename": "Holly",
       "classifier": "I",
       "dateOfBirth": "1935-03-19",
-      "status": "Alive",
+      
       "lastKnownAddress": "686 Parsons Curve, Margaretville, NE 19491"
     },
     {
@@ -559,7 +610,7 @@
       "forename": "Frank",
       "classifier": "I",
       "dateOfBirth": "1939-10-09",
-      "status": "Alive",
+      
       "lastKnownAddress": "10459 Nicholas Unions, South Jessica, MI 65441"
     },
     {
@@ -567,7 +618,7 @@
       "forename": "Christian",
       "classifier": "I",
       "dateOfBirth": "1949-03-12",
-      "status": "Alive",
+      
       "lastKnownAddress": "5327 Newbrook Rd, Christian, AL 23472"
     },
     {
@@ -575,7 +626,7 @@
       "forename": "Maria",
       "classifier": "I",
       "dateOfBirth": "1951-06-23",
-      "status": "Alive",
+      
       "lastKnownAddress": "PSC 5655, Box 9386, APO AP 00864"
     },
     {
@@ -583,7 +634,7 @@
       "forename": "Christopher",
       "classifier": "I",
       "dateOfBirth": "1974-09-26",
-      "status": "Alive",
+      
       "lastKnownAddress": "4156 Andres Valley Apt. 600, South Kellyberg, MO 28096"
     },
     {
@@ -591,7 +642,7 @@
       "forename": "Michael",
       "classifier": "I",
       "dateOfBirth": "1926-04-21",
-      "status": "Alive",
+      
       "lastKnownAddress": "635 Cruz Hill Suite 164, New Catherine, UT 08777"
     },
     {
@@ -599,7 +650,7 @@
       "forename": "Tommy",
       "classifier": "I",
       "dateOfBirth": "1965-09-24",
-      "status": "Alive",
+      
       "lastKnownAddress": "669 Cox Unions Apt. 880, Jamesmouth, HI 95364"
     },
     {
@@ -607,7 +658,7 @@
       "forename": "Mary",
       "classifier": "I",
       "dateOfBirth": "1939-10-22",
-      "status": "Deceased",
+      
       "lastKnownAddress": "708 Alexandra Garden Suite 385, Pamelashire, VA 70165",
       "dateOfDeath": "1964-03-13"
     },
@@ -616,7 +667,7 @@
       "forename": "Brandon",
       "classifier": "I",
       "dateOfBirth": "1971-01-14",
-      "status": "Alive",
+      
       "lastKnownAddress": "934 Lisa Glens Suite 216, Gonzalezland, MI 18815"
     },
     {
@@ -624,7 +675,7 @@
       "forename": "Jeffrey",
       "classifier": "I",
       "dateOfBirth": "1954-02-24",
-      "status": "Deceased",
+      
       "lastKnownAddress": "133 Hamilton Forest Apt. 007, Rodriguezfort, ID 19611",
       "dateOfDeath": "1939-11-23"
     },
@@ -633,7 +684,7 @@
       "forename": "Amy",
       "classifier": "I",
       "dateOfBirth": "1961-12-04",
-      "status": "Alive",
+      
       "lastKnownAddress": "4487 Berrygrove Point, East Kristenfort, MO 87232"
     },
     {
@@ -641,7 +692,7 @@
       "forename": "James",
       "classifier": "I",
       "dateOfBirth": "1973-02-19",
-      "status": "Alive",
+      
       "lastKnownAddress": "2989 Mcclain Roads Suite 705, East Ashleymouth, KY 62076"
     },
     {
@@ -649,7 +700,7 @@
       "forename": "Joseph",
       "classifier": "I",
       "dateOfBirth": "1934-10-22",
-      "status": "Deceased",
+      
       "lastKnownAddress": "476 Lee Flat, Jacobton, MO 83728",
       "dateOfDeath": "1983-08-14"
     },
@@ -658,7 +709,7 @@
       "forename": "Virginia",
       "classifier": "I",
       "dateOfBirth": "1960-06-05",
-      "status": "Alive",
+      
       "lastKnownAddress": "97055 Wheeler Underpass Apt. 379, Forbesfort, KY 25445"
     },
     {
@@ -666,7 +717,7 @@
       "forename": "Michael",
       "classifier": "I",
       "dateOfBirth": "1976-12-02",
-      "status": "Alive",
+      
       "lastKnownAddress": "947 Deleon Spring, Hollyview, IA 06504"
     },
     {
@@ -674,7 +725,7 @@
       "forename": "Tyler",
       "classifier": "I",
       "dateOfBirth": "1951-12-08",
-      "status": "Alive",
+      
       "lastKnownAddress": "53774 Willie Burg Apt. 146, Brandonhaven, MS 61606"
     },
     {
@@ -682,7 +733,7 @@
       "forename": "Charles",
       "classifier": "I",
       "dateOfBirth": "1980-09-30",
-      "status": "Alive",
+      
       "lastKnownAddress": "USCGC Bryant, FPO AP 27551"
     },
     {
@@ -690,7 +741,7 @@
       "forename": "Ivan",
       "classifier": "I",
       "dateOfBirth": "1929-02-27",
-      "status": "Alive",
+      
       "lastKnownAddress": "2481 Chapman Village, Jasonshire, AL 03356"
     },
     {
@@ -698,7 +749,7 @@
       "forename": "Kathryn",
       "classifier": "I",
       "dateOfBirth": "1934-12-09",
-      "status": "Alive",
+      
       "lastKnownAddress": "USNS Peters, FPO AP 55924"
     },
     {
@@ -707,7 +758,7 @@
       "classifier": "I",
       "dateOfBirth": "1950-05-17",
       "dateOfDeath": "1989-12-03",
-      "status": "Deceased",
+      
       "lastKnownAddress": "147 Oak St, Los Angeles",
       "notes": "Sentenced to life in prison as of 1976 for Murder 1."
     },
@@ -716,210 +767,230 @@
       "forename": "Peter",
       "classifier": "I",
       "dateOfBirth": "1916-01-01",
-      "status": "Deceased",
+      
       "lastKnownAddress": "Unknown",
       "dateOfDeath": "1921-01-01",
-      "notes": "Homicide Victim"
+      "notes": "Homicide Victim",
+      "related": ["Case 452452-251-521", "DARIBONDI, ASA"]
     },
     {
       "surname": "Greenberg",
       "forename": "Dorothy",
       "classifier": "I",
       "dateOfBirth": "1916-01-01",
-      "status": "Deceased",
+      
       "lastKnownAddress": "Unknown",
       "dateOfDeath": "1921-01-01",
-      "notes": "Homicide Victim"
+      "notes": "Homicide Victim",
+      "related": ["Case 452452-251-521", "DARIBONDI, ASA"]
     },
     {
       "surname": "Ruggiero",
       "forename": "Maria",
       "classifier": "I",
       "dateOfBirth": "1917-01-01",
-      "status": "Deceased",
+      
       "lastKnownAddress": "Unknown",
       "dateOfDeath": "1922-01-01",
-      "notes": "Homicide Victim"
+      "notes": "Homicide Victim",
+      "related": ["Case 452452-251-521", "DARIBONDI, ASA"]
     },
     {
       "surname": "White",
       "forename": "Albert",
       "classifier": "I",
       "dateOfBirth": "1918-01-01",
-      "status": "Deceased",
+      
       "lastKnownAddress": "Unknown",
       "dateOfDeath": "1923-01-01",
-      "notes": "Homicide Victim"
+      "notes": "Homicide Victim",
+      "related": ["Case 452452-251-521", "DARIBONDI, ASA"]
     },
     {
       "surname": "Jacobs",
       "forename": "Betty",
       "classifier": "I",
       "dateOfBirth": "1919-01-01",
-      "status": "Deceased",
+      
       "lastKnownAddress": "Unknown",
       "dateOfDeath": "1924-01-01",
-      "notes": "Homicide Victim"
+      "notes": "Homicide Victim",
+      "related": ["Case 452452-251-521", "DARIBONDI, ASA"]
     },
     {
       "surname": "Barnett",
       "forename": "Lester",
       "classifier": "I",
       "dateOfBirth": "1920-01-01",
-      "status": "Deceased",
+      
       "lastKnownAddress": "Unknown",
       "dateOfDeath": "1925-01-01",
-      "notes": "Homicide Victim"
+      "notes": "Homicide Victim",
+      "related": ["Case 452452-251-521", "DARIBONDI, ASA"]
     },
     {
       "surname": "Baldwin",
       "forename": "Gary",
       "classifier": "I",
       "dateOfBirth": "1922-01-01",
-      "status": "Deceased",
+      
       "lastKnownAddress": "Unknown",
       "dateOfDeath": "1927-01-01",
-      "notes": "Homicide Victim"
+      "notes": "Homicide Victim",
+      "related": ["Case 452452-251-521", "DARIBONDI, ASA"]
     },
     {
       "surname": "Klein",
       "forename": "Bernard",
       "classifier": "I",
       "dateOfBirth": "1923-01-01",
-      "status": "Deceased",
+      
       "lastKnownAddress": "Unknown",
       "dateOfDeath": "1928-01-01",
-      "notes": "Homicide Victim"
+      "notes": "Homicide Victim",
+      "related": ["Case 452452-251-521", "DARIBONDI, ASA"]
     },
     {
       "surname": "Townsend",
       "forename": "Shirley",
       "classifier": "I",
       "dateOfBirth": "1925-01-01",
-      "status": "Deceased",
+      
       "lastKnownAddress": "Unknown",
       "dateOfDeath": "1930-01-01",
-      "notes": "Homicide Victim"
+      "notes": "Homicide Victim",
+      "related": ["Case 452452-251-521", "DARIBONDI, ASA"]
     },
     {
       "surname": "Conklin",
       "forename": "Thelma",
       "classifier": "I",
       "dateOfBirth": "1927-01-01",
-      "status": "Deceased",
+      
       "lastKnownAddress": "Unknown",
       "dateOfDeath": "1932-01-01",
-      "notes": "Homicide Victim"
+      "notes": "Homicide Victim",
+      "related": ["Case 452452-251-521", "DARIBONDI, ASA"]
     },
     {
       "surname": "Padilla",
       "forename": "Carlos",
       "classifier": "I",
       "dateOfBirth": "1929-01-01",
-      "status": "Deceased",
+      
       "lastKnownAddress": "Unknown",
       "dateOfDeath": "1934-01-01",
-      "notes": "Homicide Victim"
+      "notes": "Homicide Victim",
+      "related": ["Case 452452-251-521", "DARIBONDI, ASA"]
     },
     {
       "surname": "DeLuca",
       "forename": "Nancy",
       "classifier": "I",
       "dateOfBirth": "1930-01-01",
-      "status": "Deceased",
+      
       "lastKnownAddress": "Unknown",
       "dateOfDeath": "1935-01-01",
-      "notes": "Homicide Victim"
+      "notes": "Homicide Victim",
+      "related": ["Case 452452-251-521", "DARIBONDI, ASA"]
     },
     {
       "surname": "Armstrong",
       "forename": "Kenneth",
       "classifier": "I",
       "dateOfBirth": "1931-01-01",
-      "status": "Deceased",
+      
       "lastKnownAddress": "Unknown",
       "dateOfDeath": "1936-01-01",
-      "notes": "Homicide Victim"
+      "notes": "Homicide Victim",
+      "related": ["Case 452452-251-521", "DARIBONDI, ASA"]
     },
     {
       "surname": "Amelieva",
       "forename": "Ivan",
       "classifier": "I",
       "dateOfBirth": "1933-01-01",
-      "status": "Deceased",
+      
       "lastKnownAddress": "Unknown",
       "dateOfDeath": "1938-01-01",
-      "notes": "Homicide Victim"
+      "notes": "Homicide Victim",
+      "related": ["Case 452452-251-521", "DARIBONDI, ASA"]
     },
     {
       "surname": "Hodge",
       "forename": "Frances",
       "classifier": "I",
       "dateOfBirth": "1935-01-01",
-      "status": "Deceased",
+      
       "lastKnownAddress": "Unknown",
       "dateOfDeath": "1940-01-01",
-      "notes": "Homicide Victim"
+      "notes": "Homicide Victim",
+      "related": ["Case 452452-251-521", "DARIBONDI, ASA"]
     },
     {
       "surname": "McNamara",
       "forename": "Roy",
       "classifier": "I",
       "dateOfBirth": "1937-01-01",
-      "status": "Deceased",
+      
       "lastKnownAddress": "Unknown",
       "dateOfDeath": "1942-01-01",
-      "notes": "Homicide Victim"
+      "notes": "Homicide Victim",
+      "related": ["Case 452452-251-521", "DARIBONDI, ASA"]
     },
     {
       "surname": "Ng",
       "forename": "Helen",
       "classifier": "I",
       "dateOfBirth": "1939-01-01",
-      "status": "Deceased",
+      
       "lastKnownAddress": "Unknown",
       "dateOfDeath": "1944-01-01",
-      "notes": "Homicide Victim"
+      "notes": "Homicide Victim",
+      "related": ["Case 452452-251-521", "DARIBONDI, ASA"]
     },
     {
       "surname": "Lechance",
       "forename": "Damien",
       "classifier": "I",
       "dateOfBirth": "1941-01-01",
-      "status": "Deceased",
+      
       "lastKnownAddress": "143 W Bridge, NY, NY",
       "dateOfDeath": "1946-01-01",
-      "notes": "Homicide Victim"
+      "notes": "Homicide Victim",
+      "related": ["Case 452452-251-521", "DARIBONDI, ASA"]
     },
     {
       "surname": "Sauer",
       "forename": "Isabelle",
       "classifier": "I",
       "dateOfBirth": "1943-01-01",
-      "status": "Deceased",
+      
       "lastKnownAddress": "Unknown",
       "dateOfDeath": "1948-01-01",
-      "notes": "Homicide Victim"
+      "notes": "Homicide Victim",
+      "related": ["Case 452452-251-521", "DARIBONDI, ASA"]
     },
     {
       "surname": "Hebron",
       "forename": "Virginia",
       "classifier": "I",
       "dateOfBirth": "1945-01-01",
-      "status": "Deceased",
+      
       "lastKnownAddress": "Unknown",
       "dateOfDeath": "1950-01-01",
-      "notes": "Homicide Victim"
+      "notes": "Homicide Victim",
+      "related": ["Case 452452-251-521", "DARIBONDI, ASA"]
     },
-    
-    
-    
+
+
+
     {
       "surname": "Curson",
       "forename": "Steven",
       "classifier": "I",
       "dateOfBirth": "1962-11-03",
-      "status": "Alive",
+      
       "lastKnownAddress": "Unknown",
       "dateOfDeath": "1950-01-01",
       "notes": "Veteran. 3 arrests for Vagrancy."
@@ -930,16 +1001,16 @@
       "forename": "Richard",
       "classifier": "I",
       "dateOfBirth": "1953-02-03",
-      "status": "Alive",
+      
       "lastKnownAddress": "Apt 224, 145 Adams Street, Boston, MA",
-      "notes": "None\n\nLinked Record: <Medical License 34232/3590>"
+      "related": "Medical License 34232/3590"
     },
     {
       "surname": "Samigina",
       "forename": "Esther",
       "classifier": "I",
       "dateOfBirth": "1966-06-03",
-      "status": "Alive",
+      
       "lastKnownAddress": "52 Crockett Ave. Boston, MA",
       "notes": ""
     },
@@ -948,17 +1019,17 @@
       "forename": "Philip",
       "classifier": "I",
       "dateOfBirth": "1965-11-21",
-      "status": "Alive",
+      
       "lastKnownAddress": "52 Crockett Ave. Boston, MA",
       "notes": ""
     },
-    
+
     {
       "surname": "Samigina",
       "forename": "Henry",
       "classifier": "I",
       "dateOfBirth": "1999-01-01",
-      "status": "Alive",
+      
       "lastKnownAddress": "52 Crockett Ave. Boston, MA",
       "notes": "",
       "notBefore": 20
@@ -966,13 +1037,13 @@
 
 
 
-    
+
     {
       "surname": "Dallan",
       "forename": "Michael",
       "classifier": "I",
       "dateOfBirth": "1982-07-15",
-      "status": "Alive",
+      
       "lastKnownAddress": "58 Greenway Dr, Austin, TX",
       "notes": ""
     },
@@ -981,7 +1052,7 @@
       "forename": "Sarah",
       "classifier": "I",
       "dateOfBirth": "1975-11-03",
-      "status": "Alive",
+      
       "lastKnownAddress": "112 Ocean Ave, Miami, FL",
       "notes": ""
     },
@@ -990,7 +1061,7 @@
       "forename": "Robert",
       "classifier": "I",
       "dateOfBirth": "1990-01-22",
-      "status": "Alive",
+      
       "lastKnownAddress": "77 Maple St, Boston, MA",
       "notes": ""
     },
@@ -999,7 +1070,7 @@
       "forename": "Emily",
       "classifier": "I",
       "dateOfBirth": "1988-05-30",
-      "status": "Alive",
+      
       "lastKnownAddress": "350 Elmwood Rd, Seattle, WA",
       "notes": ""
     },
@@ -1008,12 +1079,30 @@
       "forename": "William",
       "classifier": "I",
       "dateOfBirth": "1969-09-14",
-      "status": "Alive",
+      
       "lastKnownAddress": "99 Sunset Blvd, Los Angeles, CA",
       "notes": ""
     },
-    
-    
+
+    {
+      "surname": "Baughman",
+      "forename": "Clyde",
+      "classifier": "I",
+      "dateOfBirth": "1937-12-02",
+      "dateOfDeath": "1994-11-29",
+      "lastKnownAddress": "Unknown",
+      "related": ["BAUGHMAN, MARLENE"]
+    },
+    {
+      "surname": "Baughman",
+      "forename": "Marlene",
+      "classifier": "I",
+      "dateOfBirth": "1938-05-11",
+      "dateOfDeath": "1992-10-17",
+      "lastKnownAddress": "Unknown",
+      "notes": "Natural causes",
+      "related": ["BAUGHMAN, CLYDE"]
+    },
     {
       "surname": "Larkin",
       "forename": "Augustus",
@@ -1030,7 +1119,16 @@
       "dateOfBirth": "1880",
       "status": "Unknown",
       "lastKnownAddress": "Hotel Chelsea, NY, NY",
-      "notes": "None\n\nLinked Record: <ISBN 2348957235: Skulls Along the River, 1910>"
+      "related": ["ISBN 2348957235: Skulls Along the River, 1910"]
+    },
+
+    {
+      "surname": "Greenbrier",
+      "forename": "Devon",
+      "classifier": "I",
+      "dateOfBirth": "1956-08-23",
+      "status": "Unknown",
+      "lastKnownAddress": "Unknown"
     }
   ]
 }
