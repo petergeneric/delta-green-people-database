@@ -48,6 +48,7 @@ const people = loadDatabase();
 // For records with DoB+DoD older than this, warn that a physical record is required
 // Set to null if not desired. This feature lets you force players into a dusty dark archives room for old records.
 const cutoffDateWarning = '1960-01-01';
+const maxResults = 20;
 
 const screen = blessed.screen({ smartCSR: true, title: 'FBI KNOWN PERSONS DATABASE' });
 
@@ -196,13 +197,13 @@ function showSearchScreen() {
     screen.render();
 
     searchInput.on('submit', query => {
-        if (query.length < 4 && query.toLowerCase() !== '') {
+        if ((query.length < 4 && query.toLowerCase() !== '') || runSearch(query).length > maxResults) {
             showErrorBox('TOO MANY RESULTS', 'Your search selector was insufficiently precise and matched too many results to display. Please refine your search and try again.');
             searchInput.focus();
         }
 		else if (runSearch(query).length === 0) {
-			screen.remove(searchInput);
-			showSearchResultsScreen('...');
+			showErrorBox('NON-RESPONSIVE QUERY', 'No records were responsive to your search selector')
+			searchInput.focus();
 		}
         else {
             screen.remove(searchInput);
@@ -219,19 +220,19 @@ function showSearchScreen() {
 function runSearch(query) {
 	const q = query.toLowerCase().replaceAll(', ', ' ');
 
-	const matches = (surname, forename) => {
+	const matches = (surname, forename, address) => {
 		if (q.includes(' ')) {
 			let parts = q.replaceAll('[^a-z]+', ' ') .split(' ', 2);
 
-			return surname.toLowerCase().startsWith(parts[0]) && forename.toLowerCase().startsWith(parts[1]);
+			return surname.toLowerCase().startsWith(parts[0]) && forename.toLowerCase().startsWith(parts[1]) || address.toLowerCase().includes(query);
 		}
 		else {
-			return surname.toLowerCase().startsWith(q);
+			return surname.toLowerCase().startsWith(q)  || address.toLowerCase().includes(query);
 		}
 	}
 
 	return people
-		.filter((p) => matches(p.surname, p.forename))
+		.filter((p) => matches(p.surname, p.forename, p.lastKnownAddress || ''))
 		.sort((a, b) => {
 			// First, compare by surname
 			if (a.surname.toLowerCase() < b.surname.toLowerCase()) return -1;
@@ -261,7 +262,7 @@ function showSearchResultsScreen(query) {
         vi: true,
         columnSpacing: 2,
         columnWidth: [15, 15, 10, 12, 15, 30],
-        columns: ['Surname', 'Forename', 'DoB', 'Status', 'Classifier', 'Last Known Address']
+        columns: ['Surname', 'Forename', 'Date', 'Status', 'Classifier', 'Address']
     });
 
     const results = runSearch(query);
@@ -270,7 +271,7 @@ function showSearchResultsScreen(query) {
     });
 
     searchResultsTable.setData({
-        headers: ['Surname', 'Forename', 'DOB', 'Status', 'Classifier', 'Last Known Address'],
+        headers: ['Surname', 'Forename', 'Date', 'Status', 'Classifier', 'Address'],
         data: formattedResults
     });
 
