@@ -1129,6 +1129,42 @@
       "dateOfBirth": "1956-08-23",
       "status": "Unknown",
       "lastKnownAddress": "Unknown"
+    },
+
+
+
+    {
+      "surname": "Example",
+      "forename": "Alice",
+      "classifier": "I",
+      "dateOfBirth": "1970-01-02",
+      "lastKnownAddress": "Unknown",
+      "notes": "Law enforcement officer",
+      "related": ["EXAMPLE, BOB", "EXAMPLE, DAVE"]
+    },
+    {
+      "surname": "Example",
+      "forename": "Bob",
+      "classifier": "I",
+      "dateOfBirth": "1900-01-01",
+      "dateOfDeath": "1950-01-01",
+      "lastKnownAddress": "Unknown"
+    },
+    {
+      "surname": "Example",
+      "forename": "Carol",
+      "classifier": "I",
+      "dateOfBirth": "1920-01-01",
+      "dateOfDeath": "1950-01-01",
+      "lastKnownAddress": "Unknown"
+    },
+    {
+      "surname": "Example",
+      "forename": "Dave",
+      "classifier": "FBI",
+      "dateOfBirth": "1900-01-01",
+      "lastKnownAddress": "Unknown",
+      "notes": "Retired Law Enforcement Officer"
     }
   ]
 }
