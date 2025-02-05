@@ -143,7 +143,7 @@
       "status": "Missing PD",
       "lastKnownAddress": "147 Oak St, Los Angeles",
       "notes": "Active missing persons. Reported missing 1995-03-17 by mother <WRIGHT, JANE>",
-      "related": ["Case: 126-812-34"]
+      "related": ["Case 126-812-34"]
     },
     {
       "surname": "Wright",
@@ -201,8 +201,15 @@
       "dateOfBirth": "1969-01-22",
       "status": "Missing",
       "lastKnownAddress": "Apt 1A, 210 E 32 St, NY, NY, 10016",
-      "notes": "Active Missing Persons Case, FBI Jurisdiction. Last Seen 1995-06-01.\nMugging Victim (1994-04-23; case closed no arrests).\nCard theft victim (see missing persons case).\nReported missing 1995-06-04 by father (WRIGHT, THOMAS). NYPD FBI handover Aug 95.\n\n-- NYPD DATABASE LINK :: REPORT --\n\nMISSING PERSON:\nAbigail Wright [Caucasian woman, 26] reported missing on 4\nJUNE 1995 by her father, Thomas Wright of the Nassau County\nPolice Department. NYPD suspects she may have been missing even\nearlier, best guess 1 JUNE 1995.\n\nBACKGROUND:\nAbigail Wright moved to Manhattan in 1988 and has been\nworking as an artist and painter. She has a distinguished\nacademic record. Her first art show in New York was held last\nyear (1994) at the Mercury, a trendy art gallery on Franklin\nStreet. There she sold fifteen (15) pieces, and has been living\noff of the proceeds from those since.\n\nNYPD INVESTIGATION:\nPolice entered Wright’s apartment at the Macallister\nBuilding on East 32nd Street in Kips Bay on 4 JUNE 1995, where\nthey encountered a baffling tableau: every available surface of\nthe residence was covered in junk, affixed to the walls [and in\nsome places even the ceiling] with either a fast-setting,\nfull-bond epoxy, a common pasting glue, and/or adhesive tape. In\nsome cases all three methods were used. Only the floor remained\nclear.\nItems cataloged inside the residence include: sets of\ndentures and partial dentures, a 1940s wheelchair in excellent\ncondition, artificial limbs both modern and antique, dozens of\nshirts, shoes, pants, and various other clothing articles\nbelonging to men as well as women, and representing a large\nvariety of different sizes, a collection of briefcases, various\nradio equipment including several vintage radios, all manner of\njewelry, much of it quite valuable, and a small library’s worth\nof loose papers in a variety of languages, most notably English,\nSpanish, and Mandarin, but spanning such variety as to also\ncontain a college economics report in Farsi.\nThere were no signs of a struggle or any kind of violence.\nNeighbors did not report witnessing anything unusual. NYPD\ndetectives have exhausted all of their leads in this case.\n\nOn 4 AUGUST 1995 Abigail Wright’s credit card was used in Patience, MD to purchase a pack of Old Gold cigarettes, at which point the case was referred to the FBI as a possible interstate kidnapping.\n\nFBI agents arrived at building 6 Aug 1995, taking over case from Det. Graham Giuradanda\n",
-      "related": ["Case: 349-812-34", "WRIGHT, THOMAS" ]
+      "notes": "Active Missing Persons Case, FBI Jurisdiction. Last Seen 1995-06-01.\nMugging Victim (1994-04-23; case closed no arrests).\nCard theft victim (see missing persons case).\nReported missing 1995-06-04 by father (WRIGHT, THOMAS). NYPD FBI handover Aug 95.\n",
+      "related": ["Case 349-812-34", "WRIGHT, THOMAS" ]
+    },
+    {
+      "id": "Case 349-812-34",
+      "surname": "349-812-34",
+      "forename": "",
+      "status": "Active",
+      "notes": "-- NYPD DATABASE LINK :: REPORT --\n\nMISSING PERSON:\nAbigail Wright [Caucasian woman, 26] reported missing on 4\nJUNE 1995 by her father, Thomas Wright of the Nassau County\nPolice Department. NYPD suspects she may have been missing even\nearlier, best guess 1 JUNE 1995.\n\nBACKGROUND:\nAbigail Wright moved to Manhattan in 1988 and has been\nworking as an artist and painter. She has a distinguished\nacademic record. Her first art show in New York was held last\nyear (1994) at the Mercury, a trendy art gallery on Franklin\nStreet. There she sold fifteen (15) pieces, and has been living\noff of the proceeds from those since.\n\nNYPD INVESTIGATION:\nPolice entered Wright’s apartment at the Macallister\nBuilding on East 32nd Street in Kips Bay on 4 JUNE 1995, where\nthey encountered a baffling tableau: every available surface of\nthe residence was covered in junk, affixed to the walls [and in\nsome places even the ceiling] with either a fast-setting,\nfull-bond epoxy, a common pasting glue, and/or adhesive tape. In\nsome cases all three methods were used. Only the floor remained\nclear.\nItems cataloged inside the residence include: sets of\ndentures and partial dentures, a 1940s wheelchair in excellent\ncondition, artificial limbs both modern and antique, dozens of\nshirts, shoes, pants, and various other clothing articles\nbelonging to men as well as women, and representing a large\nvariety of different sizes, a collection of briefcases, various\nradio equipment including several vintage radios, all manner of\njewelry, much of it quite valuable, and a small library’s worth\nof loose papers in a variety of languages, most notably English,\nSpanish, and Mandarin, but spanning such variety as to also\ncontain a college economics report in Farsi.\nThere were no signs of a struggle or any kind of violence.\nNeighbors did not report witnessing anything unusual. NYPD\ndetectives have exhausted all of their leads in this case.\n\nOn 4 AUGUST 1995 Abigail Wright’s credit card was used in Patience, MD to purchase a pack of Old Gold cigarettes, at which point the case was referred to the FBI as a possible interstate kidnapping.\n\nFBI agents arrived at building 6 Aug 1995, taking over case from Det. Graham Giuradanda\n"
     },
     {
       "surname": "Wright",
@@ -258,6 +265,7 @@
       "notes": "Natural Causes"
     },
     {
+      "id": "STRUCTURE: LUNDINE HOUSE. 210 E 32 St, NY, NY, 10016",
       "surname": "Lundine",
       "forename": "House",
       "classifier": "BUILDING",
@@ -272,6 +280,7 @@
       ]
     },
     {
+      "id": "STRUCTURE: MACALLISTER BUILDING. 210 E 32 St, NY, NY, 10016",
       "surname": "MacAllister",
       "forename": "Building",
       "classifier": "BUILDING",
@@ -279,7 +288,7 @@
       "status": "Structure",
       "type": "Structure",
       "lastKnownAddress": "210 E 32 St, NY, NY, 10016",
-      "related": ["BUILDING PERMIT: VARIATION OF EXISTING STRUCTURE, 1953","PROPERTY SALE: ARTLIFE CORPORATION, 1967","COMPANY REGISTER: ARTLIFE CORPORATION"]
+      "related": ["BUILDING PERMIT: VARIATION OF EXISTING STRUCTURE, 1953","PROPERTY SALE: ARTLIFE CORPORATION, 1967","COMPANY REGISTER: ARTLIFE CORPORATION", "COMPANY REGISTER: STAR CORPORATION"]
     },
     {
       "surname": "Lundine",
@@ -402,6 +411,24 @@
       
       "lastKnownAddress": "17 Bridge Street, NY, NY",
       "notes": ""
+    },
+    {
+      "id": "COMPANY REGISTER: ARTLIFE CORPORATION",
+      "surname": "Artlife",
+      "forename": "Corporation",
+      "type": "Company Register",
+      "status": "Incorporated",
+      "lastKnownAddress": "23rd St and 3rd Ave, NY, NY",
+      "notes": "Incorporated 1962, 401c registration, charity sector: arts"
+    },
+    {
+      "id": "COMPANY REGISTER: STAR CORPORATION",
+      "surname": "Star",
+      "forename": "Corporation",
+      "type": "Company Register",
+      "status": "Dissolved",
+      "lastKnownAddress": "52498 Mako St, Dover, DE",
+      "notes": "Incorporated 1950"
     },
     {
       "surname": "Lechance",
@@ -774,7 +801,7 @@
       "lastKnownAddress": "Unknown",
       "dateOfDeath": "1921-01-01",
       "notes": "Homicide Victim",
-      "related": ["Case 452452-251-521", "DARIBONDI, ASA"]
+      "related": ["Case 452452-251-521"]
     },
     {
       "surname": "Greenberg",
@@ -785,7 +812,7 @@
       "lastKnownAddress": "Unknown",
       "dateOfDeath": "1921-01-01",
       "notes": "Homicide Victim",
-      "related": ["Case 452452-251-521", "DARIBONDI, ASA"]
+      "related": ["Case 452452-251-521"]
     },
     {
       "surname": "Ruggiero",
@@ -796,7 +823,7 @@
       "lastKnownAddress": "Unknown",
       "dateOfDeath": "1922-01-01",
       "notes": "Homicide Victim",
-      "related": ["Case 452452-251-521", "DARIBONDI, ASA"]
+      "related": ["Case 452452-251-521"]
     },
     {
       "surname": "White",
@@ -807,7 +834,7 @@
       "lastKnownAddress": "Unknown",
       "dateOfDeath": "1923-01-01",
       "notes": "Homicide Victim",
-      "related": ["Case 452452-251-521", "DARIBONDI, ASA"]
+      "related": ["Case 452452-251-521"]
     },
     {
       "surname": "Jacobs",
@@ -818,7 +845,7 @@
       "lastKnownAddress": "Unknown",
       "dateOfDeath": "1924-01-01",
       "notes": "Homicide Victim",
-      "related": ["Case 452452-251-521", "DARIBONDI, ASA"]
+      "related": ["Case 452452-251-521"]
     },
     {
       "surname": "Barnett",
@@ -829,7 +856,7 @@
       "lastKnownAddress": "Unknown",
       "dateOfDeath": "1925-01-01",
       "notes": "Homicide Victim",
-      "related": ["Case 452452-251-521", "DARIBONDI, ASA"]
+      "related": ["Case 452452-251-521"]
     },
     {
       "surname": "Baldwin",
@@ -840,7 +867,7 @@
       "lastKnownAddress": "Unknown",
       "dateOfDeath": "1927-01-01",
       "notes": "Homicide Victim",
-      "related": ["Case 452452-251-521", "DARIBONDI, ASA"]
+      "related": ["Case 452452-251-521"]
     },
     {
       "surname": "Klein",
@@ -851,7 +878,7 @@
       "lastKnownAddress": "Unknown",
       "dateOfDeath": "1928-01-01",
       "notes": "Homicide Victim",
-      "related": ["Case 452452-251-521", "DARIBONDI, ASA"]
+      "related": ["Case 452452-251-521"]
     },
     {
       "surname": "Townsend",
@@ -862,7 +889,7 @@
       "lastKnownAddress": "Unknown",
       "dateOfDeath": "1930-01-01",
       "notes": "Homicide Victim",
-      "related": ["Case 452452-251-521", "DARIBONDI, ASA"]
+      "related": ["Case 452452-251-521"]
     },
     {
       "surname": "Conklin",
@@ -873,7 +900,7 @@
       "lastKnownAddress": "Unknown",
       "dateOfDeath": "1932-01-01",
       "notes": "Homicide Victim",
-      "related": ["Case 452452-251-521", "DARIBONDI, ASA"]
+      "related": ["Case 452452-251-521"]
     },
     {
       "surname": "Padilla",
@@ -884,7 +911,7 @@
       "lastKnownAddress": "Unknown",
       "dateOfDeath": "1934-01-01",
       "notes": "Homicide Victim",
-      "related": ["Case 452452-251-521", "DARIBONDI, ASA"]
+      "related": ["Case 452452-251-521"]
     },
     {
       "surname": "DeLuca",
@@ -895,7 +922,7 @@
       "lastKnownAddress": "Unknown",
       "dateOfDeath": "1935-01-01",
       "notes": "Homicide Victim",
-      "related": ["Case 452452-251-521", "DARIBONDI, ASA"]
+      "related": ["Case 452452-251-521"]
     },
     {
       "surname": "Armstrong",
@@ -906,7 +933,7 @@
       "lastKnownAddress": "Unknown",
       "dateOfDeath": "1936-01-01",
       "notes": "Homicide Victim",
-      "related": ["Case 452452-251-521", "DARIBONDI, ASA"]
+      "related": ["Case 452452-251-521"]
     },
     {
       "surname": "Amelieva",
@@ -917,7 +944,7 @@
       "lastKnownAddress": "Unknown",
       "dateOfDeath": "1938-01-01",
       "notes": "Homicide Victim",
-      "related": ["Case 452452-251-521", "DARIBONDI, ASA"]
+      "related": ["Case 452452-251-521"]
     },
     {
       "surname": "Hodge",
@@ -928,7 +955,7 @@
       "lastKnownAddress": "Unknown",
       "dateOfDeath": "1940-01-01",
       "notes": "Homicide Victim",
-      "related": ["Case 452452-251-521", "DARIBONDI, ASA"]
+      "related": ["Case 452452-251-521"]
     },
     {
       "surname": "McNamara",
@@ -939,7 +966,7 @@
       "lastKnownAddress": "Unknown",
       "dateOfDeath": "1942-01-01",
       "notes": "Homicide Victim",
-      "related": ["Case 452452-251-521", "DARIBONDI, ASA"]
+      "related": ["Case 452452-251-521"]
     },
     {
       "surname": "Ng",
@@ -950,7 +977,7 @@
       "lastKnownAddress": "Unknown",
       "dateOfDeath": "1944-01-01",
       "notes": "Homicide Victim",
-      "related": ["Case 452452-251-521", "DARIBONDI, ASA"]
+      "related": ["Case 452452-251-521"]
     },
     {
       "surname": "Lechance",
@@ -961,7 +988,7 @@
       "lastKnownAddress": "143 W Bridge, NY, NY",
       "dateOfDeath": "1946-01-01",
       "notes": "Homicide Victim",
-      "related": ["Case 452452-251-521", "DARIBONDI, ASA"]
+      "related": ["Case 452452-251-521"]
     },
     {
       "surname": "Sauer",
@@ -972,7 +999,7 @@
       "lastKnownAddress": "Unknown",
       "dateOfDeath": "1948-01-01",
       "notes": "Homicide Victim",
-      "related": ["Case 452452-251-521", "DARIBONDI, ASA"]
+      "related": ["Case 452452-251-521"]
     },
     {
       "surname": "Hebron",
@@ -983,7 +1010,22 @@
       "lastKnownAddress": "Unknown",
       "dateOfDeath": "1950-01-01",
       "notes": "Homicide Victim",
-      "related": ["Case 452452-251-521", "DARIBONDI, ASA"]
+      "related": ["Case 452452-251-521"]
+    },
+
+
+    {
+      "id": "Case 452452-251-521",
+      "surname": "452452-251-521",
+      "forename": "",
+      "type": "NYPD Case File",
+      "dateOfBirth": "1950",
+      "suppressLegacyWarning": true,
+      "lastKnownAddres": "NIL",
+      "classifier": "Case",
+      "status": "Legacy",
+      "notes" : "<HEBRON, VIRGINIA> found at site of Asa Daribondi's office after fire, beside bloody bathtub. Coroner confirmed death was by drowning. Journal discovered nearby suggests Daribondi also murdered 19 other children - names listed in journal also show up as missing children. Bodies not found. Daribondi has disappeared.\n\nUPDATE: Daribondi declared dead, case has been moved to Legacy file.",
+      "related": ["DARIBONDI, ASA", "HEBRON, VIRGINIA"]
     },
 
 
