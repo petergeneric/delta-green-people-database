@@ -351,7 +351,7 @@
       "status": "Structure",
       "type": "Structure",
       "lastKnownAddress": "210 E 32 St, NY, NY, 10016",
-      "related": ["BUILDING PERMIT: VARIATION OF EXISTING STRUCTURE, 1953","PROPERTY SALE: ARTLIFE CORPORATION, 1967","COMPANY REGISTER: ARTLIFE CORPORATION", "COMPANY REGISTER: STAR CORPORATION"]
+      "related": ["BUILDING PERMIT: VARIATION OF EXISTING STRUCTURE, 1953","PROPERTY SALE: ARTLIFE CORPORATION, 1967","ARTLIFE CORPORATION|COMPANY REGISTER: ARTLIFE CORPORATION", "COMPANY REGISTER: STAR CORPORATION"]
     },
     {
       "surname": "Lundine",
@@ -476,13 +476,15 @@
       "notes": ""
     },
     {
-      "id": "COMPANY REGISTER: ARTLIFE CORPORATION",
+      "id": "ARTLIFE CORPORATION",
       "surname": "Artlife",
       "forename": "Corporation",
       "type": "Company Register",
       "status": "Incorporated",
+      "classifier": "Company",
       "lastKnownAddress": "23rd St and 3rd Ave, NY, NY",
-      "notes": "Incorporated 1962, 401c registration, charity sector: arts"
+      "notes": "Incorporated 1962, 401(c)3 registration, charity sector: arts",
+      "related": ["LECHANCE, CYNTHIA|CEO: Cynthia Lechance"]
     },
     {
       "id": "COMPANY REGISTER: STAR CORPORATION",
@@ -490,6 +492,7 @@
       "forename": "Corporation",
       "type": "Company Register",
       "status": "Dissolved",
+      "classifier": "Company",
       "lastKnownAddress": "52498 Mako St, Dover, DE",
       "notes": "Incorporated 1950"
     },

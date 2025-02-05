@@ -17,6 +17,11 @@ function loadDatabase() {
 		players.forEach(p => people.push(p));
 	}
 
+	// Default record types to Individual
+	people.filter(record=>record.type === undefined).forEach(record => {
+		record.type = 'Individual';
+	});
+
 	// Fix-up nonsensical records whose dateOfDeath is before dateOfBirth
 	people.forEach(person => {
 		if ('dateOfDeath' in person && person.dateOfDeath < person.dateOfBirth) {
@@ -48,12 +53,15 @@ function loadDatabase() {
 
 	people.forEach(person => {
 		if (person.related !== undefined) {
-			for (const relterm of person.related) {
+			for (let relterm of person.related) {
+				if (relterm.includes('|'))
+					relterm = relterm.split('|')[0]; // ignore label
+
 				if (relterm in peopleByIds) {
 					const rel = peopleByIds[relterm];
 					if (rel.related === undefined)
 						rel.related = [person.id];
-					else if (!rel.related.includes(person.id))
+					else if (!rel.related.includes(person.id) && rel.related.filter(line=>line.startsWith(person.id + '|')).length === 0)
 						rel.related.push(person.id);
 				}
 			}
@@ -263,6 +271,9 @@ function showSearchScreen() {
 }
 
 function runSearch(query) {
+	if (query.includes('|'))
+		query = query.split('|')[0]; // if query is of form "real term|caption" then strip the caption
+
 	query = query.toLowerCase();
 	const q = query.replaceAll(', ', ' ');
 
@@ -393,6 +404,7 @@ function showDetails(record) {
 
 
 	detailsBox.key(['escape'], () => {
+		screen.remove(menuBar);
 		screen.remove(detailsBox);
 		searchResultsTable.focus();
 
@@ -485,7 +497,14 @@ function showLinkedRecords(record, cleanupFunc) {
 		tags: true,
 		border: { type: 'line' },
 		label: ' Linked Records ',
-		items: Array.from(record.related).map(term => runSearch(term).length === 0 ? `{red-fg}${term}{/}` : `{green-fg}${term}{/}`),
+		items: Array.from(record.related).map(term => {
+			let caption = term;
+
+			if (term.includes('|'))
+				caption = term.split('|')[1];
+
+			return runSearch(term).length === 0 ? `{red-fg}${caption}{/}` : `{green-fg}${caption}{/}`
+		}),
 		interactive: true,
 		scrollable: true,
 		style: {
@@ -512,12 +531,14 @@ function showLinkedRecords(record, cleanupFunc) {
 	// Handle enter key (on screen)
 	list.key(['enter'], () => {
 		const term = record.related[list.selected];
-		const results = runSearch(term);
-		const count = runSearch(term).length;
+		const sterm = term.includes('|') ? term.split('|')[0] : term;
+		const results = runSearch(sterm);
+		const count = results.length;
 
 		if (count === 0) {
 			// Just tell the user there are no results
-			showErrorBox('Unavailable', `Linked record unavailable:\n${term}`);
+			const displayterm = term.includes('|') ? term.split('|')[1] : term;
+			showErrorBox('Unavailable', `Linked record unavailable:\n${displayterm}`);
 		}
 		else if (count === 1) {
 			// Go directly to result
@@ -530,7 +551,7 @@ function showLinkedRecords(record, cleanupFunc) {
 			// Issue search
 			closeScreen();
 
-			showSearchResultsScreen(term);
+			showSearchResultsScreen(sterm);
 
 			screen.render();
 		}
@@ -570,22 +591,21 @@ function renderRecordText(record) {
 		}
 	}
 
-	content += `Surname: ${record.surname}\nForename: ${record.forename}\nAliases: N/A\nRecord Type: ${record.type || 'Individual'}\nRecord Classifiers: ${record.classifier || 'N/A'}\nBorn: ${record.dateOfBirth}\nDied: ${record.dateOfDeath || 'N/A'}\nStatus: ${record.status || 'N/A'}\nLast Known Address: ${record.lastKnownAddress || 'N/A'}\n`;
+	content += `Surname: ${record.surname}\nForename: ${record.forename}\nAliases: N/A\nRecord Type: ${record.type || 'Unknown'}\nRecord Classifiers: ${record.classifier || 'N/A'}\nBorn: ${record.dateOfBirth}\nDied: ${record.dateOfDeath || 'N/A'}\nStatus: ${record.status || 'N/A'}\nLast Known Address: ${record.lastKnownAddress || 'N/A'}\n`;
 	
 	if (record.nationality || record.type === 'Individual')
 		content += `Nationality: ${record.nationality || 'USA'}\n`;
 	
 	content += `\n\nNotes:\n${record.notes || 'None'}`;
 
+	content += '\n\n';
+
 	if (record.related !== undefined) {
-		content += "\n\nLinked Records. Press <L> to select\n";
-		content += 'Linked Record(s):\n - '
-		content += record.related.join('\n - ');
-		content += '\n';
+		content += `${record.related.length} Linked Records Found. Press <L> to view\n`;
 	}
 
 	if (record.events !== undefined) {
-		content += "\n\nPress <E> to view event log\n";
+		content += `Press <E> to view ${record.events.length} events\n`;
 	}
 
 	return content;
