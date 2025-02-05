@@ -27,16 +27,16 @@ function loadDatabase() {
 	});
 
 	// Apply default status value
-	people.forEach(person => {
-		if (!('status' in person)){
-			person.status = ('dateOfDeath' in person) ? 'Deceased' : 'Alive';
+	people.forEach(record => {
+		if (!('status' in record) && record.type == 'Individual'){
+			record.status = ('dateOfDeath' in record) ? 'Deceased' : 'Alive';
 		}
 	});
 
 	// Apply default id
-	people.forEach(person => {
-		if (!('id' in person)){
-			person.id = person.surname.toUpperCase() + ', ' + person.forename.toUpperCase();
+	people.forEach(record => {
+		if (!('id' in record)){
+			record.id = record.surname.toUpperCase() + ', ' + record.forename.toUpperCase();
 		}
 	});
 
@@ -352,7 +352,7 @@ function showSearchResultsScreen(query) {
 	searchResultsTable.rows.key(['/'], closeScreen);
 }
 
-function showDetails(person) {
+function showDetails(record) {
 	detailsBox = blessed.box({
 		top: 'center',
 		left: 'center',
@@ -363,7 +363,7 @@ function showDetails(person) {
 		label: ' Record Content ',
 		scrollable: true,
 		alwaysScroll: true,
-		content: formatPersonDetails(person),
+		content: renderRecordText(record),
 		scrollbar: {
 			style: {
 				bg: 'yellow'
@@ -400,8 +400,8 @@ function showDetails(person) {
 	});
 
 	detailsBox.key(['l'], () => {
-		if (person.related !== undefined) {
-			showLinkedRecords(person, () => {
+		if (record.related !== undefined) {
+			showLinkedRecords(record, () => {
 				screen.remove(menuBar);
 				screen.remove(detailsBox);
 			});
@@ -412,8 +412,8 @@ function showDetails(person) {
 
 
 	detailsBox.key(['e'], () => {
-		if (person.events !== undefined) {
-			showEventLog(person, () => {
+		if (record.events !== undefined) {
+			showEventLog(record, () => {
 				screen.remove(menuBar);
 				screen.remove(detailsBox);
 			});
@@ -549,20 +549,20 @@ function showLinkedRecords(record, cleanupFunc) {
 	screen.render();
 }
 
-function formatPersonDetails(person) {
+function renderRecordText(record) {
 	let content = '';
 
-	if ('warning' in person) {
-		content = `{red-bg}{white-fg}{bold}NOTE{/bold} ${person.warning}{/white-fg}{/red-bg}`;
+	if ('warning' in record) {
+		content = `{red-bg}{white-fg}{bold}NOTE{/bold} ${record.warning}{/white-fg}{/red-bg}`;
 		content += "\n\n";
 	}
 
 	// Optional warning for 'legacy records' for deep history if you want players to have to go hunting in a physical archive
-	if (cutoffDateWarning != null && person.suppressLegacyWarning !== true) {
-		let dod = person.dateOfDeath || null;
+	if (cutoffDateWarning != null && record.suppressLegacyWarning !== true) {
+		let dod = record.dateOfDeath || null;
 		const cutoff = cutoffDateWarning;
 	
-		if (person.dateOfBirth < cutoff) {
+		if (record.dateOfBirth < cutoff) {
 			if (dod == null || dod < cutoff) {
 				content += '{blue-bg}{white-fg}{bold}Legacy Record{/bold} Consult physical original{/white-fg}{/blue-bg}';
 				content += "\n\n";
@@ -570,21 +570,21 @@ function formatPersonDetails(person) {
 		}
 	}
 
-	content += `Surname: ${person.surname}\nForename: ${person.forename}\nAliases: N/A\nRecord Type: ${person.type || 'Individual'}\nRecord Classifiers: ${person.classifier || 'N/A'}\nBorn: ${person.dateOfBirth}\nDied: ${person.dateOfDeath || 'N/A'}\nStatus: ${person.status || 'N/A'}\nLast Known Address: ${person.lastKnownAddress || 'N/A'}\n`;
+	content += `Surname: ${record.surname}\nForename: ${record.forename}\nAliases: N/A\nRecord Type: ${record.type || 'Individual'}\nRecord Classifiers: ${record.classifier || 'N/A'}\nBorn: ${record.dateOfBirth}\nDied: ${record.dateOfDeath || 'N/A'}\nStatus: ${record.status || 'N/A'}\nLast Known Address: ${record.lastKnownAddress || 'N/A'}\n`;
 	
-	if (person.nationality || person.type == 'Individual')
-		content += `Nationality: ${person.nationality || 'USA'}\n`;
+	if (record.nationality || record.type === 'Individual')
+		content += `Nationality: ${record.nationality || 'USA'}\n`;
 	
-	content += `\n\nNotes:\n${person.notes || 'None'}`;
+	content += `\n\nNotes:\n${record.notes || 'None'}`;
 
-	if (person.related !== undefined) {
+	if (record.related !== undefined) {
 		content += "\n\nLinked Records. Press <L> to select\n";
 		content += 'Linked Record(s):\n - '
-		content += person.related.join('\n - ');
+		content += record.related.join('\n - ');
 		content += '\n';
 	}
 
-	if (person.events !== undefined) {
+	if (record.events !== undefined) {
 		content += "\n\nPress <E> to view event log\n";
 	}
 
