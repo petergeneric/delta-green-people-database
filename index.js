@@ -128,7 +128,7 @@ function createMainMenu() {
 	screen.render();
 
 
-	menuList.key('/', (item, index) => {
+	menuList.key(['/'], (item, index) => {
 		screen.remove(mainMenu);
 		showSearchScreen();
 	});
@@ -144,6 +144,9 @@ function createMainMenu() {
 		}
 	});
 
+	menuList.key(['escape'], () => {
+		process.exit(0);
+	});
 
 	// Create a box for the dummy menu bar at the top
 	const menuBar = blessed.box({
@@ -160,11 +163,6 @@ function createMainMenu() {
 		},
 	});
 	screen.append(menuBar);
-
-
-	menuList.key(['escape'], () => {
-		process.exit(0);
-	});
 
 	screen.render();
 }
@@ -226,7 +224,7 @@ function showSearchScreen() {
         border: { type: 'line' },
         label: ' Enter Selector ',
         keys: true,
-        vi: true
+        vi: false
     });
 
     screen.append(searchInput);
@@ -338,22 +336,20 @@ function showSearchResultsScreen(query) {
         showDetails(results[index]);
     });
 
-	searchResultsTable.key(['escape'], () => {
+
+	
+	const closeScreen = () => {
 		screen.remove(searchResultsTable);
 
 		showSearchScreen();
 
 		screen.render();
-	});
+	};
 
-
-	searchResultsTable.rows.key(['escape'], () => {
-		screen.remove(searchResultsTable);
-
-		showSearchScreen();
-
-		screen.render();
-	});
+	searchResultsTable.key(['escape'], closeScreen);
+	searchResultsTable.key(['/'], closeScreen);
+	searchResultsTable.rows.key(['escape'], closeScreen);
+	searchResultsTable.rows.key(['/'], closeScreen);
 }
 
 function showDetails(person) {
