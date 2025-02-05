@@ -33,6 +33,33 @@ function loadDatabase() {
 		}
 	});
 
+	// Apply default id
+	people.forEach(person => {
+		if (!('id' in person)){
+			person.id = person.surname.toUpperCase() + ', ' + person.forename.toUpperCase();
+		}
+	});
+
+	// Index person -> related links
+	let peopleByIds = {};
+	people.forEach(person => {
+		peopleByIds[person.id] = person;
+	});
+
+	people.forEach(person => {
+		if (person.related !== undefined) {
+			for (const relterm of person.related) {
+				if (relterm in peopleByIds) {
+					const rel = peopleByIds[relterm];
+					if (rel.related === undefined)
+						rel.related = [person.id];
+					else if (!rel.related.includes(person.id))
+						rel.related.push(person.id);
+				}
+			}
+		}
+	});
+
 	// Remove any records that should not be visible in the current game stage
 	const stage = config.gameStage || 1;
 	return people.filter(person => {
@@ -238,12 +265,17 @@ function showSearchScreen() {
 }
 
 function runSearch(query) {
-	const q = query.toLowerCase().replaceAll(', ', ' ');
+	query = query.toLowerCase();
+	const q = query.replaceAll(', ', ' ');
 
 	if (q === 'all' && allowAllQuery)
 		return people;
 
-	const matches = (surname, forename, address) => {
+	const matches = (id, surname, forename, address) => {
+		if (q === id.toLowerCase() || query === id.toLowerCase()) {
+			return true; // record id matches
+		}
+
 		if (q.includes(' ')) {
 			let parts = q.replaceAll('[^a-z]+', ' ') .split(' ', 2);
 
@@ -255,7 +287,7 @@ function runSearch(query) {
 	}
 
 	return people
-		.filter((p) => matches(p.surname, p.forename, p.lastKnownAddress || ''))
+		.filter((p) => matches(p.id || (p.surname + ', ' + p.forename), p.surname || '', p.forename || '', p.lastKnownAddress || ''))
 		.sort((a, b) => {
 			// First, compare by surname
 			if (a.surname.toLowerCase() < b.surname.toLowerCase()) return -1;
@@ -290,7 +322,7 @@ function showSearchResultsScreen(query) {
 
     const results = runSearch(query);
     const formattedResults = results.map(p => {
-        return [p.surname.toUpperCase(), p.forename.toUpperCase(), p.dateOfBirth, p.status, p.classifier || '', p.lastKnownAddress,];
+        return [p?.surname?.toUpperCase() || '', p?.forename?.toUpperCase() || '', p?.dateOfBirth || '-', p?.status || 'Unknown', p?.classifier || '', p?.lastKnownAddress || 'Unknown'];
     });
 
     searchResultsTable.setData({
@@ -333,19 +365,19 @@ function showDetails(person) {
 		border: { type: 'line' },
 		tags: true,
 		label: ' Record Content ',
-		content: formatPersonDetails(person),
 		scrollable: true,
 		alwaysScroll: true,
+		content: formatPersonDetails(person),
 		scrollbar: {
 			style: {
 				bg: 'yellow'
 			}
 		},
 		keys: true,
-		vi: true,
+		vi: true
 	});
+
 	screen.append(detailsBox);
-	detailsBox.focus();
 
 	detailsBox.key(['escape'], () => {
 		screen.remove(detailsBox);
@@ -354,6 +386,71 @@ function showDetails(person) {
 		screen.render();
 	});
 
+	if (person.related !== undefined) {
+		detailsBox.key(['l'], () => {
+			screen.remove(detailsBox);
+			showLinkedRecords(person);
+		});
+	}
+
+	detailsBox.focus();
+	screen.render();
+}
+
+function showLinkedRecords(person) {
+	const list = blessed.list({
+		top: 'center',
+		left: 'center',
+		width: '50%',
+		height: '40%',
+		keys: true,
+		vi: true,
+		border: { type: 'line' },
+		label: ' Linked Records ',
+		items: Array.from(person.related),
+		interactive: true,
+		scrollable: true,
+		style: {
+			selected: { bg: 'blue' },
+			item: { hover: { bg: 'green' } }
+		}
+	});
+
+	// Handle enter key (on screen)
+	list.key(['enter'], () => {
+		const selected = list.getItem(list.selected);
+		screen.log(`Enter pressed on: ${selected.content}`);
+
+		const count = runSearch(selected.content).length;
+		if (count === 0) {
+			showErrorBox('Unavailable', 'Linked record unavailable:\n' + selected.content);
+		}
+		else if (count === 1) {
+			screen.remove(list);
+
+			showDetails(runSearch(selected.content)[0]);
+
+			screen.render();
+		} else {
+			screen.remove(list);
+			screen.remove(searchResultsTable);
+
+			showSearchResultsScreen(selected.content);
+
+			screen.render();
+		}
+	});
+
+	list.key(['escape'], () => {
+		screen.remove(list);
+
+		showDetails(person);
+
+		screen.render();
+	});
+
+	screen.append(list);
+	list.focus();
 	screen.render();
 }
 
@@ -381,7 +478,8 @@ function formatPersonDetails(person) {
 	content += `Surname: ${person.surname}\nForename: ${person.forename}\nAliases: N/A\nRecord Type: ${person.type || 'Individual'}\nRecord Classifiers: ${person.classifier || 'N/A'}\nBorn: ${person.dateOfBirth}\nDied: ${person.dateOfDeath || 'N/A'}\nStatus: ${person.status || 'N/A'}\nNationality: ${person.nationality || 'USA'}\nLast Known Address: ${person.lastKnownAddress || 'N/A'}\n\nNotes:\n${person.notes || 'None'}`;
 
 	if (person.related !== undefined) {
-		content += '\n\nLinked Record(s):\n - '
+		content += "\n\nLinked Records. Press <L> to select\n";
+		content += 'Linked Record(s):\n - '
 		content += person.related.join('\n - ');
 		content += '\n';
 	}
