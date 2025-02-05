@@ -202,12 +202,57 @@
       "status": "Missing",
       "lastKnownAddress": "Apt 1A, 210 E 32 St, NY, NY, 10016",
       "notes": "Active Missing Persons Case, FBI Jurisdiction. Last Seen 1995-06-01.\nMugging Victim (1994-04-23; case closed no arrests).\nCard theft victim (see missing persons case).\nReported missing 1995-06-04 by father (WRIGHT, THOMAS). NYPD FBI handover Aug 95.\n",
-      "related": ["Case 349-812-34", "WRIGHT, THOMAS" ]
+      "related": ["Case 349-812-34", "FBI Case 1995/95695834/D", "WRIGHT, THOMAS" ]
+    },
+    {
+      "id": "FBI Case 1995/95695834/D",
+      "surname": "FBI/1995/95695834/D",
+      "forename": "",
+      "type": "FBI Case File",
+      "status": "Active",
+      "notes": "Missing Persons case.\n\nReports:\n - No reports yet logged by Agent In Charge\n\nArea of Operations: New York\n\nEvent Log:\n+---------------+---------+------------------------------------+\n|  EVENT ID     | ACCOUNT | EVENT                              | \n+---------------+---------+------------------------------------+\n| 45651BFBE1F5D |JONES, D |Case logged, transfer from NYPD.    |\n| 45353509CA227 |<system> |Auto-assign to NY Field Office      |\n| 45810255D8664 |<system> |Field Set: Agent In Charge=SIMON, M |\n| 9ADC5.1929991 |HANSON, A|Field Cleared: Agent In Charge      |\n| 9ADC5.1929991 |HANSON, A|Field Set: Agent In Charge=HEBRON, T|\n| 9ADC5.1929993 |HANSON, A|set flag: TID=event_log, F=rollback |\n| 45700651F79AB |<system> |Begin backup restore TX: event_log  |\n| 457D341B952C2 |<system> |Backup read failure, abort restore  |\n+---------------+---------+------------------------------------+\n\n",
+      "related": ["Case 349-812-34", "HEBRON, TERRY"]
+    },
+    {
+      "surname": "Hanson",
+      "forename": "Arthur",
+      "classifier": "FBI /DG",
+      "dateOfBirth": "1950-08-01",
+      "suppressLegacyWarning": true,
+      "lastKnownAddress": "1500 Hoover St, Washington DC",
+      "notes": "FBI Employee\n\nJob Title: Database Administrator\n\n<Access to this record has been logged>",
+      "secretNote": "Real identity of handler",
+      "notAfter": 19
+    },
+    {
+      "surname": "Hanson",
+      "forename": "Arthur",
+      "classifier": "FBI",
+      "dateOfBirth": "1950-08-01",
+      "dateOfDeath": "2011-12-03",
+      "suppressLegacyWarning": true,
+      "lastKnownAddress": "1500 Hoover St, Washington DC",
+      "notes": "Homicide Victim",
+      "related": ["Case 4958-45324-26226"],
+      "secretNote": "Real identity of handler",
+      "notBefore": 19
+    },
+    {
+      "id": "Case 4958-45324-26226",
+      "surname": "4958-45324-26226",
+      "forename": "",
+      "type": "NYPD Case File",
+      "status": "Closed",
+      "dateOfBirth": "2015-07-09",
+      "notes": "Victim <HANSON, ARTHUR> was found in alleyway behind KFC on 42nd St with stab wounds to chest and neck. Wallet was present but cards and cash removed. Wallet dusted for prints, none found. Coroner determined cause of death was knife wound from rear along axis of spinal column between C2/C3. Brass shavings found in wound path. Determination: mugging gone wrong. Case closed due to lack of leads.",
+      "related": ["HANSON, ARTHUR"],
+      "notBefore": 19
     },
     {
       "id": "Case 349-812-34",
       "surname": "349-812-34",
       "forename": "",
+      "type": "NYPD Case File",
       "status": "Active",
       "notes": "-- NYPD DATABASE LINK :: REPORT --\n\nMISSING PERSON:\nAbigail Wright [Caucasian woman, 26] reported missing on 4\nJUNE 1995 by her father, Thomas Wright of the Nassau County\nPolice Department. NYPD suspects she may have been missing even\nearlier, best guess 1 JUNE 1995.\n\nBACKGROUND:\nAbigail Wright moved to Manhattan in 1988 and has been\nworking as an artist and painter. She has a distinguished\nacademic record. Her first art show in New York was held last\nyear (1994) at the Mercury, a trendy art gallery on Franklin\nStreet. There she sold fifteen (15) pieces, and has been living\noff of the proceeds from those since.\n\nNYPD INVESTIGATION:\nPolice entered Wright’s apartment at the Macallister\nBuilding on East 32nd Street in Kips Bay on 4 JUNE 1995, where\nthey encountered a baffling tableau: every available surface of\nthe residence was covered in junk, affixed to the walls [and in\nsome places even the ceiling] with either a fast-setting,\nfull-bond epoxy, a common pasting glue, and/or adhesive tape. In\nsome cases all three methods were used. Only the floor remained\nclear.\nItems cataloged inside the residence include: sets of\ndentures and partial dentures, a 1940s wheelchair in excellent\ncondition, artificial limbs both modern and antique, dozens of\nshirts, shoes, pants, and various other clothing articles\nbelonging to men as well as women, and representing a large\nvariety of different sizes, a collection of briefcases, various\nradio equipment including several vintage radios, all manner of\njewelry, much of it quite valuable, and a small library’s worth\nof loose papers in a variety of languages, most notably English,\nSpanish, and Mandarin, but spanning such variety as to also\ncontain a college economics report in Farsi.\nThere were no signs of a struggle or any kind of violence.\nNeighbors did not report witnessing anything unusual. NYPD\ndetectives have exhausted all of their leads in this case.\n\nOn 4 AUGUST 1995 Abigail Wright’s credit card was used in Patience, MD to purchase a pack of Old Gold cigarettes, at which point the case was referred to the FBI as a possible interstate kidnapping.\n\nFBI agents arrived at building 6 Aug 1995, taking over case from Det. Graham Giuradanda\n"
     },
@@ -1001,17 +1046,6 @@
       "notes": "Homicide Victim",
       "related": ["Case 452452-251-521"]
     },
-    {
-      "surname": "Hebron",
-      "forename": "Virginia",
-      "classifier": "I",
-      "dateOfBirth": "1945-01-01",
-      
-      "lastKnownAddress": "Unknown",
-      "dateOfDeath": "1950-01-01",
-      "notes": "Homicide Victim",
-      "related": ["Case 452452-251-521"]
-    },
 
 
     {
@@ -1024,7 +1058,7 @@
       "lastKnownAddres": "NIL",
       "classifier": "Case",
       "status": "Legacy",
-      "notes" : "<HEBRON, VIRGINIA> found at site of Asa Daribondi's office after fire, beside bloody bathtub. Coroner confirmed death was by drowning. Journal discovered nearby suggests Daribondi also murdered 19 other children - names listed in journal also show up as missing children. Bodies not found. Daribondi has disappeared.\n\nUPDATE: Daribondi declared dead, case has been moved to Legacy file.",
+      "notes" : "<HEBRON, VIRGINIA> found at site of Asa Daribondi's office after fire, beside bloody bathtub. Coroner confirmed death was by drowning. Journal discovered nearby suggests Daribondi also murdered 19 other children - names listed in journal also show up as missing children however no bodies have been found. Daribondi missing.\n\nUPDATE: Daribondi declared dead, case moved to Legacy file.",
       "related": ["DARIBONDI, ASA", "HEBRON, VIRGINIA"]
     },
 
