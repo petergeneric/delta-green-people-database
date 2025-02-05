@@ -405,9 +405,10 @@ function showLinkedRecords(person) {
 		height: '40%',
 		keys: true,
 		vi: true,
+		tags: true,
 		border: { type: 'line' },
 		label: ' Linked Records ',
-		items: Array.from(person.related),
+		items: Array.from(person.related).map(term => runSearch(term).length === 0 ? `{red-fg}${term}{/}` : `{green-fg}${term}{/}`),
 		interactive: true,
 		scrollable: true,
 		style: {
@@ -418,24 +419,27 @@ function showLinkedRecords(person) {
 
 	// Handle enter key (on screen)
 	list.key(['enter'], () => {
-		const selected = list.getItem(list.selected);
-		screen.log(`Enter pressed on: ${selected.content}`);
+		const term = person.related[list.selected];
+		const results = runSearch(term);
+		const count = runSearch(term).length;
 
-		const count = runSearch(selected.content).length;
 		if (count === 0) {
-			showErrorBox('Unavailable', 'Linked record unavailable:\n' + selected.content);
+			// Just tell the user there are no results
+			showErrorBox('Unavailable', `Linked record unavailable:\n${term}`);
 		}
 		else if (count === 1) {
+			// Go directly to result
 			screen.remove(list);
 
-			showDetails(runSearch(selected.content)[0]);
+			showDetails(results[0]);
 
 			screen.render();
 		} else {
+			// Issue search
 			screen.remove(list);
 			screen.remove(searchResultsTable);
 
-			showSearchResultsScreen(selected.content);
+			showSearchResultsScreen(term);
 
 			screen.render();
 		}
@@ -458,7 +462,7 @@ function formatPersonDetails(person) {
 	let content = '';
 
 	if ('warning' in person) {
-		content = '{red-bg}{white-fg}{bold}NOTE{/bold} ' + person.warning + '{/white-fg}{/red-bg}';
+		content = `{red-bg}{white-fg}{bold}NOTE{/bold} ${person.warning}{/white-fg}{/red-bg}`;
 		content += "\n\n";
 	}
 
