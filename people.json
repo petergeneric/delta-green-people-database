@@ -210,8 +210,26 @@
       "forename": "",
       "type": "FBI Case File",
       "status": "Active",
-      "notes": "Missing Persons case.\n\nReports:\n - No reports yet logged by Agent In Charge\n\nArea of Operations: New York\n\nEvent Log:\n+---------------+---------+------------------------------------+\n|  EVENT ID     | ACCOUNT | EVENT                              | \n+---------------+---------+------------------------------------+\n| 45651BFBE1F5D |JONES, D |Case logged, transfer from NYPD.    |\n| 45353509CA227 |<system> |Auto-assign to NY Field Office      |\n| 45810255D8664 |<system> |Field Set: Agent In Charge=SIMON, M |\n| 9ADC5.1929991 |HANSON, A|Field Cleared: Agent In Charge      |\n| 9ADC5.1929991 |HANSON, A|Field Set: Agent In Charge=HEBRON, T|\n| 9ADC5.1929993 |HANSON, A|set flag: TID=event_log, F=rollback |\n| 45700651F79AB |<system> |Begin backup restore TX: event_log  |\n| 457D341B952C2 |<system> |Backup read failure, abort restore  |\n+---------------+---------+------------------------------------+\n\n",
-      "related": ["Case 349-812-34", "HEBRON, TERRY"]
+      "notes": "Missing Persons case.\n\nArea of Operations: New York\n\nReports:\n - No reports yet logged by Agent In Charge",
+      "related": ["Case 349-812-34", "HEBRON, TERRY"],
+      "events": [
+        {"id":"45651BFBE1F5D", "user":"JONES, D", "event":"Case recorded: transfer from NYPD."},
+        {"id":"45353509CA227", "user":"<system>", "event":"Auto-assign to NY Field Office"},
+        {"id":"45810255D8664", "user":"<system>", "event":"Field Set: Agent In Charge=SIMON, M"},
+        {"id":"9ADC5.1929991", "user":"HANSON, A", "event":"Field Cleared: Agent In Charge"},
+        {"id":"9ADC5.1929991", "user":"HANSON, A", "event":"Field Set: Agent In Charge=HEBRON, T"},
+        {"id":"9ADC5.1929993", "user":"HANSON, A", "event":"set flag: TID=event_log, F=rollback_pending"},
+        {"id":"45700651F79AB", "user":"<system>", "event":"Begin backup restore TX: event_log"},
+        {"id":"457D341B952C2", "user":"<system>", "event":"Backup read failure, abort restore"}
+      ]
+    },
+    {
+      "surname": "Jones",
+      "forename": "Denny",
+      "classifier": "FBI",
+      "dateOfBirth": "1974-08-01",
+      "lastKnownAddress": "1500 Hoover St, Washington DC",
+      "notes": "FBI Employee\n\nJob Title: Data Entry Associate"
     },
     {
       "surname": "Hanson",
@@ -235,7 +253,7 @@
       "notes": "Homicide Victim",
       "related": ["Case 4958-45324-26226"],
       "secretNote": "Real identity of handler",
-      "notBefore": 19
+      "notBefore": 20
     },
     {
       "id": "Case 4958-45324-26226",
@@ -246,7 +264,7 @@
       "dateOfBirth": "2015-07-09",
       "notes": "Victim <HANSON, ARTHUR> was found in alleyway behind KFC on 42nd St with stab wounds to chest and neck. Wallet was present but cards and cash removed. Wallet dusted for prints, none found. Coroner determined cause of death was knife wound from rear along axis of spinal column between C2/C3. Brass shavings found in wound path. Determination: mugging gone wrong. Case closed due to lack of leads.",
       "related": ["HANSON, ARTHUR"],
-      "notBefore": 19
+      "notBefore": 20
     },
     {
       "id": "Case 349-812-34",
@@ -492,7 +510,8 @@
       "dateOfBirth": "1960-04-26",
       
       "lastKnownAddress": "4070 81 St W Oakhurst NY, NY",
-      "notes": "Forensic Anthropologist with FBI\n\n<Access to this record has been logged>"
+      "notes": "Forensic Anthropologist with FBI\n\n<Access to this record has been logged>",
+      "related": ["Foreign Combatant Record: Falklands War"]
     },
     {
       "surname": "Simons",
@@ -1072,7 +1091,8 @@
       
       "lastKnownAddress": "Unknown",
       "dateOfDeath": "1950-01-01",
-      "notes": "Veteran. 3 arrests for Vagrancy."
+      "notes": "3 arrests for Vagrancy.",
+      "related": ["US Marine Core Deployment Record: Vietnam Combat Zone"]
     },
 
     {
