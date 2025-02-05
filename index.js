@@ -109,7 +109,7 @@ function createMainMenu() {
 		width: '90%',
 		height: '60%',
 		keys: true,
-		vi: true,
+		
 		items: [
 			'Search Records',
 			'Modify Record',
@@ -312,7 +312,7 @@ function showSearchResultsScreen(query) {
         label: ' Search Results ',
         keys: true,
 		tags: true,
-        vi: true,
+        
         columnSpacing: 2,
         columnWidth: [15, 15, 10, 12, 15, 30],
         columns: ['Surname', 'Forename', 'Date', 'Status', 'Classifier', 'Address']
@@ -375,6 +375,23 @@ function showDetails(person) {
 
 	screen.append(detailsBox);
 
+	// Create a box for the dummy menu bar at the top
+	const menuBar = blessed.box({
+		top: 1,
+		left: 0,
+		width: '100%',
+		height: 1,
+		content: '{underline}E{/}vent Log    {underline}L{/}inked Records',
+		tags: true,
+		style: {
+			fg: 'black',
+			bg: 'yellow',
+			bold: true,
+		},
+	});
+	screen.append(menuBar);
+
+
 	detailsBox.key(['escape'], () => {
 		screen.remove(detailsBox);
 		searchResultsTable.focus();
@@ -382,30 +399,93 @@ function showDetails(person) {
 		screen.render();
 	});
 
-	if (person.related !== undefined) {
-		detailsBox.key(['l'], () => {
+	detailsBox.key(['l'], () => {
+		if (person.related !== undefined) {
 			showLinkedRecords(person, () => {
+				screen.remove(menuBar);
 				screen.remove(detailsBox);
 			});
-		});
-	}
+		} else {
+			showErrorBox('No Linked Records Found', 'No record links were found');
+		}
+	});
+
+
+	detailsBox.key(['e'], () => {
+		if (person.events !== undefined) {
+			showEventLog(person, () => {
+				screen.remove(menuBar);
+				screen.remove(detailsBox);
+			});
+		}
+		else {
+			showErrorBox('No Events Found', 'No relevant events were found');
+		}
+	});
 
 	detailsBox.focus();
 	screen.render();
 }
 
-function showLinkedRecords(person, cleanupFunc) {
+function showEventLog(record, cleanupFunc) {
+	const table = contrib.table({
+		top: 'center',
+		left: 'center',
+		width: '80%',
+		height: '60%',
+		border: { type: 'line' },
+		label: ' Event Log ',
+		keys: true,
+		tags: true,
+		columnSpacing: 2,
+		columnWidth: [14, 15, 60],
+		columns: ['Event ID', 'User', 'Comment']
+	});
+
+	const formattedResults = record.events.map(e => {
+		return [e.id || '-', e.user || '-', e.event || '-'];
+	});
+
+	table.setData({
+		headers: ['Event ID', 'User', 'Comment'],
+		data: formattedResults
+	});
+
+	const closeScreen = () => {
+		screen.remove(table);
+
+		try {
+			if (cleanupFunc !== undefined)
+				cleanupFunc();
+		}
+		catch (e) {
+			console.error(e);
+		}
+
+		showDetails(record);
+
+		screen.render();
+	};
+
+	table.key(['escape'], closeScreen);
+	table.rows.key(['escape'], closeScreen);
+
+	screen.append(table);
+	table.focus();
+	screen.render();
+}
+
+function showLinkedRecords(record, cleanupFunc) {
 	const list = blessed.list({
 		top: 'center',
 		left: 'center',
 		width: '50%',
 		height: '40%',
 		keys: true,
-		vi: true,
 		tags: true,
 		border: { type: 'line' },
 		label: ' Linked Records ',
-		items: Array.from(person.related).map(term => runSearch(term).length === 0 ? `{red-fg}${term}{/}` : `{green-fg}${term}{/}`),
+		items: Array.from(record.related).map(term => runSearch(term).length === 0 ? `{red-fg}${term}{/}` : `{green-fg}${term}{/}`),
 		interactive: true,
 		scrollable: true,
 		style: {
@@ -414,9 +494,24 @@ function showLinkedRecords(person, cleanupFunc) {
 		}
 	});
 
+	const closeScreen = () => {
+		// Go directly to result
+		screen.remove(list);
+
+		try {
+			if (cleanupFunc !== undefined)
+				cleanupFunc();
+		}
+		catch (e) {
+			console.error(e);
+		}
+
+		screen.render();
+	};
+
 	// Handle enter key (on screen)
 	list.key(['enter'], () => {
-		const term = person.related[list.selected];
+		const term = record.related[list.selected];
 		const results = runSearch(term);
 		const count = runSearch(term).length;
 
@@ -426,19 +521,14 @@ function showLinkedRecords(person, cleanupFunc) {
 		}
 		else if (count === 1) {
 			// Go directly to result
-			screen.remove(list);
-			if (cleanupFunc !== undefined)
-				cleanupFunc();
+			closeScreen();
 
 			showDetails(results[0]);
 
 			screen.render();
 		} else {
 			// Issue search
-			screen.remove(list);
-			screen.remove(searchResultsTable);
-			if (cleanupFunc !== undefined)
-				cleanupFunc();
+			closeScreen();
 
 			showSearchResultsScreen(term);
 
@@ -447,9 +537,9 @@ function showLinkedRecords(person, cleanupFunc) {
 	});
 
 	list.key(['escape'], () => {
-		screen.remove(list);
+		closeScreen();
 
-		showDetails(person);
+		showDetails(record);
 
 		screen.render();
 	});
@@ -480,13 +570,22 @@ function formatPersonDetails(person) {
 		}
 	}
 
-	content += `Surname: ${person.surname}\nForename: ${person.forename}\nAliases: N/A\nRecord Type: ${person.type || 'Individual'}\nRecord Classifiers: ${person.classifier || 'N/A'}\nBorn: ${person.dateOfBirth}\nDied: ${person.dateOfDeath || 'N/A'}\nStatus: ${person.status || 'N/A'}\nNationality: ${person.nationality || 'USA'}\nLast Known Address: ${person.lastKnownAddress || 'N/A'}\n\nNotes:\n${person.notes || 'None'}`;
+	content += `Surname: ${person.surname}\nForename: ${person.forename}\nAliases: N/A\nRecord Type: ${person.type || 'Individual'}\nRecord Classifiers: ${person.classifier || 'N/A'}\nBorn: ${person.dateOfBirth}\nDied: ${person.dateOfDeath || 'N/A'}\nStatus: ${person.status || 'N/A'}\nLast Known Address: ${person.lastKnownAddress || 'N/A'}\n`;
+	
+	if (person.nationality || person.type == 'Individual')
+		content += `Nationality: ${person.nationality || 'USA'}\n`;
+	
+	content += `\n\nNotes:\n${person.notes || 'None'}`;
 
 	if (person.related !== undefined) {
 		content += "\n\nLinked Records. Press <L> to select\n";
 		content += 'Linked Record(s):\n - '
 		content += person.related.join('\n - ');
 		content += '\n';
+	}
+
+	if (person.events !== undefined) {
+		content += "\n\nPress <E> to view event log\n";
 	}
 
 	return content;
