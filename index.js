@@ -388,8 +388,9 @@ function showDetails(person) {
 
 	if (person.related !== undefined) {
 		detailsBox.key(['l'], () => {
-			screen.remove(detailsBox);
-			showLinkedRecords(person);
+			showLinkedRecords(person, () => {
+				screen.remove(detailsBox);
+			});
 		});
 	}
 
@@ -397,7 +398,7 @@ function showDetails(person) {
 	screen.render();
 }
 
-function showLinkedRecords(person) {
+function showLinkedRecords(person, cleanupFunc) {
 	const list = blessed.list({
 		top: 'center',
 		left: 'center',
@@ -430,6 +431,8 @@ function showLinkedRecords(person) {
 		else if (count === 1) {
 			// Go directly to result
 			screen.remove(list);
+			if (cleanupFunc !== undefined)
+				cleanupFunc();
 
 			showDetails(results[0]);
 
@@ -438,6 +441,8 @@ function showLinkedRecords(person) {
 			// Issue search
 			screen.remove(list);
 			screen.remove(searchResultsTable);
+			if (cleanupFunc !== undefined)
+				cleanupFunc();
 
 			showSearchResultsScreen(term);
 
