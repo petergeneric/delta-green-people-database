@@ -4,11 +4,18 @@
   "description": "delta green person database",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js; clear"
+    "start": "node index.js"
   },
   "dependencies": {
     "neo-blessed": "^0.2.0",
     "neo-blessed-contrib": "^4.9.0"
+  },
+  
+  "bin": "index.js",
+  "pkg": {
+    "assets": [
+      "node_modules/**"
+    ]
   },
   "author": "Peter Wright",
   "license": "MIT"
