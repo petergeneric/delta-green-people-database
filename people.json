@@ -1187,25 +1187,6 @@
     },
 
     {
-      "surname": "Baughman",
-      "forename": "Clyde",
-      "classifier": "I",
-      "dateOfBirth": "1937-12-02",
-      "dateOfDeath": "1994-11-29",
-      "lastKnownAddress": "Unknown",
-      "related": ["BAUGHMAN, MARLENE"]
-    },
-    {
-      "surname": "Baughman",
-      "forename": "Marlene",
-      "classifier": "I",
-      "dateOfBirth": "1938-05-11",
-      "dateOfDeath": "1992-10-17",
-      "lastKnownAddress": "Unknown",
-      "notes": "Natural causes",
-      "related": ["BAUGHMAN, CLYDE"]
-    },
-    {
       "surname": "Larkin",
       "forename": "Augustus",
       "classifier": "I",
