@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "gameStage": { "type": "number" },
+    "stages": {
+      "type": "object",
+      "additionalProperties": { "type": "string" }
+    },
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "surname": { "type": "string" },
+          "forename": { "type": "string" },
+          "type": { "type": "string" },
+          "status": { "type": "string" },
+          "classifier": { "type": "string" },
+          "dateOfBirth": { "type": "string" },
+          "dateOfDeath": { "type": "string" },
+          "lastKnownAddress": { "type": "string" },
+          "warning": { "type": "string" },
+          "notes": { "type": "string" },
+          "related": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "events": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": { "type": "string" },
+                "user": { "type": "string" },
+                "event": { "type": "string" }
+              },
+              "required": ["id", "user", "event"]
+            }
+          }
+        }
+      }
+    }
+  },
+  "required": ["gameStage", "records"]
+}
