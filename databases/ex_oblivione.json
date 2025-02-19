@@ -1,0 +1,75 @@
+{  
+  "records": [
+    {
+      "surname": "Abril",
+      "forename": "Daniel",
+      "classifier": "I",
+      "dateOfBirth": "1965-10-03",
+      "dateOfDeath": "2010-06-02",
+      "lastKnownAddress": "771 Palma Avenue, Yuma, AZ",
+      "notes": "Homicide Victim",
+      "related": ["Case 763842-198-34", "ABRIL, SANDRA", "ABRIL, CIERRA"]
+    },
+    {
+      "surname": "Abril",
+      "forename": "Sandra",
+      "classifier": "I",
+      "dateOfBirth": "1964-02-27",
+      "dateOfDeath": "2010-06-02",
+      "lastKnownAddress": "771 Palma Avenue, Yuma, AZ",
+      "notes": "Homicide Victim",
+      "related": ["Case 763842-198-34", "ABRIL, DANIEL", "ABRIL, CIERRA", "WRIGHT, GRACE"]
+    },
+    {
+      "surname": "Wright",
+      "forename": "Grace",
+      "classifier": "I",
+      "dateOfBirth": "1944-04-17",
+      "dateOfDeath": "2010-06-02",
+      "lastKnownAddress": "771 Palma Avenue, Yuma, AZ",
+      "notes": "Homicide Victim",
+      "related": ["Case 763842-198-34", "ABRIL, SANDRA"]
+    },
+    {
+      "surname": "Abril",
+      "forename": "Cierra ",
+      "classifier": "I",
+      "dateOfBirth": "1993-11-01",
+      "dateOfDeath": "2010-06-02",
+      "lastKnownAddress": "771 Palma Avenue, Yuma, AZ",
+      "notes": "Homicide Victim",
+      "related": ["Case 763842-198-34", "ABRIL, DANIEL", "ABRIL, SANDRA", "RYAN, BETH", "RYAN, HOMER"]
+    },
+    {
+      "surname": "Ryan",
+      "forename": "Homer",
+      "classifier": "I, DoD",
+      "dateOfBirth": "1989-07-21",
+      "dateOfDeath": "2010-06-02",
+      "lastKnownAddress": "771 Palma Avenue, Yuma, AZ",
+      "notes": "Homicide Victim",
+      "related": ["Case 763842-198-34", "ABRIL, CIERRA", "RYAN, BETH"]
+    },
+    {
+      "surname": "Ryan",
+      "forename": "Beth",
+      "classifier": "I",
+      "dateOfBirth": "2010-01-23",
+      "dateOfDeath": "2010-06-02",
+      "lastKnownAddress": "771 Palma Avenue, Yuma, AZ",
+      "notes": "Homicide Victim",
+      "related": ["Case 763842-198-34", "RYAN, HOMER", "ABRIL, CIERRA"]
+    },
+      {
+      "id": "Case 763842-198-34",
+      "surname": "763842-198-34",
+      "forename": "",
+      "type": "Yuma PD Case File",
+      "dateOfBirth": "2010-06-04",
+      "lastKnownAddres": "NIL",
+      "classifier": "Case",
+      "notes" : "6 residents dead found at home in Yuma, AZ by cleaning staff. Victims had been stabbed at least 60 times each, and had lips, eyelids and ears removed.\n\nUPDATE: Lead detective assigned: SENIOR DETECTIVE JULIA REARDON.\n\nUPDATE: Neighbourhood canvas completed, several individuals reported seeing children on bikes which warrants further investigation.\n\nUPDATE: Dr Albert P. Norris from the County Sheriff's Office reports the autopsy has been completed. Cause of death was confirmed as shock from excessive blood loss. Post-mortem marking observed on victims limbs.",
+      "related": ["ABRIL, DANIEL", "ABRIL, SANDRA", "RYAN, BETH", "RYAN, HOMER", "ABRIL, CIERRA", "WRIGHT, GRACE"]
+    }
+  ]
+}
