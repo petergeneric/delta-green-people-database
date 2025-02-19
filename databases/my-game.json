@@ -1211,7 +1211,7 @@
       "dateOfBirth": "1953-02-03",
       
       "lastKnownAddress": "Apt 224, 145 Adams Street, Boston, MA",
-      "related": "Medical License 34232/3590"
+      "related": ["Medical License 34232/3590"]
     },
     {
       "surname": "Samigina",
