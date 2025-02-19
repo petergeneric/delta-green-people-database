@@ -43,5 +43,5 @@
       }
     }
   },
-  "required": ["gameStage", "records"]
+  "required": ["records"]
 }
