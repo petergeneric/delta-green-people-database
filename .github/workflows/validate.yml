@@ -1,0 +1,41 @@
+{
+  "name": "Validate JSON Files",
+  "on": {
+    "push": {
+      "paths": [
+        "**.json"
+      ]
+    },
+    "pull_request": {
+      "paths": [
+        "**.json"
+      ]
+    }
+  },
+  "jobs": {
+    "validate-json": {
+      "runs-on": "ubuntu-latest",
+      "steps": [
+        {
+          "name": "Checkout repository",
+          "uses": "actions/checkout@v4"
+        },
+        {
+          "name": "Setup Node.js",
+          "uses": "actions/setup-node@v4",
+          "with": {
+            "node-version": "18"
+          }
+        },
+        {
+          "name": "Install dependencies",
+          "run": "npm install -g ajv-cli"
+        },
+        {
+          "name": "Validate JSON files",
+          "run": "find . -name \"*.json\" -print0 | xargs -0 -n1 ajv validate -d\n"
+        }
+      ]
+    }
+  }
+}
