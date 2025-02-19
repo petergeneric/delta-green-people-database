@@ -4,6 +4,9 @@ const contrib = require('neo-blessed-contrib');
 
 function loadDatabaseFile(file, defaultStage = 1) {
 	if (fs.existsSync(file)) {
+		/**
+		 * @type Datafile
+		 */
 		let config = JSON.parse(fs.readFileSync(file, 'utf-8'));
 
 		// Remove any records that should not be visible in the current game stage
