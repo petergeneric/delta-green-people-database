@@ -1,5 +1,5 @@
 export interface Datafile {
-    gameStage: number
+    gameStage?: number
     stages?: {
         [gameStagePoint: string]: string
     }
