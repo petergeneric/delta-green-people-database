@@ -31,9 +31,14 @@
           "name": "Install dependencies",
           "run": "npm install -g ajv-cli"
         },
+        
+        {
+          "name": "Validate Example JSON",
+          "run": "ajv validate -s schema.json -d people.json"
+        },
         {
           "name": "Validate JSON files",
-          "run": "find . -name \"*.json\" -print0 | xargs -0 -n1 ajv validate -d\n"
+          "run": "find databases/ -name \"*.json\" -print0 | xargs -0 -n1 ajv validate -s schema.json -d "
         }
       ]
     }
