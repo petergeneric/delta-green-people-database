@@ -4,7 +4,8 @@
   "description": "delta green person database",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "game": "node index.js databases/my-game.json"
   },
   "dependencies": {
     "neo-blessed": "^0.2.0",

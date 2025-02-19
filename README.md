@@ -62,7 +62,7 @@ You can add another file, `players.json` (that won't be committed) and put the r
 Here's an example of what that file would look like for a single player:
 
 ```
-[
+{ "records": [
   {
     "surname": "PlayerSurname",
     "forename": "PlayerForename",
@@ -74,5 +74,5 @@ Here's an example of what that file would look like for a single player:
     "lastKnownAddress": "Behind Your Eyes, Can't You Smell It?",
     "notes": "{yellow-fg}<<Take 1D10 of Sanity Damage>>{/}"
   }
-]
+]}
 ```

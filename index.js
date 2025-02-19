@@ -2,48 +2,92 @@ const fs = require('fs');
 const blessed = require('neo-blessed');
 const contrib = require('neo-blessed-contrib');
 
-function loadDatabase() {
-	if (!fs.existsSync('people.json')) {
-		console.error('No people.json database found!');
-		console.exit(1);
+function loadDatabaseFile(file, defaultStage = 1) {
+	if (fs.existsSync(file)) {
+		let config = JSON.parse(fs.readFileSync(file, 'utf-8'));
+
+		// Remove any records that should not be visible in the current game stage
+		// If the datafile specifies a stage then use that, otherwise default to the master datafile's stage
+		const stage = config.gameStage || defaultStage;
+		config.records = config.records.filter(person => {
+			const minStage = person.notBefore || 0;
+			const maxStage = person.notAfter || 999999999;
+
+			return (stage >= minStage && stage <= maxStage);
+		});
+
+		// Default record types to Individual
+		config.records.filter(record=>record.type === undefined).forEach(record => {
+			record.type = 'Individual';
+		});
+
+		// Fix-up nonsensical records whose dateOfDeath is before dateOfBirth
+		config.records.forEach(person => {
+			if ('dateOfDeath' in person && person.dateOfDeath < person.dateOfBirth) {
+				let tmp = person.dateOfBirth;
+				person.dateOfBirth = person.dateOfDeath;
+				person.dateOfDeath = tmp;
+			}
+		});
+
+		// Apply default status value
+		config.records.forEach(record => {
+			if (!('status' in record) && record.type === 'Individual'){
+				record.status = ('dateOfDeath' in record) ? 'Deceased' : 'Alive';
+			}
+		});
+
+		// Apply default id
+		config.records.forEach(record => {
+			if (!('id' in record)){
+				record.id = record.surname.toUpperCase() + ', ' + record.forename.toUpperCase();
+			}
+		});
+
+		return config;
+	}
+	else {
+		return null;
+	}
+}
+
+function loadDatabase(files) {
+	let config = null;
+	if (files.length === 0) {
+		config = loadDatabaseFile('people.json');
+
+		if (config === null) {
+			console.error('people.json datafile not found in working directory. To run with a custom datafile, add it as an argument to this program.');
+			console.exit(1);
+		}
+	}
+	else {
+		for (let file of files) {
+			if (fs.existsSync(file)) {
+				const cfg = loadDatabaseFile(file, config?.gameStage || 1);
+
+				if (config === null) {
+					config = cfg; // Master datafile
+				}
+				else {
+					// Add records from other file
+					cfg.records.forEach(p => config.records.push(p));
+				}
+			}
+			else {
+				console.error('Supplied database file not found: ' + process.argv[2]);
+				process.exit(1);
+			}
+		}
 	}
 
-	const config = JSON.parse(fs.readFileSync('people.json', 'utf-8'));
+	if (!files.includes('players.json') && fs.existsSync('players.json')) {
+		const cfg = loadDatabaseFile('players.json');
+
+		cfg.records.forEach(record => config.records.push(record));
+	}
+
 	let people = config.records;
-
-	if (fs.existsSync('players.json')) {
-		const players = JSON.parse(fs.readFileSync('players.json', 'utf-8'));
-
-		players.forEach(p => people.push(p));
-	}
-
-	// Default record types to Individual
-	people.filter(record=>record.type === undefined).forEach(record => {
-		record.type = 'Individual';
-	});
-
-	// Fix-up nonsensical records whose dateOfDeath is before dateOfBirth
-	people.forEach(person => {
-		if ('dateOfDeath' in person && person.dateOfDeath < person.dateOfBirth) {
-			let tmp = person.dateOfBirth;
-			person.dateOfBirth = person.dateOfDeath;
-			person.dateOfDeath = tmp;
-		}
-	});
-
-	// Apply default status value
-	people.forEach(record => {
-		if (!('status' in record) && record.type == 'Individual'){
-			record.status = ('dateOfDeath' in record) ? 'Deceased' : 'Alive';
-		}
-	});
-
-	// Apply default id
-	people.forEach(record => {
-		if (!('id' in record)){
-			record.id = record.surname.toUpperCase() + ', ' + record.forename.toUpperCase();
-		}
-	});
 
 	// Index person -> related links
 	let peopleByIds = {};
@@ -51,6 +95,7 @@ function loadDatabase() {
 		peopleByIds[person.id] = person;
 	});
 
+	// Include backlinks for related records
 	people.forEach(person => {
 		if (person.related !== undefined) {
 			for (let relterm of person.related) {
@@ -68,17 +113,11 @@ function loadDatabase() {
 		}
 	});
 
-	// Remove any records that should not be visible in the current game stage
-	const stage = config.gameStage || 1;
-	return people.filter(person => {
-		const minStage = person.notBefore || 0;
-		const maxStage = person.notAfter || 999999999;
-
-		return (stage >= minStage && stage <= maxStage);
-	});
+	return people;
 }
 
-const people = loadDatabase();
+// Load all the datafiles supplied as args
+const people = loadDatabase(process.argv.slice(2));
 
 // For records with DoB+DoD older than this, warn that a physical record is required
 // Set to null if not desired. This feature lets you force players into a dusty dark archives room for old records.
