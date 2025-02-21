@@ -1,0 +1,122 @@
+{ 
+  "records": [
+    {
+      "surname": "Maretti",
+      "forename": "Carl",
+      "classifier": "I",
+      "dateOfBirth": "1952-01-12",
+      "dateOfDeath": "1997-09-15",
+      "lastKnownAddress": "Unknown",
+      "related": ["Case 07-97-00002", "MARETTI, CAROLINE", "MARETTI, DONNA", "MARETTI, CATHY"]
+    },
+    {
+      "surname": "Maretti",
+      "forename": "Caroline",
+      "classifier": "I",
+      "dateOfBirth": "1951-05-26",
+      "lastKnownAddress": "Unknown",
+      "related": ["MARETTI, CARL", "MARETTI, DONNA", "MARETTI, CATHY"]
+    },
+    {
+      "surname": "Maretti",
+      "forename": "Cathy",
+      "classifier": "I",
+      "dateOfBirth": "1989-11-04",
+      "lastKnownAddress": "Unknown",
+      "related": ["MARETTI, CARL", "MARETTI, CAROLINE", "MARETTI, DONNA"]
+    },
+    {
+      "surname": "Maretti",
+      "forename": "Donna",
+      "classifier": "I",
+      "dateOfBirth": "1987-10-20",
+      "lastKnownAddress": "Unknown",
+      "related": ["MARETTI, CARL", "MARETTI, CAROLINE", "MARETTI, CATHY"]
+    },
+    {
+      "surname": "Hatvan",
+      "forename": "Vanessa",
+      "classifier": "I",
+      "dateOfBirth": "1956-03-01",
+      "dateOfDeath": "1997-10-07",
+      "lastKnownAddress": "Unknown",
+      "related": ["Case 07-97-00002"]
+    },
+    {
+      "surname": "Harrogate",
+      "forename": "Lauren",
+      "classifier": "I",
+      "dateOfBirth": "1980-08-09",
+      "dateOfDeath": "1997-10-21",
+      "lastKnownAddress": "7 Kimogenor Point Road, Glenridge, NY 11956",
+      "related": ["Case 07-97-00002", "HARROGATE, SANDRA"]
+    },
+    {
+      "surname": "Harrogate",
+      "forename": "Sandra",
+      "classifier": "I",
+      "dateOfBirth": "1955-09-24",
+      "lastKnownAddress": "7 Kimogenor Point Road, Glenridge, NY 11956",
+      "related": ["HARROGATE, LAUREN"]
+    },
+    {
+      "id": "Case 07-97-00002",
+      "surname": "07-97-00002",
+      "forename": "",
+      "type": "Glenridge PD Case File",
+      "dateOfBirth": "1997-09-15",
+      "lastKnownAddres": "NIL",
+      "classifier": "Case",
+      "notes" : "Missing persons case reported by Caroline Maretti for her husband Carl Maretti, after he failed to return from work. Officers have been dispatched to check his place of work. \n\nUPDATE: Human remains located in a culvert drain, sent to the Suffolk County Medical Examiner for an autopsy.\n\nUPDATE: Lead detective assigned: DETECTIVE HANNAH GREGSON.\n\nUPDATE: Dr Stephen Santorini from the Suffolk County Medical Examiner's Office reports that the autopsy has been completed. The cause of death is inconclusive due to massive mutilation.\n\nUPDATE: Investigation has found no irregularities or leads for Carl's murder, currently pursuing a random/opportunistic murder motive.\n\nUPDATE: Vanessa Hatvan was found dead with similarities to Carl's case, merging investigations. Her remains are with County Medical Examiner for autopsy.\n\nUPDATE: Dr Stephen Santorini from the Suffolk County Medical Examiner's Office reports that Vaness's autopsy has been completed. Cause of death is again inconclusive, but notable similarities were identified with Carl's murder.\n\nUPDATE: Lauren Harrogate reported missing from her home, with her mother in a catatonic state. Her remains were located near Highway 31 in a similar condition to the 2 other victims.\n\nUPDATE: Request submitted to the FBI for assistance from their serial killer and behavioral analysis teams.",
+      "related": ["MARETTI, CARL", "HATVAN, VANESSA", "HARROGATE, LAUREN"]
+    },
+    {
+      "surname": "Gregson",
+      "forename": "Hannah",
+      "classifier": "I, LEO",
+      "dateOfBirth": "1958-04-22",
+      "warning": "Active Concealed Carry Permit",
+      "notes": "Glenridge PD Law Enforcement Officer",
+      "lastKnownAddress": "159 Old Harbor Road, Glenridge, NY 11956"
+    },
+    {
+      "surname": "Dengler",
+      "forename": "Mark",
+      "classifier": "I",
+      "dateOfBirth": "1942-08-01",
+      "lastKnownAddress": "50 Oak Road, Glenridge, NY 11956",
+      "notes": "Warned for speeding on Highway 31 on 1995-12-23",
+      "related": ["DENGLER, ELOISE", "DENGLER, THOMAS"]
+    },
+    {
+      "surname": "Dengler",
+      "forename": "Eloise",
+      "classifier": "I",
+      "dateOfBirth": "1944-06-18",
+      "lastKnownAddress": "50 Oak Road, Glenridge, NY 11956",
+      "related": ["DENGLER, MARK", "DENGLER, THOMAS"]
+    },
+    {
+      "surname": "Dengler",
+      "forename": "Thomas",
+      "classifier": "I",
+      "dateOfBirth": "1981-10-22",
+      "lastKnownAddress": "50 Oak Road, Glenridge, NY 11956",
+      "related": ["DENGLER, MARK", "DENGLER, ELOISE"]
+    },
+    {
+      "surname": "Santorini",
+      "forename": "Stephen",
+      "classifier": "I",
+      "dateOfBirth": "1941-03-03",
+      "lastKnownAddress": "11 Myrtle Ave, Brentwood, NY 11717"
+    },
+    {
+      "surname": "Smith",
+      "forename": "Gilbert",
+      "classifier": "I, DoD",
+      "dateOfBirth": "1969-08-19",
+      "lastKnownAddress": "1402 Apollo Way, Valdosta, GA 31605"
+    }
+  ]
+}
