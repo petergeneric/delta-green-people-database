@@ -1,4 +1,17 @@
-p",
+{  
+  "records": [
+    {
+      "surname": "Wei",
+      "forename": "Michael",
+      "classifier": "I",
+      "dateOfBirth": "1984-07-29",
+      "dateOfDeath": "2010-10-12",
+      "lastKnownAddress": "600 West 113th Street Hall, New York, NY 10025",
+      "related": ["FBI Case 2010/65874142/D", "WEI, PHILIP", "WEI, MIRIAM", "WEI, IMOGEN"]
+    },
+    {
+      "surname": "Wei",
+      "forename": "Philip",
       "classifier": "I",
       "dateOfBirth": "1954-12-07",
       "dateOfDeath": "2002-03-12",
