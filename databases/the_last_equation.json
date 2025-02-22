@@ -1,0 +1,268 @@
+p",
+      "classifier": "I",
+      "dateOfBirth": "1954-12-07",
+      "dateOfDeath": "2002-03-12",
+      "lastKnownAddress": "UNKNOWN",
+      "related": ["WEI, MIRIAM", "WEI, MICHAEL", "WEI, IMOGEN"]
+    },
+    {
+      "surname": "Wei",
+      "forename": "Miriam",
+      "classifier": "I",
+      "dateOfBirth": "1957-07-29",
+      "lastKnownAddress": "125 Bulkley Ave, Alta Mira, CA 94965",
+      "related": ["WEI, PHILIP", "WEI, MICHAEL", "WEI, IMOGEN"]
+    },
+    {
+      "surname": "Wei",
+      "forename": "Imogen",
+      "classifier": "I",
+      "dateOfBirth": "1986-08-20",
+      "lastKnownAddress": "125 Bulkley Ave, Alta Mira, CA 94965",
+      "related": ["WEI, PHILIP", "WEI, MIRIAM", "WEI, MICHAEL"]
+    },
+
+    {
+      "surname": "Ridgeway",
+      "forename": "Malcolm",
+      "classifier": "I",
+      "dateOfBirth": "1966-02-27",
+      "dateOfDeath": "2010-10-12",
+      "lastKnownAddress": "136 Henry Ave, Elmer, NJ 08318",
+      "notes": "Homicide Victim",
+      "related": ["FBI Case 2010/65874142/D", "RIDGEWAY, DINAH", "RIDGEWAY, MICHAEL", "RIDGEWAY, CLARK", "RIDGEWAY, DEAN", "RIDGEWAY, MARY", "RIDGEWAY, ALICE",  "RIDGEWAY, CLAIRE"]
+    },
+    {
+      "surname": "Ridgeway",
+      "forename": "Dinah",
+      "classifier": "I",
+      "dateOfBirth": "1967-04-17",
+      "dateOfDeath": "2010-10-12",
+      "lastKnownAddress": "136 Henry Ave, Elmer, NJ 08318",
+      "notes": "Homicide Victim",
+      "related": ["FBI Case 2010/65874142/D", "RIDGEWAY, MALCOLM", "RIDGEWAY, MICHAEL", "RIDGEWAY, CLARK", "RIDGEWAY, DEAN", "RIDGEWAY, MARY", "RIDGEWAY, ALICE",  "RIDGEWAY, CLAIRE"]
+    },
+    {
+      "surname": "Ridgeway",
+      "forename": "Michael ",
+      "classifier": "I",
+      "dateOfBirth": "1992-11-01",
+      "dateOfDeath": "2010-10-12",
+      "lastKnownAddress": "136 Henry Ave, Elmer, NJ 08318",
+      "notes": "Homicide Victim",
+      "related": ["FBI Case 2010/65874142/D", "RIDGEWAY, MALCOLM", "RIDGEWAY, DINAH", "RIDGEWAY, CLARK", "RIDGEWAY, DEAN", "RIDGEWAY, MARY", "RIDGEWAY, ALICE",  "RIDGEWAY, CLAIRE"]
+    },
+    {
+      "surname": "Ridgeway",
+      "forename": "Clark",
+      "classifier": "I",
+      "dateOfBirth": "1994-07-21",
+      "dateOfDeath": "2010-10-12",
+      "lastKnownAddress": "136 Henry Ave, Elmer, NJ 08318",
+      "notes": "Homicide Victim",
+      "related": ["FBI Case 2010/65874142/D", "RIDGEWAY, MALCOLM", "RIDGEWAY, DINAH", "RIDGEWAY, MICHAEL", "RIDGEWAY, DEAN", "RIDGEWAY, MARY", "RIDGEWAY, ALICE",  "RIDGEWAY, CLAIRE"]
+    },
+    {
+      "surname": "Ridgeway",
+      "forename": "Dean",
+      "classifier": "I",
+      "dateOfBirth": "1996-07-04",
+      "dateOfDeath": "2010-10-12",
+      "lastKnownAddress": "136 Henry Ave, Elmer, NJ 08318",
+      "notes": "Homicide Victim",
+      "related": ["FBI Case 2010/65874142/D", "RIDGEWAY, MALCOLM", "RIDGEWAY, DINAH", "RIDGEWAY, MICHAEL", "RIDGEWAY, CLARK", "RIDGEWAY, MARY", "RIDGEWAY, ALICE",  "RIDGEWAY, CLAIRE"]
+    },
+    {
+      "surname": "Ridgeway",
+      "forename": "Mary",
+      "classifier": "I",
+      "dateOfBirth": "1997-01-09",
+      "dateOfDeath": "2010-10-12",
+      "lastKnownAddress": "136 Henry Ave, Elmer, NJ 08318",
+      "notes": "Homicide Victim",
+      "related": ["FBI Case 2010/65874142/D", "RIDGEWAY, MALCOLM", "RIDGEWAY, DINAH", "RIDGEWAY, MICHAEL", "RIDGEWAY, CLARK", "RIDGEWAY, DEAN", "RIDGEWAY, ALICE",  "RIDGEWAY, CLAIRE"]
+    },
+    {
+      "surname": "Ridgeway",
+      "forename": "Alice",
+      "classifier": "I",
+      "dateOfBirth": "1998-08-30",
+      "dateOfDeath": "2010-10-12",
+      "lastKnownAddress": "136 Henry Ave, Elmer, NJ 08318",
+      "notes": "Homicide Victim",
+      "related": ["FBI Case 2010/65874142/D", "RIDGEWAY, MALCOLM", "RIDGEWAY, DINAH", "RIDGEWAY, MICHAEL", "RIDGEWAY, CLARK", "RIDGEWAY, DEAN", "RIDGEWAY, MARY", "RIDGEWAY, CLAIRE"]
+    },
+    {
+      "surname": "Ridgeway",
+      "forename": "Claire",
+      "classifier": "I",
+      "dateOfBirth": "2000-02-05",
+      "dateOfDeath": "2010-10-12",
+      "lastKnownAddress": "136 Henry Ave, Elmer, NJ 08318",
+      "notes": "Homicide Victim",
+      "related": ["FBI Case 2010/65874142/D", "RIDGEWAY, MALCOLM", "RIDGEWAY, DINAH", "RIDGEWAY, MICHAEL", "RIDGEWAY, CLARK", "RIDGEWAY, DEAN", "RIDGEWAY, MARY", "RIDGEWAY, ALICE"]
+    },
+
+    {
+      "surname": "Kimbrel",
+      "forename": "Julio",
+      "classifier": "I",
+      "dateOfBirth": "1965-07-29",
+      "lastKnownAddress": "114 E Pearl, Wellsville, NY 14895"
+    },
+    {
+      "surname": "Casselman",
+      "forename": "Kelly",
+      "classifier": "I",
+      "dateOfBirth": "1981-04-11",
+      "lastKnownAddress": "121 Keystone Dr, Brinkman, MT 59714"
+    },
+    {
+      "surname": "Markell",
+      "forename": "Tia",
+      "classifier": "I",
+      "dateOfBirth": "1981-03-10",
+      "lastKnownAddress": "636 Rosedale Ave, Bronx, NY 10473"
+    },
+    {
+      "surname": "Philbeck",
+      "forename": "Ben",
+      "classifier": "I",
+      "dateOfBirth": "1966-07-14",
+      "lastKnownAddress": "2516 Farnsworth Dr, Livermore, CA 94551"
+    },
+    {
+      "surname": "Pletcher",
+      "forename": "Kelly",
+      "classifier": "I",
+      "dateOfBirth": "1989-03-19",
+      "lastKnownAddress": "1009 Clayton St, Columbia, MO 65203"
+    },
+
+    {
+      "surname": "Sward",
+      "forename": "Julius",
+      "classifier": "I",
+      "dateOfBirth": "1979-07-05",
+      "lastKnownAddress": "2041 Rock Pine Ct, Modesto, CA 95351"
+    },
+    {
+      "surname": "Sward",
+      "forename": "Anetta",
+      "classifier": "I",
+      "dateOfBirth": "1980-02-25",
+      "lastKnownAddress": "2041 Rock Pine Ct, Modesto, CA 95351"
+    },
+    {
+      "surname": "Sward",
+      "forename": "Anthony",
+      "classifier": "I",
+      "dateOfBirth": "2008-09-22",
+      "lastKnownAddress": "2041 Rock Pine Ct, Modesto, CA 95351"
+    },
+    {
+      "surname": "Sward",
+      "forename": "Evelyn",
+      "classifier": "I",
+      "dateOfBirth": "2005-02-10",
+      "lastKnownAddress": "2041 Rock Pine Ct, Modesto, CA 95351"
+    },
+
+    {
+      "surname": "Tumlinson",
+      "forename": "Emile",
+      "classifier": "I",
+      "dateOfBirth": "1959-05-04",
+      "lastKnownAddress": "611 Catalonia Ave, Coral Gables, FL 33134"
+    },
+
+    {
+      "surname": "Desjardin",
+      "forename": "Anthony",
+      "classifier": "I",
+      "dateOfBirth": "1982-03-08",
+      "lastKnownAddress": "600 West 113th Street Hall, New York, NY 10025"
+    },
+    {
+      "surname": "Frank",
+      "forename": "Molly",
+      "classifier": "I",
+      "dateOfBirth": "1985-11-09",
+      "lastKnownAddress": "Hamilton Hall, 1130 Amsterdam Ave, New York, NY 10027"
+    },
+
+    {
+      "surname": "Blanet",
+      "forename": "Thomas",
+      "classifier": "I, LEO",
+      "dateOfBirth": "1961-05-12",
+      "lastKnownAddress": "177 Cedar Rd, Pittsgrove, NJ 08318",
+      "notes": "New Jersey State Police Officer"
+    },
+    {
+      "surname": "Weeks",
+      "forename": "Upton",
+      "classifier": "I, LEO",
+      "dateOfBirth": "1969-05-12",
+      "lastKnownAddress": "121 Henry Ave, Alliance, NJ 08318",
+      "notes": "Chief of Police, Alliance Police Department"
+    },
+    {
+      "surname": "Herrera",
+      "forename": "Marvin",
+      "classifier": "I, LEO",
+      "dateOfBirth": "1973-11-05",
+      "lastKnownAddress": "327 W 101st St, New York, NY 10025",
+      "notes": "NYPD"
+    },
+    {
+      "surname": "Canor",
+      "forename": "Aiden",
+      "classifier": "I, FBI",
+      "dateOfBirth": "1963-08-03",
+      "lastKnownAddress": "17 Harrison Ct, Woodland Park, NJ 07424"
+    },
+    {
+      "surname": "Gant",
+      "forename": "William",
+      "classifier": "I, FBI",
+      "dateOfBirth": "1979-04-22",
+      "lastKnownAddress": "111 Nelson St, Clifton, NJ 07013"
+    },
+    {
+      "surname": "Comox",
+      "forename": "Sarah",
+      "classifier": "I, FBI",
+      "dateOfBirth": "1964-06-15",
+      "lastKnownAddress": "175 Highview Dr, Clifton, NJ 07013"
+    },
+
+    {
+      "surname": "Savé",
+      "forename": "Enrico",
+      "classifier": "I",
+      "dateOfBirth": "1969-01-02",
+      "lastKnownAddress": "11 Bloomfield Ave, Denville, NJ 07834"
+    },
+
+    {
+      "id": "FBI Case 2010/65874142/D",
+      "surname": "FBI/2010/65874142/D",
+      "forename": "",
+      "type": "FBI Case File",
+      "dateOfBirth": "2010-10-12",
+      "lastKnownAddres": "NIL",
+      "classifier": "Case",
+      "notes" : "Multiple reports recieved about a public murder and suicide along highway six, officers dispatched.\n\nUPDATE: Victim identified as Michael Ridgeway, perpetrator as Michael Wei.\n\nUPDATE: Officers dispatched to notify Michael Ridgeway's next of kin, Malcolm and Dinah.\n\nUPDATE: Remaining 7 members of the Ridgeway family found dead with shotgun wounds at their home.\n\nUPDATE: Case migrated to FBI case management system from the New Jersey Alliance Police Department.",
+      "events": [
+        {"id":"45651AD113E5D", "user":"<system>", "event":"Case recorded: transfer from Alliance New Jersey Police Department."},
+        {"id":"22333509CA227", "user":"<system>", "event":"Auto-assign to NJ Field Office"},
+        {"id":"45410255D8E64", "user":"<system>", "event":"Field Set: Agent In Charge=CANOR, A"},
+        {"id":"CAD35.1229833", "user":"CANOR, A", "event":"Notes added: All 8 members of the Ridgeway family died on 12th of Oct from shotgun injuries."},
+        {"id":"CAD35.1229941", "user":"CANOR, A", "event":"Notes added: After murdering Michael Ridgeway with the shotgun in front of multiple eye witnesses, Michael Wei spray painted the number 9920.229989212.333 on the pavement prior to decapitating himself with a shotgun shell to the face"},
+        {"id":"CAD35.1239182", "user":"CANOR, A", "event":"Notes added: Active leads: links between Michael Wei and Ridgeway family, source of shotgun and ammunition, Michael Wei's last few days and understanding the spray painted number."}
+      ],
+      "related": ["WEI, MICHAEL", "RIDGEWAY, MALCOLM", "RIDGEWAY, DINAH", "RIDGEWAY, MICHAEL", "RIDGEWAY, CLARK", "RIDGEWAY, DEAN", "RIDGEWAY, MARY", "RIDGEWAY, ALICE",  "RIDGEWAY, CLAIRE"]
+    }
+  ]
+}
