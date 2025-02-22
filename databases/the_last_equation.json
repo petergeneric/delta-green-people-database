@@ -57,7 +57,7 @@
     },
     {
       "surname": "Ridgeway",
-      "forename": "Michael ",
+      "forename": "Michael",
       "classifier": "I",
       "dateOfBirth": "1992-11-01",
       "dateOfDeath": "2010-10-12",
@@ -264,9 +264,9 @@
       "forename": "",
       "type": "FBI Case File",
       "dateOfBirth": "2010-10-12",
-      "lastKnownAddres": "NIL",
+      "lastKnownAddress": "NIL",
       "classifier": "Case",
-      "notes" : "Multiple reports recieved about a public murder and suicide along highway six, officers dispatched.\n\nUPDATE: Victim identified as Michael Ridgeway, perpetrator as Michael Wei.\n\nUPDATE: Officers dispatched to notify Michael Ridgeway's next of kin, Malcolm and Dinah.\n\nUPDATE: Remaining 7 members of the Ridgeway family found dead with shotgun wounds at their home.\n\nUPDATE: Case migrated to FBI case management system from the New Jersey Alliance Police Department.",
+      "notes" : "Multiple reports received about a public murder and suicide along highway six, officers dispatched.\n\nUPDATE: Victim identified as Michael Ridgeway, perpetrator as Michael Wei.\n\nUPDATE: Officers dispatched to notify Michael Ridgeway's next of kin, Malcolm and Dinah.\n\nUPDATE: Remaining 7 members of the Ridgeway family found dead with shotgun wounds at their home.\n\nUPDATE: Case migrated to FBI case management system from the New Jersey Alliance Police Department.",
       "events": [
         {"id":"45651AD113E5D", "user":"<system>", "event":"Case recorded: transfer from Alliance New Jersey Police Department."},
         {"id":"22333509CA227", "user":"<system>", "event":"Auto-assign to NJ Field Office"},
