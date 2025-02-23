@@ -524,9 +524,51 @@ function showEventLog(record, cleanupFunc) {
 	table.key(['escape'], closeScreen);
 	table.rows.key(['escape'], closeScreen);
 
+	table.rows.on('select', (_, index) => {
+		showEventLogText(record.events[index].event, () => {
+			table.focus();
+			screen.render();
+		});
+	});
+
 	screen.append(table);
 	table.focus();
 	screen.render();
+}
+
+function showEventLogText(text, closeCallback) {
+
+	const box = blessed.box({
+		top: 'center',
+		left: 'center',
+		width: '40%',
+		height: '70%',
+		border: {type: 'line'},
+		tags: true,
+		label: ' Event Log Record ',
+		scrollable: true,
+		alwaysScroll: true,
+		content: text,
+		scrollbar: {
+			style: {
+				bg: 'yellow'
+			}
+		},
+		keys: true,
+		vi: true
+	});
+
+	screen.append(box);
+	box.focus();
+	screen.render();
+
+	box.key(['escape', 'enter'], () => {
+		screen.remove(box);
+		screen.render();
+
+		if (closeCallback !== undefined)
+			closeCallback();
+	});
 }
 
 function showLinkedRecords(record, cleanupFunc) {
