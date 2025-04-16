@@ -278,7 +278,7 @@
       "status": "Missing",
       "lastKnownAddress": "The Hotel Broadalbin, NY, NY",
       "notes": "Missing person",
-      "related": ["IRS Employment Record: Fuller Brush Company :: Salesman", "Missing Persons Case: ROARK, M. 1933", "Census 1929: job description: door-to-door salesman"]
+      "related": ["IRS Employment Record: Fuller Brush Company :: Salesman :: Code 729G", "Missing Persons Case: ROARK, M. 1932"]
     },
 
 
@@ -642,6 +642,34 @@
       "lastKnownAddress": "3600 Princeton Ave, Dallas, TX",
       "notes": "\n\n<Access to this record has been logged>"
     },
+    {
+      "surname": "Older",
+      "forename": "Daniel",
+      "warning": "Record corruption detected; please consult IT",
+      "classifier": "NIL",
+      "dateOfBirth": "1971-07-22",
+      "dateOfDeath": "1995-01-06",
+      
+      "lastKnownAddress": "72 East Heights, Calmer, OH",
+      "notes": "\n\n<Access to this record has been logged>",
+      "related": ["Ohio State PD Case 34-3521-52161-43", "Psychiatric Treatment Report 956-323-1-5B"]
+    },
+    
+    
+    {
+      "id": "Ohio State PD Case 34-3521-52161-43",
+      "surname": "34-3521-52161-43",
+      "forename": "",
+      "type": "Ohio State PD Case File",
+      "dateOfBirth": "1995",
+      "suppressLegacyWarning": true,
+      "lastKnownAddres": "NIL",
+      "classifier": "Case",
+      "status": "Closed",
+      "notes" : "Body found by wildlife photographer <JONES, T> amidst rushes of Lake Calmer. Body appears to have washed up from lake.\nPathologist examination shows cause of death as GSW to head. Single shot to the side of head. Low calibre, x-ray indicates bullet still lodged in head.\n\nDetermination: apparant suicide. Appears to have returned to his home town and shot himself on the lake, with his body subsequently washing up after a storm. Presume missing jacket would have contained rocks to attempt to weigh himself down. Psych reports indicate a history of depression unbeknownst to his close family."
+    },
+
+    
     {
       "surname": "Suave",
       "forename": "Enrico",
