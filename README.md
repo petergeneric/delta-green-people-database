@@ -76,3 +76,19 @@ Here's an example of what that file would look like for a single player:
   }
 ]}
 ```
+
+Old Style Terminal Interface
+============================
+
+
+MacOS
+-----
+
+If you launch the application from within [cool-retro-term](https://github.com/Swordfish90/cool-retro-term) which can be configured with a variety of CRT/retro terminal styles.
+
+Windows
+-------
+
+For a CRT/retro style under Windows, you can use [Windows Terminal](https://learn.microsoft.com/en-us/windows/terminal/) and follow the instructions within the README of this repo: https://github.com/Hammster/windows-terminal-shaders
+
+Once that is done, your Windows Terminal window should have the effect enabled. Now, run the script within the terminal window by navigating to the correct directory and executing `delta-green-person-database-win.exe`.
