@@ -1,5 +1,5 @@
 {
-  "gameStage": 10,
+  "gameStage": 20,
 
   "stages": {
   	"10": "Beginning of IL Chapter 1",
@@ -256,6 +256,33 @@
       "secretNote": "Real identity of handler",
       "notBefore": 20
     },
+    {
+      "surname": "Barbas",
+      "forename": "Elias",
+      "classifier": "FBI",
+      "dateOfBirth": "1955-08-22",
+      "suppressLegacyWarning": true,
+      "lastKnownAddress": "919 4th Street, Medford, MA 02153",
+      "notes": "Mass State Police employee",
+      "related": ["Internal Affairs Case 45245-624-622"],
+      "secretNote": "Real identity of Agent Exeter",
+      "notBefore": 20
+    },
+    
+    {
+      "id": "Internal Affairs Case 45245-624-622",
+      "surname": "45245-624-622",
+      "forename": "",
+      "type": "MSPD Case File",
+      "status": "Dropped",
+      "dateOfBirth": "2015-06-09",
+      "notes": "Victim <SKEHAN, EMELINE> alleges physical altercation perpetrated by State PD employee <BARBAS, ELIAS>. Circumstances unclear. Interviews of colleagues of BARBAS indicates an exemplary history sullied by recent pattern of problematic behavior, administrative leave strongly recommended during full investigation. Update: complainant drops charges, case closed",
+      "related": ["BARBAS, ELIAS", "SKEHAN, EMELINE"],
+      "notBefore": 20
+    },
+    
+    
+    
     {
       "id": "Case 4958-45324-26226",
       "surname": "4958-45324-26226",
@@ -1371,19 +1398,19 @@
       "surname": "Topchick",
       "forename": "Gary",
       "classifier": "I",
-      "dateOfBirth": "1906-02-29",
-      "dateOfDeath": "1972-06-10",
+      "dateOfBirth": "1966-02-29",
       "lastKnownAddress": "Bellevue Hospital, NY, NY",
       "notes": "{blue-fg}<Please see physical case files>{/}",
-      "related": [ "Case 34-523623-5235-52", "Declaration of Criminal Insanity, 1953", "Internet Movie Database: The Philco Television Playhouse" ]
+      "related": [ "Case 34-523623-5235-52", "Declaration of Criminal Insanity, 2012", "Internet Movie Database: The Philco Television Playhouse" ]
     },
 
     {
       "surname": "Witwer",
       "forename": "Michael",
-      "classifier": "I",
+      "classifier": "I, DEA, DG",
       "dateOfBirth": "1980-05-23",
-      "notAfter": 19,
+      "status": "Missing",
+      "notes": "Reported missing 28 JUL 2015 by spouse, records indicate he took a vacation to unknown destination 24 JUN 2015, has not reported to work at DEA since.",
       "lastKnownAddress": "823 Rosewood Ave, Lansing, MI",
       "related": ["Grant High School D.A.R.E. Program Completion Certificate" ]
     },
