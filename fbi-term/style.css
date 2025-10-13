@@ -1,0 +1,281 @@
+/* FBI NCIC Terminal Emulator - Windows 95 Mainframe Style */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', 'Courier', monospace;
+    background-color: #008080;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Windows 95 Window Chrome */
+.win95-window {
+    background-color: #c0c0c0;
+    border: 2px solid;
+    border-color: #ffffff #000000 #000000 #ffffff;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Title Bar */
+.title-bar {
+    background: linear-gradient(to right, #000080, #1084d0);
+    color: #ffffff;
+    padding: 3px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.title-bar-text {
+    padding-left: 5px;
+}
+
+.title-bar-controls {
+    display: flex;
+    gap: 2px;
+}
+
+.title-btn {
+    background-color: #c0c0c0;
+    border: 1px solid;
+    border-color: #ffffff #000000 #000000 #ffffff;
+    width: 16px;
+    height: 14px;
+    font-size: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+}
+
+.title-btn:active:not(:disabled) {
+    border-color: #000000 #ffffff #ffffff #000000;
+}
+
+.title-btn:disabled {
+    color: #808080;
+}
+
+/* Menu Bar */
+.menu-bar {
+    background-color: #c0c0c0;
+    border-bottom: 1px solid #808080;
+    display: flex;
+    padding: 2px 4px;
+    font-size: 11px;
+}
+
+.menu-item {
+    padding: 3px 8px;
+    cursor: pointer;
+}
+
+.menu-item:hover {
+    background-color: #000080;
+    color: #ffffff;
+}
+
+/* Terminal Screen */
+.terminal-screen {
+    background-color: #000000;
+    color: #00ff00;
+    font-size: 14px;
+    line-height: 1.2;
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+}
+
+/* Status Line */
+.status-line {
+    background-color: #004400;
+    color: #00ff00;
+    padding: 2px 10px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #00ff00;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Terminal Output */
+.terminal-output {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    position: relative;
+}
+
+.terminal-output pre {
+    margin: 0;
+    white-space: pre;
+    font-family: 'Courier New', 'Courier', monospace;
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+/* Screen Content */
+.screen-content {
+    display: none;
+}
+
+.screen-content.active {
+    display: block;
+}
+
+/* Cursor Blink */
+.cursor-blink {
+    animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Status Messages */
+.status-msg {
+    color: #ffff00;
+    font-weight: bold;
+}
+
+/* Hidden Input */
+.hidden-input {
+    position: absolute;
+    left: -9999px;
+    opacity: 0;
+}
+
+/* Function Bar */
+.function-bar {
+    background-color: #c0c0c0;
+    border-top: 2px solid;
+    border-color: #ffffff #000000 #000000 #ffffff;
+    padding: 4px 8px;
+    display: flex;
+    gap: 10px;
+    font-size: 11px;
+}
+
+.function-key {
+    background-color: #c0c0c0;
+    border: 1px solid;
+    border-color: #ffffff #808080 #808080 #ffffff;
+    padding: 2px 8px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.function-key:hover {
+    background-color: #d0d0d0;
+}
+
+.function-key:active {
+    border-color: #808080 #ffffff #ffffff #808080;
+}
+
+/* Table Styling */
+.record-row {
+    cursor: pointer;
+}
+
+.record-row:hover {
+    background-color: #004400;
+}
+
+.record-row.selected {
+    background-color: #006600;
+    font-weight: bold;
+}
+
+/* Scrollbar (WebKit) */
+.terminal-output::-webkit-scrollbar {
+    width: 16px;
+    background-color: #000000;
+}
+
+.terminal-output::-webkit-scrollbar-track {
+    background-color: #001100;
+}
+
+.terminal-output::-webkit-scrollbar-thumb {
+    background-color: #00ff00;
+    border: 2px solid #000000;
+}
+
+.terminal-output::-webkit-scrollbar-thumb:hover {
+    background-color: #00cc00;
+}
+
+/* Box Drawing Characters - ensure proper alignment */
+pre {
+    letter-spacing: 0;
+}
+
+/* Color variations for different message types */
+.warning-text {
+    color: #ff0000;
+    font-weight: bold;
+}
+
+.info-text {
+    color: #00ffff;
+}
+
+.highlight-text {
+    color: #ffff00;
+    font-weight: bold;
+}
+
+/* Record detail styling */
+.field-label {
+    color: #00ff00;
+    font-weight: bold;
+}
+
+.field-value {
+    color: #00ff00;
+}
+
+/* Link styling */
+.link-available {
+    color: #00ff00;
+}
+
+.link-unavailable {
+    color: #ff0000;
+}
+
+/* Selection highlight */
+.selected-line {
+    background-color: #006600;
+    color: #ffff00;
+}
+
+/* Error messages */
+.error-msg {
+    color: #ff0000;
+    font-weight: bold;
+    animation: blink 0.5s step-start 3;
+}
+
+/* Help text */
+.help-text {
+    color: #00ffff;
+    font-size: 13px;
+}

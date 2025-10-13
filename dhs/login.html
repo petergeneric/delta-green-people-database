@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DHS Case Management System - Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-page">
+    <div class="login-container">
+        <div class="login-box">
+            <!-- Header -->
+            <div class="login-header">
+                <div class="seal-container">
+                    <img src="dhs-seal.svg" alt="DHS Seal" class="dhs-seal">
+                </div>
+                <h1 class="dept-name">DEPARTMENT OF HUMAN SERVICES</h1>
+                <h2 class="system-name">Case Management System</h2>
+                <div class="version-info">Version 4.2.1 - Build 2001.06.22</div>
+            </div>
+
+            <!-- Login Form -->
+            <div class="login-body">
+                <div class="notice-box">
+                    <div class="notice-title">⚠ NOTICE TO USERS</div>
+                    <div class="notice-text">
+                        This system is for the use of authorized users only. All information in this system is confidential
+                        and protected under state privacy laws. Unauthorized access or disclosure may result in civil and criminal penalties.
+                    </div>
+                </div>
+
+                <form id="loginForm" class="login-form">
+                    <table class="form-table">
+                        <tr>
+                            <td class="form-label">User ID:</td>
+                            <td><input type="text" id="username" class="form-input" autocomplete="off"></td>
+                        </tr>
+                        <tr>
+                            <td class="form-label">Password:</td>
+                            <td><input type="password" id="password" class="form-input" autocomplete="off"></td>
+                        </tr>
+                    </table>
+
+                    <div class="button-row">
+                        <button type="submit" class="btn btn-primary">Log In</button>
+                        <button type="button" class="btn btn-secondary" onclick="clearForm()">Clear</button>
+                        <button type="button" class="btn btn-secondary" onclick="window.close()">Exit</button>
+                    </div>
+                </form>
+
+                <div class="help-text">
+                    For technical support, contact your system administrator<br>
+                    Help Desk: (555) 0100 ext. 4200
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="login-footer">
+                <div class="status-bar">
+                    <span id="statusText">Ready</span>
+                    <span class="server-status">● Server: DHSSRV01</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('loginForm');
+        const statusText = document.getElementById('statusText');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Accept any username/password or blank
+            statusText.textContent = 'Authenticating...';
+
+            setTimeout(() => {
+                statusText.textContent = 'Access granted';
+                sessionStorage.setItem('dhs_authenticated', 'true');
+                sessionStorage.setItem('dhs_username', document.getElementById('username').value || 'Guest');
+
+                setTimeout(() => {
+                    window.location.href = 'index.html';
+                }, 500);
+            }, 800);
+        });
+
+        function clearForm() {
+            document.getElementById('username').value = '';
+            document.getElementById('password').value = '';
+            statusText.textContent = 'Ready';
+        }
+
+        // Focus username field on load
+        window.addEventListener('load', () => {
+            document.getElementById('username').focus();
+        });
+    </script>
+</body>
+</html>

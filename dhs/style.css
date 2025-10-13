@@ -1,0 +1,598 @@
+/* DHS Case Management System - Windows 98 Government UI Style */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Tahoma', 'MS Sans Serif', Arial, sans-serif;
+    font-size: 11px;
+    background-color: #5a7f6b;
+    color: #000000;
+    overflow: hidden;
+}
+
+/* ===== Login Page ===== */
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #4a6f5f 0%, #2d4a3e 100%);
+}
+
+.login-container {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+}
+
+.login-box {
+    background-color: #d4d0c8;
+    border: 2px outset #ffffff;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.login-header {
+    background: linear-gradient(to bottom, #6b9177, #4a6f5f);
+    padding: 25px;
+    text-align: center;
+    border-bottom: 2px solid #2d4a3e;
+}
+
+.seal-container {
+    margin-bottom: 15px;
+}
+
+.dhs-seal {
+    width: 100px;
+    height: 100px;
+    filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.3));
+}
+
+.dept-name {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.system-name {
+    color: #e8f4ef;
+    font-size: 14px;
+    font-weight: normal;
+    margin-bottom: 8px;
+}
+
+.version-info {
+    color: #c8e0d6;
+    font-size: 10px;
+    font-style: italic;
+}
+
+.login-body {
+    padding: 20px;
+}
+
+.notice-box {
+    background-color: #ffffcc;
+    border: 1px solid #cc9900;
+    padding: 12px;
+    margin-bottom: 20px;
+}
+
+.notice-title {
+    font-weight: bold;
+    color: #cc6600;
+    margin-bottom: 8px;
+    font-size: 12px;
+}
+
+.notice-text {
+    font-size: 10px;
+    line-height: 1.5;
+    color: #333333;
+}
+
+.login-form {
+    margin: 20px 0;
+}
+
+.form-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.form-table td {
+    padding: 8px;
+}
+
+.form-label {
+    text-align: right;
+    padding-right: 12px;
+    font-weight: bold;
+    width: 30%;
+}
+
+.form-input {
+    width: 100%;
+    padding: 3px 5px;
+    border: 2px inset #ffffff;
+    background-color: #ffffff;
+    font-family: 'Tahoma', Arial, sans-serif;
+    font-size: 11px;
+}
+
+.form-input:focus {
+    outline: 1px dotted #000000;
+    outline-offset: -3px;
+}
+
+.button-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 5px 18px;
+    font-family: 'Tahoma', Arial, sans-serif;
+    font-size: 11px;
+    font-weight: normal;
+    border: 2px outset #ffffff;
+    background-color: #d4d0c8;
+    cursor: pointer;
+    min-width: 80px;
+}
+
+.btn:hover {
+    background-color: #e8e4dc;
+}
+
+.btn:active {
+    border-style: inset;
+}
+
+.btn-primary {
+    font-weight: bold;
+}
+
+.btn-secondary {
+    /* Same as btn */
+}
+
+.help-text {
+    text-align: center;
+    font-size: 10px;
+    color: #666666;
+    margin-top: 20px;
+    line-height: 1.6;
+}
+
+.login-footer {
+    border-top: 2px solid #808080;
+}
+
+.status-bar {
+    background-color: #d4d0c8;
+    padding: 4px 8px;
+    font-size: 10px;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #ffffff;
+}
+
+.server-status {
+    color: #006600;
+}
+
+/* ===== Main Application ===== */
+
+.screen {
+    display: none;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+}
+
+.screen.active {
+    display: flex;
+}
+
+.app-header {
+    background: linear-gradient(to bottom, #6b9177, #5a8070);
+    border-bottom: 2px solid #2d4a3e;
+    padding: 8px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.header-logo {
+    width: 40px;
+    height: 40px;
+}
+
+.header-text {
+    color: #ffffff;
+}
+
+.header-title {
+    font-size: 14px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.header-subtitle {
+    font-size: 10px;
+    color: #e8f4ef;
+}
+
+.header-right {
+    text-align: right;
+    color: #ffffff;
+    font-size: 10px;
+}
+
+.user-info {
+    margin-bottom: 3px;
+}
+
+.timestamp {
+    font-size: 9px;
+    color: #c8e0d6;
+}
+
+.content-area {
+    flex: 1;
+    padding: 12px;
+    overflow-y: auto;
+    background-color: #5a7f6b;
+}
+
+.panel {
+    background-color: #d4d0c8;
+    border: 2px outset #ffffff;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
+}
+
+.main-panel {
+    max-width: 700px;
+}
+
+.search-panel {
+    max-width: 600px;
+}
+
+.results-panel,
+.details-panel,
+.linked-panel {
+    max-width: 900px;
+    width: 100%;
+}
+
+.panel-title {
+    background: linear-gradient(to bottom, #8fa89a, #6b9177);
+    color: #ffffff;
+    padding: 6px 10px;
+    font-weight: bold;
+    font-size: 12px;
+    border-bottom: 1px solid #2d4a3e;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.panel-body {
+    padding: 20px;
+}
+
+.notice-banner {
+    background-color: #fff8dc;
+    border: 2px solid #daa520;
+    padding: 12px;
+    margin-bottom: 20px;
+    font-size: 11px;
+    color: #8b4513;
+    font-weight: bold;
+}
+
+.menu-section h3 {
+    font-size: 12px;
+    margin-bottom: 12px;
+    color: #2d4a3e;
+}
+
+.menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.menu-button {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 15px;
+    background-color: #d4d0c8;
+    border: 2px outset #ffffff;
+    cursor: pointer;
+    font-family: 'Tahoma', Arial, sans-serif;
+    font-size: 11px;
+    text-align: left;
+}
+
+.menu-button:hover:not(.disabled) {
+    background-color: #e8e4dc;
+}
+
+.menu-button:active:not(.disabled) {
+    border-style: inset;
+}
+
+.menu-button.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.menu-icon {
+    font-size: 16px;
+    width: 24px;
+    text-align: center;
+}
+
+.menu-text {
+    font-weight: bold;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 11px;
+}
+
+.text-input {
+    width: 100%;
+    padding: 4px 6px;
+    border: 2px inset #ffffff;
+    background-color: #ffffff;
+    font-family: 'Tahoma', Arial, sans-serif;
+    font-size: 11px;
+}
+
+.text-input:focus {
+    outline: 1px dotted #000000;
+    outline-offset: -3px;
+}
+
+.button-group {
+    display: flex;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+/* Data Grid */
+.table-wrapper {
+    border: 2px inset #ffffff;
+    background-color: #ffffff;
+    overflow: auto;
+    max-height: 400px;
+    margin-bottom: 15px;
+}
+
+.data-grid {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 11px;
+}
+
+.data-grid thead {
+    background-color: #8fa89a;
+    color: #ffffff;
+    position: sticky;
+    top: 0;
+}
+
+.data-grid th {
+    padding: 6px 8px;
+    text-align: left;
+    font-weight: bold;
+    border: 1px solid #6b9177;
+}
+
+.data-grid td {
+    padding: 5px 8px;
+    border: 1px solid #d4d0c8;
+}
+
+.data-grid tbody tr {
+    cursor: pointer;
+    background-color: #ffffff;
+}
+
+.data-grid tbody tr:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+.data-grid tbody tr:hover {
+    background-color: #d0e8df;
+}
+
+.data-grid tbody tr.selected {
+    background-color: #6b9177;
+    color: #ffffff;
+}
+
+/* Record Details */
+.record-details {
+    background-color: #ffffff;
+    border: 2px inset #d4d0c8;
+    padding: 15px;
+    font-family: 'Courier New', monospace;
+    font-size: 11px;
+    white-space: pre-wrap;
+    max-height: 450px;
+    overflow-y: auto;
+    margin-bottom: 15px;
+}
+
+.record-warning {
+    background-color: #ffcccc;
+    border: 2px solid #cc0000;
+    color: #cc0000;
+    padding: 8px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-family: 'Tahoma', Arial, sans-serif;
+}
+
+.record-legacy {
+    background-color: #cce0ff;
+    border: 2px solid #0066cc;
+    color: #0066cc;
+    padding: 8px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-family: 'Tahoma', Arial, sans-serif;
+}
+
+/* Linked Records */
+.linked-list {
+    background-color: #ffffff;
+    border: 2px inset #d4d0c8;
+    max-height: 400px;
+    overflow-y: auto;
+    margin-bottom: 15px;
+}
+
+.linked-item {
+    padding: 10px 12px;
+    border-bottom: 1px solid #d4d0c8;
+    cursor: pointer;
+    font-size: 11px;
+}
+
+.linked-item:hover {
+    background-color: #d0e8df;
+}
+
+.linked-item.available {
+    color: #006600;
+}
+
+.linked-item.unavailable {
+    color: #cc0000;
+    cursor: not-allowed;
+}
+
+/* Modal Dialog */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-box {
+    background-color: #d4d0c8;
+    border: 2px outset #ffffff;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+    min-width: 350px;
+    max-width: 500px;
+}
+
+.modal-header {
+    background: linear-gradient(to bottom, #8fa89a, #6b9177);
+    color: #ffffff;
+    padding: 5px 10px;
+    font-weight: bold;
+    font-size: 11px;
+}
+
+.modal-body {
+    padding: 20px;
+    min-height: 60px;
+}
+
+.modal-body p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.modal-footer {
+    padding: 10px 20px;
+    text-align: center;
+    border-top: 1px solid #808080;
+}
+
+/* Status Bar */
+.status-bar {
+    background-color: #d4d0c8;
+    border-top: 1px solid #ffffff;
+    padding: 3px 8px;
+    font-size: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.status-right {
+    color: #666666;
+}
+
+/* Scrollbar (WebKit) */
+::-webkit-scrollbar {
+    width: 16px;
+    height: 16px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #d4d0c8;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #8fa89a;
+    border: 2px outset #ffffff;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #7a9485;
+}
+
+::-webkit-scrollbar-button {
+    background-color: #d4d0c8;
+    border: 2px outset #ffffff;
+}
+
+/* Utilities */
+.text-center {
+    text-align: center;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}

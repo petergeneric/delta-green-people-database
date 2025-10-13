@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FBI NCIC Terminal Emulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="win95-window">
+        <div class="title-bar">
+            <div class="title-bar-text">FBI NCIC Terminal - [Session A01]</div>
+            <div class="title-bar-controls">
+                <button class="title-btn" disabled>_</button>
+                <button class="title-btn" disabled>□</button>
+                <button class="title-btn" onclick="window.close()">×</button>
+            </div>
+        </div>
+
+        <div class="terminal-screen">
+            <div class="terminal-output">
+<pre id="loginScreen">╔═════════════════════════════════════════════════════════════════════════════╗
+║                                                                             ║
+║                    FEDERAL BUREAU OF INVESTIGATION                          ║
+║              NATIONAL CRIME INFORMATION CENTER (NCIC)                       ║
+║                    TERMINAL ACCESS SYSTEM                                   ║
+║                                                                             ║
+║                         Version 7.2.1 (WIN32)                               ║
+║                         Build Date: 08/15/2001                              ║
+║                                                                             ║
+╚═════════════════════════════════════════════════════════════════════════════╝
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ WARNING:                                                                    │
+│                                                                             │
+│ THIS SYSTEM IS FOR THE USE OF AUTHORIZED USERS ONLY.                        │
+│ INDIVIDUALS USING THIS COMPUTER SYSTEM WITHOUT AUTHORITY, OR IN             │
+│ EXCESS OF THEIR AUTHORITY, ARE SUBJECT TO HAVING ALL OF THEIR               │
+│ ACTIVITIES ON THIS SYSTEM MONITORED AND RECORDED.                           │
+│                                                                             │
+│ UNAUTHORIZED OR IMPROPER USE OF THIS SYSTEM MAY RESULT IN                   │
+│ ADMINISTRATIVE DISCIPLINARY ACTION AND CIVIL AND CRIMINAL PENALTIES.        │
+│                                                                             │
+│ BY CONTINUING TO USE THIS SYSTEM YOU INDICATE YOUR AWARENESS OF AND         │
+│ CONSENT TO THESE TERMS AND CONDITIONS OF USE.                               │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+
+TERMINAL ID: TERM-A01-DC
+SESSION:     NEW
+DATE/TIME:   <span id="loginDateTime"></span>
+
+
+USER ID: <span id="cursorUser">_</span>
+
+PASSWORD: <span id="cursorPass" style="display:none">_</span>
+
+
+<span id="statusLine">ENTER USER CREDENTIALS TO CONTINUE</span>
+
+</pre>
+            </div>
+        </div>
+
+        <div class="function-bar">
+            <div class="function-key">F1=Help</div>
+            <div class="function-key">F3=Exit</div>
+            <div class="function-key">F10=Actions</div>
+            <div class="function-key">F12=Cancel</div>
+        </div>
+    </div>
+
+    <input type="text" id="hiddenInput" class="hidden-input" autocomplete="off">
+
+    <script>
+        let loginState = 'username';
+        let username = '';
+        let password = '';
+        const input = document.getElementById('hiddenInput');
+
+        function updateDateTime() {
+            const now = new Date();
+            const dateStr = now.toLocaleDateString('en-US');
+            const timeStr = now.toLocaleTimeString('en-US', { hour12: false });
+            document.getElementById('loginDateTime').textContent = `${dateStr} ${timeStr}`;
+        }
+
+        updateDateTime();
+        setInterval(updateDateTime, 1000);
+
+        input.focus();
+
+        document.addEventListener('click', () => {
+            input.focus();
+        });
+
+        input.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                if (loginState === 'username') {
+                    username = input.value || 'GUEST';
+                    input.value = '';
+                    document.getElementById('cursorUser').textContent = username;
+                    document.getElementById('cursorPass').style.display = 'inline';
+                    document.getElementById('statusLine').textContent = 'ENTER PASSWORD AND PRESS ENTER';
+                    loginState = 'password';
+                } else if (loginState === 'password') {
+                    password = input.value;
+                    document.getElementById('cursorPass').textContent = '*'.repeat(password.length || 4);
+                    document.getElementById('statusLine').textContent = 'AUTHENTICATING...';
+
+                    setTimeout(() => {
+                        sessionStorage.setItem('fbi_authenticated', 'true');
+                        sessionStorage.setItem('fbi_username', username);
+                        window.location.href = 'index.html';
+                    }, 800);
+                }
+            }
+        });
+
+        input.addEventListener('input', (e) => {
+            if (loginState === 'username') {
+                document.getElementById('cursorUser').textContent = input.value + '_';
+            } else {
+                document.getElementById('cursorPass').textContent = '*'.repeat(input.value.length) + '_';
+            }
+        });
+    </script>
+</body>
+</html>

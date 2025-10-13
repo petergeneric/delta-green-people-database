@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240">
+  <!-- Department of Human Services Official Seal - Government Style -->
+
+  <!-- Outer circle border -->
+  <circle cx="120" cy="120" r="115" fill="#2B5F3F" stroke="#1a3d28" stroke-width="4"/>
+
+  <!-- Inner circle -->
+  <circle cx="120" cy="120" r="107" fill="#3A7D54" stroke="#ffffff" stroke-width="2"/>
+
+  <!-- Top text arc "DEPARTMENT OF HUMAN SERVICES" -->
+  <path id="topArc" d="M 35,120 A 85,85 0 0,1 205,120" fill="none"/>
+  <text font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff">
+    <textPath href="#topArc" startOffset="50%" text-anchor="middle">
+      DEPARTMENT OF HUMAN SERVICES
+    </textPath>
+  </text>
+
+  <!-- Bottom text arc "ESTABLISHED 1948" -->
+  <path id="bottomArc" d="M 35,120 A 85,85 0 0,0 205,120" fill="none"/>
+  <text font-family="Arial, sans-serif" font-size="11" font-weight="normal" fill="#ffffff">
+    <textPath href="#bottomArc" startOffset="50%" text-anchor="middle">
+      ESTABLISHED 1948
+    </textPath>
+  </text>
+
+  <!-- Central emblem: Family figures -->
+  <g transform="translate(120, 100)">
+    <!-- Parent 1 (left) -->
+    <circle cx="-25" cy="-5" r="9" fill="#ffffff"/>
+    <rect x="-30" y="4" width="10" height="20" rx="2" fill="#ffffff"/>
+    <rect x="-32" y="10" width="14" height="3" fill="#ffffff"/>
+
+    <!-- Child (center) -->
+    <circle cx="0" cy="0" r="7" fill="#ffffff"/>
+    <rect x="-4" y="7" width="8" height="16" rx="2" fill="#ffffff"/>
+    <rect x="-6" y="12" width="12" height="2.5" fill="#ffffff"/>
+
+    <!-- Parent 2 (right) -->
+    <circle cx="25" cy="-5" r="9" fill="#ffffff"/>
+    <rect x="20" y="4" width="10" height="20" rx="2" fill="#ffffff"/>
+    <rect x="18" y="10" width="14" height="3" fill="#ffffff"/>
+  </g>
+
+  <!-- Helping hands below -->
+  <g transform="translate(120, 135)">
+    <!-- Left hand -->
+    <ellipse cx="-20" cy="0" rx="12" ry="8" fill="#FFD700" stroke="#CC9900" stroke-width="1"/>
+    <path d="M-20,-8 L-18,-12 L-16,-8" fill="#FFD700" stroke="#CC9900" stroke-width="1"/>
+    <path d="M-26,-2 L-30,-4 L-28,0" fill="#FFD700" stroke="#CC9900" stroke-width="1"/>
+
+    <!-- Right hand -->
+    <ellipse cx="20" cy="0" rx="12" ry="8" fill="#FFD700" stroke="#CC9900" stroke-width="1"/>
+    <path d="M20,-8 L22,-12 L24,-8" fill="#FFD700" stroke="#CC9900" stroke-width="1"/>
+    <path d="M26,-2 L30,-4 L28,0" fill="#FFD700" stroke="#CC9900" stroke-width="1"/>
+  </g>
+
+  <!-- House/shelter symbol above figures -->
+  <g transform="translate(120, 70)">
+    <path d="M-20,0 L0,-15 L20,0 L20,5 L-20,5 Z" fill="#ffffff" stroke="#2B5F3F" stroke-width="1.5"/>
+    <rect x="-8" y="0" width="6" height="5" fill="#2B5F3F"/>
+    <rect x="3" y="0" width="5" height="3" fill="#2B5F3F"/>
+  </g>
+
+  <!-- Heart symbol at bottom (compassion) -->
+  <g transform="translate(120, 160)">
+    <path d="M0,8 L-10,-2 Q-12,-6 -8,-10 Q-4,-12 0,-8 Q4,-12 8,-10 Q12,-6 10,-2 Z"
+          fill="#CC3333" stroke="#ffffff" stroke-width="1.5"/>
+  </g>
+
+  <!-- Decorative stars in corners -->
+  <g fill="#FFD700" stroke="#CC9900" stroke-width="0.5">
+    <!-- Top left star -->
+    <path d="M35,35 L37,42 L44,42 L38,46 L40,53 L35,49 L30,53 L32,46 L26,42 L33,42 Z"/>
+
+    <!-- Top right star -->
+    <path d="M205,35 L207,42 L214,42 L208,46 L210,53 L205,49 L200,53 L202,46 L196,42 L203,42 Z"/>
+
+    <!-- Bottom left star -->
+    <path d="M35,205 L37,212 L44,212 L38,216 L40,223 L35,219 L30,223 L32,216 L26,212 L33,212 Z"/>
+
+    <!-- Bottom right star -->
+    <path d="M205,205 L207,212 L214,212 L208,216 L210,223 L205,219 L200,223 L202,216 L196,212 L203,212 Z"/>
+  </g>
+
+  <!-- Outer decorative border -->
+  <circle cx="120" cy="120" r="118" fill="none" stroke="#1a3d28" stroke-width="2"/>
+</svg>

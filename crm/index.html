@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise CRM System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Menu Bar -->
+    <div class="menu-bar">
+        <div class="menu-item">File</div>
+        <div class="menu-item">Edit</div>
+        <div class="menu-item">View</div>
+        <div class="menu-item">Query</div>
+        <div class="menu-item">Record</div>
+        <div class="menu-item">Tools</div>
+        <div class="menu-item">Help</div>
+        <div class="menu-spacer"></div>
+        <div class="menu-user">
+            <span class="user-label">User:</span>
+            <span id="currentUser">Guest</span>
+            <button class="logout-btn" onclick="logout()">Logout</button>
+        </div>
+    </div>
+
+    <!-- Toolbar -->
+    <div class="toolbar">
+        <div class="toolbar-section">
+            <button class="tool-btn" title="New Record" disabled>
+                <span class="tool-icon">📄</span>
+            </button>
+            <button class="tool-btn" title="Delete" disabled>
+                <span class="tool-icon">🗑️</span>
+            </button>
+            <button class="tool-btn" title="Save" disabled>
+                <span class="tool-icon">💾</span>
+            </button>
+            <div class="toolbar-sep"></div>
+            <button class="tool-btn" title="Print" disabled>
+                <span class="tool-icon">🖨️</span>
+            </button>
+            <button class="tool-btn" title="Export" disabled>
+                <span class="tool-icon">📊</span>
+            </button>
+            <div class="toolbar-sep"></div>
+            <button class="tool-btn" onclick="showQueryPanel()" title="Query">
+                <span class="tool-icon">🔍</span>
+            </button>
+            <button class="tool-btn" onclick="clearQuery()" title="Clear Query">
+                <span class="tool-icon">✖️</span>
+            </button>
+            <button class="tool-btn" onclick="refreshData()" title="Refresh">
+                <span class="tool-icon">🔄</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Tab Bar -->
+    <div class="tab-bar">
+        <div class="tab active" data-view="records" onclick="switchView('records')">
+            <span class="tab-icon">👤</span>
+            Records
+        </div>
+        <div class="tab" data-view="search" onclick="switchView('search')">
+            <span class="tab-icon">🔍</span>
+            Search
+        </div>
+        <div class="tab disabled" data-view="reports">
+            <span class="tab-icon">📊</span>
+            Reports
+        </div>
+        <div class="tab disabled" data-view="admin">
+            <span class="tab-icon">⚙️</span>
+            Administration
+        </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="content-wrapper">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-title">Views</div>
+            <div class="view-list">
+                <div class="view-item active" onclick="selectView('all')">
+                    <span class="view-bullet">►</span>
+                    All Records
+                </div>
+                <div class="view-item" onclick="selectView('recent')">
+                    <span class="view-bullet">►</span>
+                    Recently Viewed
+                </div>
+                <div class="view-item" onclick="selectView('my')">
+                    <span class="view-bullet">►</span>
+                    My Records
+                </div>
+            </div>
+
+            <div class="sidebar-title">Query Results</div>
+            <div class="query-info">
+                <div class="query-stat">Total: <span id="totalCount">0</span></div>
+                <div class="query-stat">Displayed: <span id="displayCount">0</span></div>
+            </div>
+        </div>
+
+        <!-- Main Panel -->
+        <div class="main-panel">
+            <!-- Records View -->
+            <div id="recordsView" class="view-panel active">
+                <div class="applet">
+                    <div class="applet-header">
+                        <span class="applet-title">Records List</span>
+                        <div class="applet-controls">
+                            <button class="applet-btn" onclick="toggleGrid()">▼</button>
+                        </div>
+                    </div>
+                    <div class="applet-body">
+                        <div class="grid-container">
+                            <table class="data-grid" id="recordsGrid">
+                                <thead>
+                                    <tr>
+                                        <th class="col-header">Surname</th>
+                                        <th class="col-header">Forename</th>
+                                        <th class="col-header">Date of Birth</th>
+                                        <th class="col-header">Status</th>
+                                        <th class="col-header">Type</th>
+                                        <th class="col-header">Address</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="gridBody">
+                                    <tr>
+                                        <td colspan="6" class="no-records">No records to display. Use Query to search.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Record Form -->
+                        <div class="form-container" id="recordForm" style="display: none;">
+                            <div class="form-title">Record Details</div>
+                            <div class="form-grid">
+                                <div class="form-row">
+                                    <div class="form-field">
+                                        <label class="form-label">Surname:</label>
+                                        <div class="form-value" id="detailSurname"></div>
+                                    </div>
+                                    <div class="form-field">
+                                        <label class="form-label">Forename:</label>
+                                        <div class="form-value" id="detailForename"></div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-field">
+                                        <label class="form-label">Type:</label>
+                                        <div class="form-value" id="detailType"></div>
+                                    </div>
+                                    <div class="form-field">
+                                        <label class="form-label">Status:</label>
+                                        <div class="form-value" id="detailStatus"></div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-field">
+                                        <label class="form-label">Date of Birth:</label>
+                                        <div class="form-value" id="detailDOB"></div>
+                                    </div>
+                                    <div class="form-field">
+                                        <label class="form-label">Date of Death:</label>
+                                        <div class="form-value" id="detailDOD"></div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-field full-width">
+                                        <label class="form-label">Classifiers:</label>
+                                        <div class="form-value" id="detailClassifier"></div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-field full-width">
+                                        <label class="form-label">Last Known Address:</label>
+                                        <div class="form-value" id="detailAddress"></div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-field full-width">
+                                        <label class="form-label">Notes:</label>
+                                        <div class="form-value notes" id="detailNotes"></div>
+                                    </div>
+                                </div>
+                                <div class="form-row" id="linkedSection" style="display: none;">
+                                    <div class="form-field full-width">
+                                        <label class="form-label">Linked Records (<span id="linkedCountLabel">0</span>):</label>
+                                        <div class="linked-container" id="linkedContainer"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Search View -->
+            <div id="searchView" class="view-panel">
+                <div class="applet">
+                    <div class="applet-header">
+                        <span class="applet-title">Query Criteria</span>
+                    </div>
+                    <div class="applet-body">
+                        <div class="query-form">
+                            <div class="query-field">
+                                <label class="query-label">Search Term:</label>
+                                <input type="text" id="queryInput" class="query-input"
+                                       placeholder="Enter surname or identifier (min 4 characters)">
+                            </div>
+                            <div class="query-actions">
+                                <button class="crm-button primary" onclick="executeQuery()">Execute Query</button>
+                                <button class="crm-button" onclick="clearQuery()">Clear</button>
+                                <button class="crm-button" onclick="switchView('records')">View Results</button>
+                            </div>
+                            <div class="query-help">
+                                <strong>Search Tips:</strong>
+                                <ul>
+                                    <li>Enter at least 4 characters to search</li>
+                                    <li>Maximum 20 results will be returned</li>
+                                    <li>Wildcards are not supported</li>
+                                    <li>Search is case-insensitive</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Status Bar -->
+    <div class="status-bar">
+        <div class="status-section">
+            <span id="statusMessage">Ready</span>
+        </div>
+        <div class="status-section">
+            <span>Records: <span id="statusRecordCount">0</span></span>
+        </div>
+        <div class="status-section">
+            <span id="statusTime"></span>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

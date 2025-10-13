@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FBI NCIC Terminal Emulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="win95-window">
+        <div class="title-bar">
+            <div class="title-bar-text">FBI NCIC Terminal - [Session A01] - <span id="titleUser">USER</span></div>
+            <div class="title-bar-controls">
+                <button class="title-btn" disabled>_</button>
+                <button class="title-btn" disabled>□</button>
+                <button class="title-btn" onclick="confirmExit()">×</button>
+            </div>
+        </div>
+
+        <div class="menu-bar">
+            <div class="menu-item">File</div>
+            <div class="menu-item">Edit</div>
+            <div class="menu-item">View</div>
+            <div class="menu-item">Query</div>
+            <div class="menu-item">Help</div>
+        </div>
+
+        <div class="terminal-screen">
+            <div class="status-line">
+                <span>TERM-A01-DC</span>
+                <span>USER: <span id="statusUser">GUEST</span></span>
+                <span>SESS: ACTIVE</span>
+                <span id="statusTime"></span>
+                <span>REC: <span id="recCount">0</span></span>
+            </div>
+
+            <div class="terminal-output" id="terminalOutput">
+                <!-- Main Menu Screen -->
+                <div id="mainMenuScreen" class="screen-content active">
+<pre>╔══════════════════════════════════════════════════════════════════════════════╗
+║  NCIC - NATIONAL CRIME INFORMATION CENTER                      MAIN MENU     ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+  SELECT FUNCTION:
+
+    1. QUERY RECORDS
+    2. DISPLAY RECORD DETAILS
+    3. LIST ALL RECORDS
+    4. ADMINISTRATIVE FUNCTIONS
+    5. HELP
+    6. LOGOFF
+
+  ENTER SELECTION: <span id="mainMenuCursor" class="cursor-blink">_</span>
+
+
+<span id="mainMenuMsg" class="status-msg">ENTER FUNCTION NUMBER (1-6) AND PRESS ENTER</span>
+
+</pre>
+                </div>
+
+                <!-- Query Screen -->
+                <div id="queryScreen" class="screen-content">
+<pre>╔══════════════════════════════════════════════════════════════════════════════╗
+║  NCIC - QUERY RECORDS                                                        ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+  QUERY CRITERIA:
+  ┌────────────────────────────────────────────────────────────────────────────┐
+  │                                                                            │
+  │  SURNAME/IDENTIFIER: <span id="queryCursor" class="cursor-blink">_</span><span id="queryText"></span>
+  │                                                                            │
+  │  NOTE: MINIMUM 4 CHARACTERS REQUIRED                                       │
+  │        MAXIMUM 20 RESULTS WILL BE DISPLAYED                                │
+  │                                                                            │
+  └────────────────────────────────────────────────────────────────────────────┘
+
+<span id="queryMsg" class="status-msg">ENTER SEARCH CRITERIA AND PRESS ENTER (F3=CANCEL)</span>
+
+</pre>
+                </div>
+
+                <!-- Results Screen -->
+                <div id="resultsScreen" class="screen-content">
+<pre id="resultsContent">╔══════════════════════════════════════════════════════════════════════════════╗
+║  NCIC - QUERY RESULTS                                     RECORDS: <span id="resultCount">00</span>        ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+<span id="resultsTable"></span>
+
+<span id="resultsMsg" class="status-msg">ENTER RECORD NUMBER TO VIEW DETAILS (F3=RETURN TO MENU)</span>
+</pre>
+                </div>
+
+                <!-- Details Screen -->
+                <div id="detailsScreen" class="screen-content">
+<pre id="detailsContent">╔══════════════════════════════════════════════════════════════════════════════╗
+║  NCIC - RECORD DETAILS                                                       ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+<span id="recordDetails"></span>
+
+<span id="detailsMsg" class="status-msg">F3=RETURN TO RESULTS  F7=LINKED RECORDS</span>
+</pre>
+                </div>
+
+                <!-- Linked Records Screen -->
+                <div id="linkedScreen" class="screen-content">
+<pre id="linkedContent">╔══════════════════════════════════════════════════════════════════════════════╗
+║  NCIC - LINKED RECORDS                                                       ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+<span id="linkedList"></span>
+
+<span id="linkedMsg" class="status-msg">ENTER RECORD NUMBER TO VIEW (F3=RETURN TO DETAILS)</span>
+</pre>
+                </div>
+            </div>
+        </div>
+
+        <div class="function-bar">
+            <div class="function-key" onclick="showHelp()">F1=Help</div>
+            <div class="function-key" onclick="handleF3()">F3=Exit</div>
+            <div class="function-key" onclick="handleF7()">F7=Linked</div>
+            <div class="function-key" onclick="refreshScreen()">F9=Refresh</div>
+            <div class="function-key" onclick="handleF12()">F12=Cancel</div>
+        </div>
+    </div>
+
+    <input type="text" id="hiddenInput" class="hidden-input" autocomplete="off">
+
+    <script src="app.js"></script>
+</body>
+</html>

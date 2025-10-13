@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DHS Case Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Main Menu Screen -->
+    <div id="mainMenu" class="screen active">
+        <div class="app-header">
+            <div class="header-left">
+                <img src="dhs-seal.svg" alt="DHS" class="header-logo">
+                <div class="header-text">
+                    <div class="header-title">Department of Human Services</div>
+                    <div class="header-subtitle">Case Management System v4.2.1</div>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="user-info">User: <span id="currentUser">Guest</span></div>
+                <div class="timestamp" id="timestamp"></div>
+            </div>
+        </div>
+
+        <div class="content-area">
+            <div class="panel main-panel">
+                <div class="panel-title">Main Menu</div>
+                <div class="panel-body">
+                    <div class="notice-banner">
+                        NOTICE: This system contains confidential case information protected under state privacy laws.
+                        Unauthorized access or disclosure is prohibited.
+                    </div>
+
+                    <div class="menu-section">
+                        <h3>Available Functions</h3>
+                        <div class="menu-list">
+                            <button class="menu-button" onclick="showSearch()">
+                                <span class="menu-icon">🔍</span>
+                                <span class="menu-text">Search Records</span>
+                            </button>
+                            <button class="menu-button disabled" title="Access restricted">
+                                <span class="menu-icon">✏️</span>
+                                <span class="menu-text">Modify Record</span>
+                            </button>
+                            <button class="menu-button disabled" title="Access restricted">
+                                <span class="menu-icon">🗑️</span>
+                                <span class="menu-text">Delete Record</span>
+                            </button>
+                            <button class="menu-button disabled" title="Access restricted">
+                                <span class="menu-icon">📋</span>
+                                <span class="menu-text">Access Logs</span>
+                            </button>
+                            <button class="menu-button disabled" title="Access restricted">
+                                <span class="menu-icon">⚙️</span>
+                                <span class="menu-text">System Settings</span>
+                            </button>
+                            <button class="menu-button" onclick="logout()">
+                                <span class="menu-icon">🚪</span>
+                                <span class="menu-text">Log Out</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="status-bar">
+            <span>Ready</span>
+            <span class="status-right">Server: DHSSRV01 | Records Loaded: <span id="recordCount">0</span></span>
+        </div>
+    </div>
+
+    <!-- Search Screen -->
+    <div id="searchScreen" class="screen">
+        <div class="app-header">
+            <div class="header-left">
+                <img src="dhs-seal.svg" alt="DHS" class="header-logo">
+                <div class="header-text">
+                    <div class="header-title">Department of Human Services</div>
+                    <div class="header-subtitle">Case Management System v4.2.1</div>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="user-info">User: <span class="current-user">Guest</span></div>
+            </div>
+        </div>
+
+        <div class="content-area">
+            <div class="panel search-panel">
+                <div class="panel-title">Record Search</div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        <label for="searchInput">Enter search criteria (surname or identifier):</label>
+                        <input type="text" id="searchInput" class="text-input" placeholder="Minimum 4 characters">
+                    </div>
+                    <div class="button-group">
+                        <button class="btn btn-primary" onclick="performSearch()">Search</button>
+                        <button class="btn btn-secondary" onclick="showMainMenu()">Back to Menu</button>
+                    </div>
+                    <div class="help-text">
+                        • Enter at least 4 characters to search<br>
+                        • Maximum 20 results will be displayed<br>
+                        • Search by surname, identifier, or address
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="status-bar">
+            <span>Enter search criteria</span>
+        </div>
+    </div>
+
+    <!-- Results Screen -->
+    <div id="resultsScreen" class="screen">
+        <div class="app-header">
+            <div class="header-left">
+                <img src="dhs-seal.svg" alt="DHS" class="header-logo">
+                <div class="header-text">
+                    <div class="header-title">Department of Human Services</div>
+                    <div class="header-subtitle">Case Management System v4.2.1</div>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="user-info">User: <span class="current-user">Guest</span></div>
+            </div>
+        </div>
+
+        <div class="content-area">
+            <div class="panel results-panel">
+                <div class="panel-title">Search Results (<span id="resultCount">0</span> records found)</div>
+                <div class="panel-body">
+                    <div class="table-wrapper">
+                        <table class="data-grid" id="resultsTable">
+                            <thead>
+                                <tr>
+                                    <th>Surname</th>
+                                    <th>Forename</th>
+                                    <th>Date of Birth</th>
+                                    <th>Status</th>
+                                    <th>Classifier</th>
+                                    <th>Last Known Address</th>
+                                </tr>
+                            </thead>
+                            <tbody id="resultsBody">
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="button-group">
+                        <button class="btn btn-secondary" onclick="showSearch()">New Search</button>
+                        <button class="btn btn-secondary" onclick="showMainMenu()">Main Menu</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="status-bar">
+            <span>Click a record to view details</span>
+        </div>
+    </div>
+
+    <!-- Details Screen -->
+    <div id="detailsScreen" class="screen">
+        <div class="app-header">
+            <div class="header-left">
+                <img src="dhs-seal.svg" alt="DHS" class="header-logo">
+                <div class="header-text">
+                    <div class="header-title">Department of Human Services</div>
+                    <div class="header-subtitle">Case Management System v4.2.1</div>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="user-info">User: <span class="current-user">Guest</span></div>
+            </div>
+        </div>
+
+        <div class="content-area">
+            <div class="panel details-panel">
+                <div class="panel-title">Record Details</div>
+                <div class="panel-body">
+                    <div id="detailsContent" class="record-details"></div>
+                    <div class="button-group">
+                        <button class="btn btn-primary" id="linkedRecordsBtn" onclick="showLinkedRecords()" style="display:none;">
+                            View Linked Records (<span id="linkedCount">0</span>)
+                        </button>
+                        <button class="btn btn-secondary" onclick="backToResults()">Back to Results</button>
+                        <button class="btn btn-secondary" onclick="showMainMenu()">Main Menu</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="status-bar">
+            <span>Viewing record details</span>
+        </div>
+    </div>
+
+    <!-- Linked Records Screen -->
+    <div id="linkedScreen" class="screen">
+        <div class="app-header">
+            <div class="header-left">
+                <img src="dhs-seal.svg" alt="DHS" class="header-logo">
+                <div class="header-text">
+                    <div class="header-title">Department of Human Services</div>
+                    <div class="header-subtitle">Case Management System v4.2.1</div>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="user-info">User: <span class="current-user">Guest</span></div>
+            </div>
+        </div>
+
+        <div class="content-area">
+            <div class="panel linked-panel">
+                <div class="panel-title">Linked Records</div>
+                <div class="panel-body">
+                    <div class="linked-list" id="linkedList"></div>
+                    <div class="button-group">
+                        <button class="btn btn-secondary" onclick="backToDetails()">Back to Record</button>
+                        <button class="btn btn-secondary" onclick="showMainMenu()">Main Menu</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="status-bar">
+            <span>Select a linked record to view</span>
+        </div>
+    </div>
+
+    <!-- Error/Message Dialog -->
+    <div id="messageDialog" class="modal-overlay" style="display: none;">
+        <div class="modal-box">
+            <div class="modal-header">
+                <span id="modalTitle">Message</span>
+            </div>
+            <div class="modal-body">
+                <p id="modalMessage"></p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" onclick="closeModal()">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise CRM - Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-body">
+    <div class="login-container">
+        <div class="login-panel">
+            <div class="login-header-bar">
+                <div class="header-icon">◆</div>
+                <div class="header-title">Enterprise CRM System</div>
+            </div>
+
+            <div class="login-content">
+                <div class="login-banner">
+                    <div class="banner-logo">
+                        <svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="10" y="10" width="60" height="60" fill="#003d6a" stroke="#0066cc" stroke-width="2"/>
+                            <circle cx="40" cy="35" r="12" fill="#0066cc"/>
+                            <path d="M 20 60 Q 40 50 60 60" stroke="#0066cc" stroke-width="3" fill="none"/>
+                            <rect x="15" y="15" width="20" height="15" fill="#0099ff" opacity="0.6"/>
+                            <rect x="45" y="15" width="20" height="15" fill="#0099ff" opacity="0.6"/>
+                        </svg>
+                    </div>
+                    <h1 class="banner-title">Enterprise CRM</h1>
+                    <div class="banner-version">Version 7.7.2.4</div>
+                </div>
+
+                <div class="login-form-container">
+                    <form id="loginForm" class="login-form">
+                        <div class="field-group">
+                            <label class="field-label">Username:</label>
+                            <input type="text" id="username" class="field-input" autocomplete="off">
+                        </div>
+
+                        <div class="field-group">
+                            <label class="field-label">Password:</label>
+                            <input type="password" id="password" class="field-input" autocomplete="off">
+                        </div>
+
+                        <div class="field-group">
+                            <label class="field-label">Language:</label>
+                            <select class="field-input">
+                                <option>English</option>
+                            </select>
+                        </div>
+
+                        <div class="login-actions">
+                            <button type="submit" class="crm-button primary">Login</button>
+                            <button type="button" class="crm-button" onclick="clearFields()">Clear</button>
+                        </div>
+                    </form>
+
+                    <div class="login-info">
+                        <div class="info-item">
+                            <strong>Note:</strong> This application requires cookies to be enabled.
+                        </div>
+                        <div class="info-item">
+                            Session timeout: 30 minutes
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="login-footer">
+                <div class="footer-text">
+                    © 2001 Enterprise Solutions Inc. All rights reserved.
+                </div>
+                <div class="footer-status">
+                    <span class="status-indicator"></span>
+                    <span>Server Connected</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('loginForm');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const username = document.getElementById('username').value || 'Guest';
+
+            // Store session
+            sessionStorage.setItem('crm_authenticated', 'true');
+            sessionStorage.setItem('crm_username', username);
+
+            // Redirect to main app
+            window.location.href = 'index.html';
+        });
+
+        function clearFields() {
+            document.getElementById('username').value = '';
+            document.getElementById('password').value = '';
+        }
+
+        // Focus username on load
+        window.addEventListener('load', () => {
+            document.getElementById('username').focus();
+        });
+    </script>
+</body>
+</html>
