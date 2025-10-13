@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FBI KNOWN PERSONS DATABASE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Main Menu Screen -->
+    <div id="mainMenu" class="screen">
+        <div class="menu-bar">
+            <span class="menu-item">System</span>
+            <span class="menu-item">Access</span>
+            <span class="menu-item">Screen</span>
+            <span class="menu-item">Edit Profile</span>
+            <span class="menu-item">Settings</span>
+            <span class="menu-item">Print Screen</span>
+            <span class="menu-item">Help</span>
+        </div>
+
+        <div class="status-bar">
+            <span class="status-text">LOGGED IN &lt;3204-412-41-C&gt;</span>
+        </div>
+
+        <div class="window main-window">
+            <div class="title-bar">
+                <span class="title-text">KNOWN PERSONS DATABASE</span>
+            </div>
+            <div class="window-content">
+                <div class="warning-text">
+                    THIS IS A FEDERAL LAW ENFORCEMENT SYSTEM.<br>
+                    UNAUTHORIZED ACCESS IS A FEDERAL CRIME PUNISHABLE PER 18 USC § 1030
+                </div>
+                <br>
+                <p>Select Function:</p>
+                <div class="menu-list">
+                    <div class="menu-item-row" tabindex="0" data-action="search">Search Records</div>
+                    <div class="menu-item-row" tabindex="0" data-action="modify">Modify Record</div>
+                    <div class="menu-item-row" tabindex="0" data-action="delete">Delete Record</div>
+                    <div class="menu-item-row" tabindex="0" data-action="logs">Access Logs</div>
+                    <div class="menu-item-row" tabindex="0" data-action="admin">Administrative Settings</div>
+                    <div class="menu-item-row" tabindex="0" data-action="logout">LOG OUT</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Search Screen -->
+    <div id="searchScreen" class="screen" style="display: none;">
+        <div class="menu-bar">
+            <span class="menu-item">System</span>
+            <span class="menu-item">Access</span>
+            <span class="menu-item">Screen</span>
+            <span class="menu-item">Edit Profile</span>
+            <span class="menu-item">Settings</span>
+            <span class="menu-item">Print Screen</span>
+            <span class="menu-item">Help</span>
+        </div>
+
+        <div class="status-bar">
+            <span class="status-text">LOGGED IN &lt;3204-412-41-C&gt;</span>
+        </div>
+
+        <div class="window search-window">
+            <div class="title-bar">
+                <span class="title-text">Enter Selector</span>
+            </div>
+            <div class="window-content">
+                <input type="text" id="searchInput" class="text-input" autofocus>
+            </div>
+        </div>
+    </div>
+
+    <!-- Search Results Screen -->
+    <div id="resultsScreen" class="screen" style="display: none;">
+        <div class="menu-bar">
+            <span class="menu-item">System</span>
+            <span class="menu-item">Access</span>
+            <span class="menu-item">Screen</span>
+            <span class="menu-item">Edit Profile</span>
+            <span class="menu-item">Settings</span>
+            <span class="menu-item">Print Screen</span>
+            <span class="menu-item">Help</span>
+        </div>
+
+        <div class="status-bar">
+            <span class="status-text">LOGGED IN &lt;3204-412-41-C&gt;</span>
+        </div>
+
+        <div class="window results-window">
+            <div class="title-bar">
+                <span class="title-text">Search Results</span>
+            </div>
+            <div class="window-content">
+                <div class="table-container">
+                    <table id="resultsTable" class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Surname</th>
+                                <th>Forename</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                                <th>Classifier</th>
+                                <th>Address</th>
+                            </tr>
+                        </thead>
+                        <tbody id="resultsTableBody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Details Screen -->
+    <div id="detailsScreen" class="screen" style="display: none;">
+        <div class="menu-bar">
+            <span class="menu-item">System</span>
+            <span class="menu-item">Access</span>
+            <span class="menu-item">Screen</span>
+            <span class="menu-item">Edit Profile</span>
+            <span class="menu-item">Settings</span>
+            <span class="menu-item">Print Screen</span>
+            <span class="menu-item">Help</span>
+        </div>
+
+        <div class="detail-menu-bar">
+            <span class="menu-item">Event Log</span>
+            <span class="menu-item">Linked Records</span>
+        </div>
+
+        <div class="window details-window">
+            <div class="title-bar">
+                <span class="title-text">Record Content</span>
+            </div>
+            <div class="window-content">
+                <div id="detailsContent" class="details-content"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Linked Records Screen -->
+    <div id="linkedScreen" class="screen" style="display: none;">
+        <div class="menu-bar">
+            <span class="menu-item">System</span>
+            <span class="menu-item">Access</span>
+            <span class="menu-item">Screen</span>
+            <span class="menu-item">Edit Profile</span>
+            <span class="menu-item">Settings</span>
+            <span class="menu-item">Print Screen</span>
+            <span class="menu-item">Help</span>
+        </div>
+
+        <div class="detail-menu-bar">
+            <span class="menu-item">Event Log</span>
+            <span class="menu-item">Linked Records</span>
+        </div>
+
+        <div class="window linked-window">
+            <div class="title-bar">
+                <span class="title-text">Linked Records</span>
+            </div>
+            <div class="window-content">
+                <div id="linkedList" class="linked-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Error Dialog -->
+    <div id="errorDialog" class="dialog" style="display: none;">
+        <div class="window error-window">
+            <div class="title-bar">
+                <span class="title-text" id="errorTitle">ERROR</span>
+            </div>
+            <div class="window-content dialog-content">
+                <p id="errorMessage"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,329 @@
+/* Windows 95 / 2001 Police Database Styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'MS Sans Serif', 'Microsoft Sans Serif', sans-serif;
+    background-color: #008080; /* Teal background like Windows 95 */
+    color: #000000;
+    font-size: 11px;
+    overflow: hidden;
+    height: 100vh;
+}
+
+/* Screen Layouts */
+.screen {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Menu Bar at Top */
+.menu-bar {
+    background-color: #000080; /* Navy blue */
+    color: #ffffff;
+    padding: 2px 6px;
+    font-weight: bold;
+    font-size: 11px;
+    display: flex;
+    gap: 15px;
+}
+
+.menu-bar .menu-item {
+    cursor: pointer;
+}
+
+.menu-bar .menu-item:hover {
+    background-color: #0000a0;
+}
+
+/* Status Bar */
+.status-bar {
+    background-color: #c0c0c0;
+    padding: 2px 6px;
+    border-top: 1px solid #808080;
+    font-size: 11px;
+}
+
+/* Detail Menu Bar (yellow) */
+.detail-menu-bar {
+    background-color: #ffff00;
+    color: #000000;
+    padding: 2px 6px;
+    font-weight: bold;
+    font-size: 11px;
+    display: flex;
+    gap: 15px;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+}
+
+.detail-menu-bar .menu-item {
+    cursor: pointer;
+}
+
+.detail-menu-bar .menu-item:hover {
+    text-decoration: underline;
+}
+
+/* Windows */
+.window {
+    background-color: #c0c0c0;
+    border: 2px solid;
+    border-color: #ffffff #000000 #000000 #ffffff;
+    box-shadow: 1px 1px 0 #000000;
+    position: absolute;
+}
+
+.main-window {
+    width: 600px;
+    height: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.search-window {
+    width: 500px;
+    height: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.results-window {
+    width: 80%;
+    height: 60%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.details-window {
+    width: 60%;
+    height: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.linked-window {
+    width: 500px;
+    height: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.error-window {
+    width: 400px;
+    height: 150px;
+}
+
+/* Title Bar */
+.title-bar {
+    background: linear-gradient(to right, #000080, #1084d0);
+    color: #ffffff;
+    padding: 3px 6px;
+    font-weight: bold;
+    font-size: 11px;
+}
+
+/* Window Content */
+.window-content {
+    padding: 10px;
+    background-color: #c0c0c0;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.dialog-content {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Warning Text */
+.warning-text {
+    color: #ff0000;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Menu List */
+.menu-list {
+    margin-top: 10px;
+}
+
+.menu-item-row {
+    padding: 4px 8px;
+    margin: 2px 0;
+    background-color: #c0c0c0;
+    border: 1px solid #c0c0c0;
+    cursor: pointer;
+}
+
+.menu-item-row:hover,
+.menu-item-row:focus {
+    background-color: #000080;
+    color: #ffffff;
+    outline: none;
+}
+
+/* Text Input */
+.text-input {
+    width: 100%;
+    padding: 2px 4px;
+    border: 2px solid;
+    border-color: #808080 #ffffff #ffffff #808080;
+    background-color: #ffffff;
+    font-family: 'MS Sans Serif', 'Microsoft Sans Serif', sans-serif;
+    font-size: 11px;
+}
+
+.text-input:focus {
+    outline: none;
+}
+
+/* Data Table */
+.table-container {
+    overflow-y: auto;
+    max-height: calc(100% - 20px);
+    border: 2px solid;
+    border-color: #808080 #ffffff #ffffff #808080;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    font-size: 11px;
+}
+
+.data-table th {
+    background-color: #c0c0c0;
+    border: 1px solid #808080;
+    padding: 4px;
+    text-align: left;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+}
+
+.data-table td {
+    border: 1px solid #c0c0c0;
+    padding: 4px;
+}
+
+.data-table tbody tr {
+    cursor: pointer;
+}
+
+.data-table tbody tr:hover,
+.data-table tbody tr.selected {
+    background-color: #000080;
+    color: #ffffff;
+}
+
+/* Details Content */
+.details-content {
+    font-family: 'Courier New', monospace;
+    font-size: 11px;
+    white-space: pre-wrap;
+    background-color: #ffffff;
+    padding: 10px;
+    border: 2px solid;
+    border-color: #808080 #ffffff #ffffff #808080;
+    height: calc(100% - 20px);
+    overflow-y: auto;
+}
+
+.legacy-warning {
+    background-color: #000080;
+    color: #ffffff;
+    padding: 4px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.access-warning {
+    background-color: #ff0000;
+    color: #ffffff;
+    padding: 4px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Linked List */
+.linked-list {
+    background-color: #ffffff;
+    border: 2px solid;
+    border-color: #808080 #ffffff #ffffff #808080;
+    height: calc(100% - 20px);
+    overflow-y: auto;
+}
+
+.linked-item {
+    padding: 4px 8px;
+    cursor: pointer;
+    border-bottom: 1px solid #c0c0c0;
+}
+
+.linked-item:hover,
+.linked-item.selected {
+    background-color: #000080;
+    color: #ffffff;
+}
+
+.linked-item.unavailable {
+    color: #ff0000;
+}
+
+.linked-item.available {
+    color: #008000;
+}
+
+/* Dialog Overlay */
+.dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Scrollbar Styling (Windows 95 style) */
+::-webkit-scrollbar {
+    width: 16px;
+    height: 16px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #c0c0c0;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #808080;
+    border: 1px solid;
+    border-color: #ffffff #000000 #000000 #ffffff;
+}
+
+::-webkit-scrollbar-button {
+    background-color: #c0c0c0;
+    border: 1px solid;
+    border-color: #ffffff #000000 #000000 #ffffff;
+}
+
+::-webkit-scrollbar-button:hover {
+    background-color: #a0a0a0;
+}
