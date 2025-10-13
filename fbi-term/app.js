@@ -55,7 +55,12 @@ function updateClock() {
 // Load Database
 async function loadDatabase() {
     try {
-        const response = await fetch('../databases/gods-teeth.json');
+        // Get database name from query parameter, default to 'gods-teeth'
+        const urlParams = new URLSearchParams(window.location.search);
+        const dbName = urlParams.get('db') || 'gods-teeth';
+        const dbPath = `../databases/${dbName}.json`;
+
+        const response = await fetch(dbPath);
         const data = await response.json();
 
         const stage = data.gameStage || 1;
