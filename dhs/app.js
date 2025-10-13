@@ -47,9 +47,9 @@ function updateTimestamp() {
 // Load database
 async function loadDatabase() {
     try {
-        // Get database name from query parameter, default to 'gods-teeth'
+        // Get database name from query parameter, default to 'gods-teeth-dhs'
         const urlParams = new URLSearchParams(window.location.search);
-        const dbName = urlParams.get('db') || 'gods-teeth';
+        const dbName = urlParams.get('db') || 'gods-teeth-dhs';
         const dbPath = `../databases/${dbName}.json`;
 
         const response = await fetch(dbPath);
@@ -188,14 +188,7 @@ function runSearch(query) {
             return true;
         }
 
-        if (q.includes(' ')) {
-            let parts = q.replace(/[^a-z ]+/g, ' ').split(' ', 2);
-            return (surname.toLowerCase().startsWith(parts[0]) &&
-                    forename.toLowerCase().startsWith(parts[1])) ||
-                   (ALLOW_ADDRESS_SEARCH && address.toLowerCase().includes(q));
-        } else {
-            return surname.toLowerCase().startsWith(q);
-        }
+        return `${surname} ${forename} - ${address}`.toLowerCase().includes(q) || `${forename} ${surname}`.toLowerCase().trim().includes(q);
     };
 
     return database
