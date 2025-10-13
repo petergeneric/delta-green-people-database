@@ -1,0 +1,861 @@
+{
+  "gameStage": 10,
+
+  "stages": {
+  	"10": "Go Forth"
+  },
+
+  "records": [
+  {
+    "surname": "Appolonov",
+    "forename": "Sabina",
+    "classifier": "I",
+    "dateOfBirth": "1976-03-12",
+    "status": "",
+    "lastKnownAddress": "1247 Harbor Rd, Cambridge, MD",
+    "notes": "",
+    "related": []
+  },
+
+  {
+    "surname": "Innokenty",
+    "forename": "Ryan",
+    "classifier": "I",
+    "dateOfBirth": "1967-08-23",
+    "status": "",
+    "lastKnownAddress": "582 Elm St, Salisbury, MD",
+    "notes": "",
+    "related": ["Case NY-1989-4421", "Case DC-1991-8834", "Case B-1993-2156", "Case VA-1995-6742"]
+  },
+  {
+    "id": "Case NY-1989-4421",
+    "surname": "NY-1989-4421",
+    "forename": "",
+    "type": "NYPD Case File",
+    "status": "Closed",
+    "notes": "-- NYPD DATABASE LINK :: REPORT --\n\nARREST RECORD:\nRyan Innokenty. Possession controlled substance. Convicted. Fine, no jail time."
+  },
+  {
+    "id": "Case DC-1991-8834",
+    "surname": "DC-1991-8834",
+    "forename": "",
+    "type": "DCPD Case File",
+    "status": "Closed",
+    "notes": "-- DCPD DATABASE LINK :: REPORT --\n\nARREST RECORD:\nRyan Innokenty. Public intoxication. Convicted. Fine, no jail time."
+  },
+  {
+    "id": "Case B-1993-2156",
+    "surname": "B-1993-2156",
+    "forename": "",
+    "type": "BPD Case File",
+    "status": "Closed",
+    "notes": "-- BPD DATABASE LINK :: REPORT --\n\nARREST RECORD:\nRyan Innokenty. Possession controlled substance. Convicted. Fine, no jail time."
+  },
+  {
+    "id": "Case VA-1995-6742",
+    "surname": "VA-1995-6742",
+    "forename": "",
+    "type": "VPD Case File",
+    "status": "Closed",
+    "notes": "-- VPD DATABASE LINK :: REPORT --\n\nARREST RECORD:\nRyan Innokenty. Public intoxication. Convicted. Fine, no jail time."
+  },
+
+
+  {
+    "surname": "Arseni",
+    "forename": "Alexi",
+    "classifier": "I",
+    "dateOfBirth": "1980-11-04",
+    "status": "",
+    "lastKnownAddress": "",
+    "notes": "",
+    "related": ["DHS ADOPTION RECORD :: SEALED"]
+  },
+  {
+    "surname": "Kalamatiano",
+    "forename": "Yelena",
+    "classifier": "I",
+    "dateOfBirth": "1925-07-15",
+    "status": "",
+    "lastKnownAddress": "Cornucopia House, Zion, MD",
+    "notes": "No criminal record.",
+    "related": ["Families Without Borders"]
+  },
+  {
+    "surname": "Noella",
+    "forename": "Marie",
+    "classifier": "I",
+    "dateOfBirth": "1967-02-19",
+    "status": "",
+    "lastKnownAddress": "412 Chesapeake Ave, Annapolis, MD",
+    "notes": "MD, PhD.",
+    "related": ["Flight 8844 to Beijing 6:00AM 13-FEB-2001"]
+  },
+  {
+    "surname": "Hall",
+    "forename": "Gary",
+    "classifier": "I",
+    "dateOfBirth": "1965-10-08",
+    "status": "Missing",
+    "lastKnownAddress": "2901 River View Dr, Baltimore, MD",
+    "notes": "FBI Special Agent",
+    "related": ["Case FBI-MD-2001-0117"]
+  },
+  {
+    "id": "Case FBI-MD-2001-0117",
+    "surname": "FBI-MD-2001-0117",
+    "forename": "",
+    "type": "FBI Missing Person Case",
+    "status": "Active",
+    "notes": "-- FBI DATABASE LINK :: REPORT --\n\nMISSING PERSON:\nSpecial Agent Gary Hall reported missing 17-JAN-2001. Last seen 13-JAN-2001 at work. Subject failed to report for duty subsequently. Wife interviewed - states subject has history of PTSD, mood instability. Previous unexplained absences always involved prior notification."
+  },
+  {
+    "surname": "Karpov",
+    "forename": "Vasilii",
+    "classifier": "I",
+    "dateOfBirth": "1921-04-30",
+    "status": "",
+    "lastKnownAddress": "1156 Park Heights Ave, Baltimore, MD",
+    "notes": "U.S. Navy veteran. Radio technician USS Astoria. Severe back injury Battle of Savo Island AUG-1942. Navy disability pension. Previous addresses: New York, Philadelphia, Chicago, Boston, Pittsburgh, Cleveland.",
+    "related": []
+  },
+  {
+    "surname": "Families Without Borders",
+    "forename": "",
+    "classifier": "P",
+    "dateOfBirth": "",
+    "status": "Active",
+    "lastKnownAddress": "PO Box 908, Zion, MD",
+    "notes": "501(c)(3) registered charity since 1948. Operates Cornucopia House children's home and hobby dairy farm.",
+    "related": ["IRS Investigation 1987-FFB-3421", "Kalamatiano, Yelena", "Maryland Property Taxes Arrears Notice 2000/9/3/451351"]
+  },
+  {
+    "surname": "Houghton",
+    "forename": "Kerry",
+    "classifier": "I",
+    "dateOfBirth": "1976-06-14",
+    "status": "",
+    "lastKnownAddress": "789 Cambridge St, Easton, MD",
+    "notes": "Social worker, Maryland Department of Human Services.",
+    "related": []
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {
+      "surname": "Detwiller",
+      "forename": "Dennis",
+      "classifier": "I",
+      "dateOfBirth": "1972-07-12",
+      
+      "lastKnownAddress": "1923 Bridge St, NY, NY",
+      "notes": ""
+    },
+    {
+      "surname": "Wright",
+      "forename": "Allan",
+      "classifier": "I, V",
+      "dateOfBirth": "1950-05-17",
+      "status": "Missing PD",
+      "lastKnownAddress": "147 Oak St, Los Angeles",
+      "notes": "Active missing persons. Reported missing 1995-03-17 by mother <WRIGHT, JANE>",
+      "related": ["Case 126-812-34"]
+    },
+    {
+      "surname": "Wright",
+      "forename": "Steven",
+      "classifier": "I",
+      "dateOfBirth": "1932-05-01",
+      
+      "lastKnownAddress": "123 Main Street, NY, NY",
+      "notes": "Pending appearance at NY County Court on IRS complaint 1994-12-01/349283-B"
+    },
+    {
+      "surname": "Wright",
+      "forename": "Ian",
+      "classifier": "I, V",
+      "dateOfBirth": "1982-01-02",
+      
+      "lastKnownAddress": "72 Arneau Av, Rochester, NY",
+      "notes": "Minor. Parental kidnap victim.",
+      "related": ["WRIGHT, IAN", "VICKERS, SAMANTHA","Case 1923-542-5125"]
+    },
+    {
+      "surname": "Wright",
+      "forename": "Ian",
+      "classifier": "",
+      "dateOfBirth": "1950-05-17",
+      "status": "Custody",
+      "lastKnownAddress": "3498 W 43 St, NY, NY",
+      "notes": "Arrested 1993-01-30 for Parental Kidnapping son.",
+      "related": ["Case 1923-542-5125"]
+    },
+    {
+      "surname": "Wright",
+      "forename": "Frank",
+      "classifier": "I",
+      "dateOfBirth": "1892-09-30",
+      "dateOfDeath": "1990-06-23",
+      
+      "lastKnownAddress": "329 E 120 St, NY, NY",
+      "notes": "Natural Causes"
+    },
+    {
+      "surname": "Wright",
+      "forename": "Jennifer",
+      "classifier": "LEO, FBI",
+      "dateOfBirth": "1979-12-22",
+      
+      "lastKnownAddress": "1500 Hoover St, Washington DC",
+      "notes": "Law Enforcement Officer"
+    },
+    {
+      "surname": "Older",
+      "forename": "Daniel",
+      "classifier": "NIL",
+      "dateOfBirth": "1971-07-22",
+      "dateOfDeath": "1995-01-06",
+      
+      "lastKnownAddress": "72 East Heights, Calmer, OH",
+      "notes": "\n\n<Access to this record has been logged>",
+      "related": ["Ohio State PD Case 34-3521-52161-43", "Psychiatric Treatment Report 956-323-1-5B"]
+    },
+    
+    
+    {
+      "id": "Ohio State PD Case 34-3521-52161-43",
+      "surname": "34-3521-52161-43",
+      "forename": "",
+      "type": "Ohio State PD Case File",
+      "dateOfBirth": "1995",
+      "suppressLegacyWarning": true,
+      "lastKnownAddres": "NIL",
+      "classifier": "Case",
+      "status": "Closed",
+      "notes" : "Body found by wildlife photographer <JONES, T> amidst rushes of Lake Calmer. Body appears to have washed up from lake.\nPathologist examination shows cause of death as GSW to head. Single shot to the side of head. Low calibre, x-ray indicates bullet still lodged in head.\n\nDetermination: apparant suicide. Appears to have returned to his home town and shot himself on the lake, with his body subsequently washing up after a storm. Presume missing jacket would have contained rocks to attempt to weigh himself down. Psych reports indicate a history of depression unbeknownst to his close family."
+    },
+
+    
+    {
+      "surname": "Suave",
+      "forename": "Enrico",
+      "classifier": "I, S",
+      "dateOfBirth": "1975-04-20",
+      
+      "warning": "",
+      "lastKnownAddress": "242 W 12 St, NY, NY",
+      "notes": ""
+    },
+    {
+      "surname": "Willard",
+      "forename": "Jordan",
+      "classifier": "DoS /DG",
+      "dateOfBirth": "1975-10-08",
+      
+      "lastKnownAddress": "723 West State Dr, Hiwatha Township, MI",
+      "notes": "Department of State employee. Foreign Service Officer. On leave pending performance management plan.\n\n<Access to this record has been logged>"
+    },
+    {
+      "surname": "Tatyana",
+      "forename": "Amelevia",
+      "classifier": "LEO /DG",
+      "dateOfBirth": "1975-11-26",
+      
+      "lastKnownAddress": "990 Camino Bvd, Little Rock, AR",
+      "notes": "\n\n<Access to this record has been logged>"
+    },
+    {
+      "surname": "Daniels",
+      "forename": "Justin",
+      "classifier": "DoJ /DG",
+      "dateOfBirth": "1971-06-30",
+      
+      "lastKnownAddress": "126 Graceland Ave, Dallas, TX",
+      "notes": "United States Marshall. Performance management plan.\n\n<Access to this record has been logged>"
+    },
+    {
+      "surname": "Hebron",
+      "forename": "Darlene",
+      "classifier": "I",
+      "dateOfBirth": "1934-01-15",
+      
+      "lastKnownAddress": "688 David Overpass Suite 298, Bushberg, AL 59705"
+    },
+    {
+      "surname": "Hebron",
+      "forename": "Jessica",
+      "classifier": "I",
+      "dateOfBirth": "1962-02-01",
+      
+      "lastKnownAddress": "9323 Williams Greens, New Terrimouth, WA 02952",
+      "dateOfDeath": "1953-03-14"
+    },
+    {
+      "surname": "Hebron",
+      "forename": "David",
+      "classifier": "I",
+      "dateOfBirth": "1929-07-11",
+      
+      "lastKnownAddress": "854 Tammy Underpass Apt. 512, South Nicole, NC 78477"
+    },
+    {
+      "surname": "West",
+      "forename": "Joseph",
+      "classifier": "I",
+      "dateOfBirth": "1986-07-29",
+      
+      "lastKnownAddress": "4885 Sabrina Track, West Dustinburgh, AK 02539",
+      "dateOfDeath": "1990-08-13"
+    },
+    {
+      "surname": "Martinez",
+      "forename": "Johnathan",
+      "classifier": "I",
+      "dateOfBirth": "1965-10-07",
+      
+      "lastKnownAddress": "3744 Kelly Gardens, East Kaitlyn, SC 61250"
+    },
+    {
+      "surname": "West",
+      "forename": "John",
+      "classifier": "I",
+      "dateOfBirth": "1978-05-11",
+      
+      "lastKnownAddress": "92518 Torres Wells, New Peterchester, RI 18870"
+    },
+    {
+      "surname": "Rojas",
+      "forename": "Veronica",
+      "classifier": "I",
+      "dateOfBirth": "1988-08-18",
+      
+      "lastKnownAddress": "USNV Miller, FPO AE 66400",
+      "dateOfDeath": "1956-05-30"
+    },
+    {
+      "surname": "West",
+      "forename": "Robin",
+      "classifier": "I",
+      "dateOfBirth": "1960-06-26",
+      
+      "lastKnownAddress": "PSC 3702, Box 5502, APO AP 25133",
+      "dateOfDeath": "1978-08-19"
+    },
+    {
+      "surname": "West",
+      "forename": "Tanya",
+      "classifier": "I",
+      "dateOfBirth": "1938-05-27",
+      
+      "lastKnownAddress": "624 Miller Shoal Apt. 184, Kristyport, NV 48215",
+      "dateOfDeath": "1981-08-08"
+    },
+    {
+      "surname": "Nguyen",
+      "forename": "Rhonda",
+      "classifier": "I",
+      "dateOfBirth": "1981-07-12",
+      
+      "lastKnownAddress": "576 Elizabeth Turnpike, West Bruceton, NJ 31500"
+    },
+    {
+      "surname": "Smith",
+      "forename": "Michael",
+      "classifier": "I",
+      "dateOfBirth": "1940-06-02",
+      
+      "lastKnownAddress": "1257 Hart Views, North Shawn, PA 49907",
+      "dateOfDeath": "1987-04-10"
+    },
+    {
+      "surname": "Elliott",
+      "forename": "Jessica",
+      "classifier": "I",
+      "dateOfBirth": "1966-01-07",
+      
+      "lastKnownAddress": "PSC 4135, Box 3784, APO AP 18310",
+      "dateOfDeath": "1927-05-09"
+    },
+    {
+      "surname": "Morales",
+      "forename": "Ryan",
+      "classifier": "I",
+      "dateOfBirth": "1975-02-15",
+      
+      "lastKnownAddress": "8693 Martin Lakes, Jamesside, OH 47683"
+    },
+    {
+      "surname": "Perkins",
+      "forename": "Holly",
+      "classifier": "I",
+      "dateOfBirth": "1935-03-19",
+      
+      "lastKnownAddress": "686 Parsons Curve, Margaretville, NE 19491"
+    },
+    {
+      "surname": "Simons",
+      "forename": "Frank",
+      "classifier": "I",
+      "dateOfBirth": "1939-10-09",
+      
+      "lastKnownAddress": "10459 Nicholas Unions, South Jessica, MI 65441"
+    },
+    {
+      "surname": "Simons",
+      "forename": "Christian",
+      "classifier": "I",
+      "dateOfBirth": "1949-03-12",
+      
+      "lastKnownAddress": "5327 Newbrook Rd, Christian, AL 23472"
+    },
+    {
+      "surname": "Suave",
+      "forename": "Maria",
+      "classifier": "I",
+      "dateOfBirth": "1951-06-23",
+      
+      "lastKnownAddress": "PSC 5655, Box 9386, APO AP 00864"
+    },
+    {
+      "surname": "Vanfitz",
+      "forename": "Christopher",
+      "classifier": "I",
+      "dateOfBirth": "1974-09-26",
+      
+      "lastKnownAddress": "4156 Andres Valley Apt. 600, South Kellyberg, MO 28096"
+    },
+    {
+      "surname": "Lundune",
+      "forename": "Michael",
+      "classifier": "I",
+      "dateOfBirth": "1926-04-21",
+      
+      "lastKnownAddress": "635 Cruz Hill Suite 164, New Catherine, UT 08777"
+    },
+    {
+      "surname": "Suave",
+      "forename": "Tommy",
+      "classifier": "I",
+      "dateOfBirth": "1965-09-24",
+      
+      "lastKnownAddress": "669 Cox Unions Apt. 880, Jamesmouth, HI 95364"
+    },
+    {
+      "surname": "Everett",
+      "forename": "Brandon",
+      "classifier": "I",
+      "dateOfBirth": "1971-01-14",
+      
+      "lastKnownAddress": "934 Lisa Glens Suite 216, Gonzalezland, MI 18815"
+    },
+    {
+      "surname": "Severs",
+      "forename": "Jeffrey",
+      "classifier": "I",
+      "dateOfBirth": "1954-02-24",
+      
+      "lastKnownAddress": "133 Hamilton Forest Apt. 007, Rodriguezfort, ID 19611",
+      "dateOfDeath": "1939-11-23"
+    },
+    {
+      "surname": "Lechance",
+      "forename": "Amy",
+      "classifier": "I",
+      "dateOfBirth": "1961-12-04",
+      
+      "lastKnownAddress": "4487 Berrygrove Point, East Kristenfort, MO 87232"
+    },
+    {
+      "surname": "Fitzroy",
+      "forename": "James",
+      "classifier": "I",
+      "dateOfBirth": "1973-02-19",
+      
+      "lastKnownAddress": "2989 Mcclain Roads Suite 705, East Ashleymouth, KY 62076"
+    },
+    {
+      "surname": "Lechance",
+      "forename": "Joseph",
+      "classifier": "I",
+      "dateOfBirth": "1934-10-22",
+      
+      "lastKnownAddress": "476 Lee Flat, Jacobton, MO 83728",
+      "dateOfDeath": "1983-08-14"
+    },
+    {
+      "surname": "Everett",
+      "forename": "Virginia",
+      "classifier": "I",
+      "dateOfBirth": "1960-06-05",
+      
+      "lastKnownAddress": "97055 Wheeler Underpass Apt. 379, Forbesfort, KY 25445"
+    },
+    {
+      "surname": "Everett",
+      "forename": "Michael",
+      "classifier": "I",
+      "dateOfBirth": "1976-12-02",
+      
+      "lastKnownAddress": "947 Deleon Spring, Hollyview, IA 06504"
+    },
+    {
+      "surname": "Manual",
+      "forename": "Tyler",
+      "classifier": "I",
+      "dateOfBirth": "1951-12-08",
+      
+      "lastKnownAddress": "53774 Willie Burg Apt. 146, Brandonhaven, MS 61606"
+    },
+    {
+      "surname": "Severs",
+      "forename": "Charles",
+      "classifier": "I",
+      "dateOfBirth": "1980-09-30",
+      
+      "lastKnownAddress": "USCGC Bryant, FPO AP 27551"
+    },
+    {
+      "surname": "Kovalchuk",
+      "forename": "Ivan",
+      "classifier": "I",
+      "dateOfBirth": "1929-02-27",
+      
+      "lastKnownAddress": "2481 Chapman Village, Jasonshire, AL 03356"
+    },
+    {
+      "surname": "Fitzroy",
+      "forename": "Kathryn",
+      "classifier": "I",
+      "dateOfBirth": "1934-12-09",
+      
+      "lastKnownAddress": "USNS Peters, FPO AP 55924"
+    },
+    {
+      "surname": "Hansen",
+      "forename": "Frederick",
+      "classifier": "I",
+      "dateOfBirth": "1950-05-17",
+      "dateOfDeath": "1989-12-03",
+      
+      "lastKnownAddress": "147 Oak St, Los Angeles",
+      "notes": "Sentenced to life in prison as of 1976 for Murder 1."
+    },
+    {
+      "surname": "Devoras",
+      "forename": "Peter",
+      "classifier": "I",
+      "dateOfBirth": "1916-01-01",
+      
+      "lastKnownAddress": "Unknown",
+      "dateOfDeath": "1921-01-01",
+      "notes": "Homicide Victim",
+      "related": ["Case 452452-251-521"]
+    },
+    {
+      "surname": "Greenberg",
+      "forename": "Dorothy",
+      "classifier": "I",
+      "dateOfBirth": "1916-01-01",
+      
+      "lastKnownAddress": "Unknown",
+      "dateOfDeath": "1921-01-01",
+      "notes": "Homicide Victim",
+      "related": ["Case 452452-251-521"]
+    },
+    {
+      "surname": "Ruggiero",
+      "forename": "Maria",
+      "classifier": "I",
+      "dateOfBirth": "1917-01-01",
+      
+      "lastKnownAddress": "Unknown",
+      "dateOfDeath": "1922-01-01",
+      "notes": "Homicide Victim",
+      "related": ["Case 452452-251-521"]
+    },
+    {
+      "surname": "White",
+      "forename": "Albert",
+      "classifier": "I",
+      "dateOfBirth": "1918-01-01",
+      
+      "lastKnownAddress": "Unknown",
+      "dateOfDeath": "1923-01-01",
+      "notes": "Homicide Victim",
+      "related": ["Case 452452-251-521"]
+    },
+    {
+      "surname": "Jacobs",
+      "forename": "Betty",
+      "classifier": "I",
+      "dateOfBirth": "1919-01-01",
+      
+      "lastKnownAddress": "Unknown",
+      "dateOfDeath": "1924-01-01",
+      "notes": "Homicide Victim",
+      "related": ["Case 452452-251-521"]
+    },
+    {
+      "surname": "Barnett",
+      "forename": "Lester",
+      "classifier": "I",
+      "dateOfBirth": "1920-01-01",
+      
+      "lastKnownAddress": "Unknown",
+      "dateOfDeath": "1925-01-01",
+      "notes": "Homicide Victim",
+      "related": ["Case 452452-251-521"]
+    },
+    {
+      "surname": "Baldwin",
+      "forename": "Gary",
+      "classifier": "I",
+      "dateOfBirth": "1922-01-01",
+      
+      "lastKnownAddress": "Unknown",
+      "dateOfDeath": "1927-01-01",
+      "notes": "Homicide Victim",
+      "related": ["Case 452452-251-521"]
+    },
+    {
+      "surname": "Klein",
+      "forename": "Bernard",
+      "classifier": "I",
+      "dateOfBirth": "1923-01-01",
+      
+      "lastKnownAddress": "Unknown",
+      "dateOfDeath": "1928-01-01",
+      "notes": "Homicide Victim",
+      "related": ["Case 452452-251-521"]
+    },
+    {
+      "surname": "Townsend",
+      "forename": "Shirley",
+      "classifier": "I",
+      "dateOfBirth": "1925-01-01",
+      
+      "lastKnownAddress": "Unknown",
+      "dateOfDeath": "1930-01-01",
+      "notes": "Homicide Victim",
+      "related": ["Case 452452-251-521"]
+    },
+    {
+      "surname": "Conklin",
+      "forename": "Thelma",
+      "classifier": "I",
+      "dateOfBirth": "1927-01-01",
+      
+      "lastKnownAddress": "Unknown",
+      "dateOfDeath": "1932-01-01",
+      "notes": "Homicide Victim",
+      "related": ["Case 452452-251-521"]
+    },
+    {
+      "surname": "Padilla",
+      "forename": "Carlos",
+      "classifier": "I",
+      "dateOfBirth": "1929-01-01",
+      
+      "lastKnownAddress": "Unknown",
+      "dateOfDeath": "1934-01-01",
+      "notes": "Homicide Victim",
+      "related": ["Case 452452-251-521"]
+    },
+    {
+      "surname": "DeLuca",
+      "forename": "Nancy",
+      "classifier": "I",
+      "dateOfBirth": "1930-01-01",
+      
+      "lastKnownAddress": "Unknown",
+      "dateOfDeath": "1935-01-01",
+      "notes": "Homicide Victim",
+      "related": ["Case 452452-251-521"]
+    },
+    {
+      "surname": "Armstrong",
+      "forename": "Kenneth",
+      "classifier": "I",
+      "dateOfBirth": "1931-01-01",
+      
+      "lastKnownAddress": "Unknown",
+      "dateOfDeath": "1936-01-01",
+      "notes": "Homicide Victim",
+      "related": ["Case 452452-251-521"]
+    },
+    {
+      "surname": "Amelieva",
+      "forename": "Ivan",
+      "classifier": "I",
+      "dateOfBirth": "1933-01-01",
+      
+      "lastKnownAddress": "Unknown",
+      "dateOfDeath": "1938-01-01",
+      "notes": "Homicide Victim",
+      "related": ["Case 452452-251-521"]
+    },
+    {
+      "surname": "Hodge",
+      "forename": "Frances",
+      "classifier": "I",
+      "dateOfBirth": "1935-01-01",
+      
+      "lastKnownAddress": "Unknown",
+      "dateOfDeath": "1940-01-01",
+      "notes": "Homicide Victim",
+      "related": ["Case 452452-251-521"]
+    },
+    {
+      "surname": "McNamara",
+      "forename": "Roy",
+      "classifier": "I",
+      "dateOfBirth": "1937-01-01",
+      
+      "lastKnownAddress": "Unknown",
+      "dateOfDeath": "1942-01-01",
+      "notes": "Homicide Victim",
+      "related": ["Case 452452-251-521"]
+    },
+    {
+      "surname": "Ng",
+      "forename": "Helen",
+      "classifier": "I",
+      "dateOfBirth": "1939-01-01",
+      
+      "lastKnownAddress": "Unknown",
+      "dateOfDeath": "1944-01-01",
+      "notes": "Homicide Victim",
+      "related": ["Case 452452-251-521"]
+    },
+    {
+      "surname": "Lechance",
+      "forename": "Damien",
+      "classifier": "I",
+      "dateOfBirth": "1941-01-01",
+      
+      "lastKnownAddress": "143 W Bridge, NY, NY",
+      "dateOfDeath": "1948-04-03",
+      "notes": "Cause of death: drowning. Found: Hudson River. Suspected homicide victim",
+      "related": ["Case 452452-251-521"]
+    },
+    {
+      "surname": "Sauer",
+      "forename": "Isabelle",
+      "classifier": "I",
+      "dateOfBirth": "1943-01-01",
+      
+      "lastKnownAddress": "Unknown",
+      "dateOfDeath": "1948-01-01",
+      "notes": "Homicide Victim",
+      "related": ["Case 452452-251-521"]
+    },
+
+
+    {
+      "surname": "Curson",
+      "forename": "Emily",
+      "classifier": "I",
+      "dateOfBirth": "1988-05-30",
+      
+      "lastKnownAddress": "350 Elmwood Rd, Seattle, WA",
+      "notes": ""
+    },
+    {
+      "surname": "Curson",
+      "forename": "William",
+      "classifier": "I",
+      "dateOfBirth": "1969-09-14",
+      
+      "lastKnownAddress": "99 Sunset Blvd, Los Angeles, CA",
+      "notes": ""
+    },
+
+    {
+      "surname": "Baughman",
+      "forename": "Clyde",
+      "classifier": "I",
+      "dateOfBirth": "1937-12-02",
+      "dateOfDeath": "1994-11-29",
+      "lastKnownAddress": "Unknown",
+      "related": ["BAUGHMAN, MARLENE"]
+    },
+    {
+      "surname": "Baughman",
+      "forename": "Marlene",
+      "classifier": "I",
+      "dateOfBirth": "1938-05-11",
+      "dateOfDeath": "1992-10-17",
+      "lastKnownAddress": "Unknown",
+      "notes": "Natural causes",
+      "related": ["BAUGHMAN, CLYDE"]
+    },
+
+    {
+      "surname": "Elias",
+      "forename": "Jackson",
+      "classifier": "I",
+      "dateOfBirth": "1880",
+      "status": "Unknown",
+      "lastKnownAddress": "Hotel Chelsea, NY, NY",
+      "related": ["ISBN 2348957235: Skulls Along the River, 1910"]
+    },
+
+
+    {
+      "surname": "Detwiller",
+      "forename": "Alice",
+      "classifier": "I",
+      "dateOfBirth": "1970-01-02",
+      "lastKnownAddress": "Unknown",
+      "notes": "Law enforcement officer",
+      "related": ["EXAMPLE, BOB", "EXAMPLE, DAVE"]
+    },
+    {
+      "surname": "Evans",
+      "forename": "Bob",
+      "classifier": "I",
+      "dateOfBirth": "1900-01-01",
+      "dateOfDeath": "1950-01-01",
+      "lastKnownAddress": "Unknown"
+    },
+    {
+      "surname": "Grenfold",
+      "forename": "Carol",
+      "classifier": "I",
+      "dateOfBirth": "1920-01-01",
+      "dateOfDeath": "1950-01-01",
+      "lastKnownAddress": "Unknown"
+    },
+    {
+      "surname": "Ender",
+      "forename": "Dave",
+      "classifier": "FBI",
+      "dateOfBirth": "1900-01-01",
+      "lastKnownAddress": "Unknown",
+      "notes": "Retired Law Enforcement Officer"
+    }
+  ]
+}
