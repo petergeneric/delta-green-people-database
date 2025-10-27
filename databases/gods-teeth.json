@@ -18,6 +18,18 @@
   },
 
   {
+    "surname": "Dovchenko",
+    "forename": "Anatoly",
+    "gmNote": "Non-book NPC. Runs Deli in town, 'donates' money to Yelena",
+    "classifier": "I",
+    "dateOfBirth": "1945-10-27",
+    "status": "",
+    "lastKnownAddress": "2560 Ted Point Rd, Hoopersville, MD",
+    "notes": "",
+    "related": ["Maryland State Firearms License 3452-345-62", "Certificate of Naturalization 1968/652-1", "Soviet Union Passport M3450621-351"]
+  },
+
+  {
     "surname": "Innokenty",
     "forename": "Ryan",
     "classifier": "I",
